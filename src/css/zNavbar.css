@@ -1,0 +1,312 @@
+/* ============================================
+   zNavbar.css - Bootstrap-inspired Navbar Component
+   Using zTheme CSS Variables
+   ============================================ */
+
+/* Navbar Container */
+.zNavbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--mainBase, #ffffff);
+  border-bottom: 1px solid var(--borderColor, #dee2e6);
+}
+
+/* Brand/Logo */
+.zNavbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: inherit;
+  white-space: nowrap;
+  color: var(--textPrimary, #212529);
+  text-decoration: none;
+}
+
+.zNavbar-brand:hover,
+.zNavbar-brand:focus {
+  color: var(--mainAccent, #0d6efd);
+  text-decoration: none;
+}
+
+/* Navigation Container */
+.zNavbar-nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  gap: 0;
+  align-items: center;
+}
+
+/* Navigation Items */
+.zNav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.zNav-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--textSecondary, #6c757d);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.zNav-link:hover,
+.zNav-link:focus {
+  color: var(--mainAccent, #0d6efd);
+  background-color: var(--hoverBg, #f8f9fa);
+}
+
+/* Active State */
+.zNav-link.active {
+  color: var(--mainAccent, #0d6efd);
+  font-weight: 600;
+  background-color: var(--activeBg, #e7f1ff);
+}
+
+/* Disabled State */
+.zNav-link.disabled {
+  color: var(--textMuted, #adb5bd);
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Navbar Toggle (Mobile) */
+.zNavbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid var(--borderColor, #dee2e6);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: none;
+}
+
+.zNavbar-toggler:hover {
+  background-color: var(--hoverBg, #f8f9fa);
+}
+
+.zNavbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Navbar Collapse */
+.zNavbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+/* Dropdown Menu */
+.zNav-dropdown {
+  position: relative;
+}
+
+.zNav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 12rem;
+  padding: 0.5rem 0;
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  color: var(--textPrimary, #212529);
+  text-align: left;
+  list-style: none;
+  background-color: var(--mainBase, #ffffff);
+  background-clip: padding-box;
+  border: 1px solid var(--borderColor, #dee2e6);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.zNav-dropdown-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Desktop: Hover to open dropdown */
+@media (min-width: 769px) {
+  .zNav-dropdown:hover .zNav-dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile: Click to toggle (handled by JS) */
+.zNav-dropdown.show .zNav-dropdown-menu {
+  display: block;
+}
+
+.zNav-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: var(--textPrimary, #212529);
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.zNav-dropdown-item:hover,
+.zNav-dropdown-item:focus {
+  color: var(--textPrimary, #212529);
+  background-color: var(--hoverBg, #f8f9fa);
+}
+
+.zNav-dropdown-item.active {
+  color: var(--mainBase, #ffffff);
+  background-color: var(--mainAccent, #0d6efd);
+}
+
+/* Utilities */
+.zNavbar-text {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--textSecondary, #6c757d);
+}
+
+/* Light Theme */
+.zNavbar-light {
+  background-color: var(--lightBg, #f8f9fa);
+  border-bottom: 1px solid var(--borderColor, #dee2e6);
+}
+
+.zNavbar-light .zNavbar-brand {
+  color: var(--textPrimary, #212529);
+}
+
+.zNavbar-light .zNav-link {
+  color: var(--textSecondary, #6c757d);
+}
+
+.zNavbar-light .zNav-link:hover {
+  color: var(--mainAccent, #0d6efd);
+}
+
+.zNavbar-light .zNav-link.active {
+  color: var(--mainAccent, #0d6efd);
+}
+
+/* Dark Theme */
+.zNavbar-dark {
+  background-color: var(--darkBg, #212529);
+  border-bottom: 1px solid var(--darkBorder, #373b3e);
+}
+
+.zNavbar-dark .zNavbar-brand {
+  color: var(--lightText, #ffffff);
+}
+
+.zNavbar-dark .zNav-link {
+  color: var(--lightText, rgba(255, 255, 255, 0.7));
+}
+
+.zNavbar-dark .zNav-link:hover {
+  color: var(--lightText, #ffffff);
+}
+
+.zNavbar-dark .zNav-link.active {
+  color: var(--lightText, #ffffff);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .zNavbar-toggler {
+    display: block;
+  }
+  
+  .zNavbar-collapse {
+    display: none;
+  }
+  
+  .zNavbar-collapse.show {
+    display: block;
+  }
+  
+  .zNavbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .zNav-link {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Mobile dropdown styling */
+  .zNav-dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    border: 0;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 0;
+    padding-left: 1rem;
+  }
+  
+  .zNav-dropdown-item {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .zNavbar-collapse {
+    display: flex !important;
+  }
+}
+
+/* Fixed Top/Bottom */
+.zNavbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.zNavbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Sticky Top */
+.zNavbar-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}

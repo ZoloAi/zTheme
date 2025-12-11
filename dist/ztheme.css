@@ -1,0 +1,2487 @@
+:root {
+  /* Brand Colors */
+  --color-primary:   #A2D46E; /* Intention - the heart of zCLI */
+  --color-secondary: #9370DB; /* Validation - structure & elegance */
+
+  /* Contextual Colors */
+  --color-info:      #5CA9FF; /* Perception - clarity & understanding */
+  --color-success:   #52B788; /* Manifestation - organic & vibrant */
+  --color-warning:   #FFB347; /* Caution - warm & approachable */
+  --color-error:     #E63946; /* Decisive - clear & strong */
+
+  /* Neutral Colors */
+  --color-base:      #FFFCDC; /* Foundation - warm & natural */
+  --color-gray:      #6F6F62; /* Earth - grounded & stable */
+  --color-darkgray:  #3A3A32; /* Depth - contrast & clarity */
+  --color-dark:      #212529; /* Dark text/elements */
+  --color-light:     #f8f9fa; /* Light backgrounds/text */
+  --color-white:     #ffffff; /* Pure white */
+  --color-body:      #212529; /* Body text color */
+  --color-border:    #dee2e6; /* Subtle borders */
+  
+  /* Highlight Colors */
+  --color-highlight: #ffeb3b; /* Marker yellow for text highlighting */
+
+  /* Border Radii */
+  --border-radius: 0.25rem;       /* Default border radius (4px) */
+  --border-radius-sm: 0.2rem;     /* Small border radius (3.2px) */
+  --border-radius-lg: 0.3rem;     /* Large border radius (4.8px) */
+  --border-radius-pill: 50rem;    /* Pill-shaped (fully rounded ends) */
+  --border-radius-circle: 50%;    /* Perfect circle */
+
+  /* Border Widths */
+  --border-width: 1px;            /* Default border width */
+
+  /* Floating Labels */
+  --form-floating-height: 3.5rem;
+  --form-floating-line-height: 1.25;
+  --form-floating-padding-x: 0.75rem;
+  --form-floating-padding-y: 1rem;
+  --form-floating-input-padding-t: 1.625rem;
+  --form-floating-input-padding-b: 0.625rem;
+  --form-floating-label-opacity: 0.65;
+  --form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+/* Depricated below */
+    --mainBase: #FFFBCB;
+    --gray: #54595F;
+    --grayDark: #3F4347;
+    --mainGreen: #8FBE6D;
+    --mainYellow: #F1E65C;
+    --mainOrange: #F8961F;
+    --mainRed: #EA7171;
+    --mainPurple: #AE84D3;
+    --mainBlue: #577590;
+    --mainGrad: linear-gradient(135deg, var(--mainGreen) 0%, var(--mainYellow) 100%);
+    --yellowGrad: linear-gradient(135deg, var(--mainYellow) 0%, var(--mainRed) 100%);
+    --redGrad: linear-gradient(135deg, var(--mainRed) 0%, var(--mainOrange) 100%);
+    --orangeGrad: linear-gradient(135deg, var(--mainOrange) 0%, var(--mainRed) 100%);
+    --purpleGrad: linear-gradient(135deg, var(--mainRed) 0%, var(--mainPurple) 100%);
+    --blueGrad: linear-gradient(135deg, var(--mainPurple) 0%, var(--mainBlue) 100%);
+    --zTable-row-odd: rgba(143, 190, 109, 0.2); /* mainGreen with 20% opacity */
+    --zTable-row-even: rgba(241, 230, 92, 0.2); /* mainYellow with 20% opacity */
+    --bodyPsize: clamp(16px, 2.5vw, 22px); /* New font size variable */
+    --bodySmPsize: clamp(12px, 2vw, 18px); /* Small text size variable */
+    --h1size: clamp(32px, 5vw, 48px); /* h1 */
+    --h2size: clamp(28px, 4vw, 40px); /* h2 */
+    --h3size: clamp(24px, 3.5vw, 36px); /* h3 */
+    --h4size: clamp(20px, 3vw, 30px); /* h4 */
+    --h5size: clamp(18px, 2.5vw, 24px); /* h5 */
+    --h6size: clamp(16px, 2vw, 20px); /* h6 */
+  }
+  
+  body.mainGreen {
+    background: var(--mainGrad);
+  }
+  
+  body.mainYellow {
+    background: var(--yellowGrad);
+  }
+  
+  body.mainOrange {
+    background: var(--orangeGrad);
+  }
+  
+  body.mainRed {
+    background: var(--purpleGrad);
+  }
+  
+  body.mainPurple {
+    background: var(--blueGrad);
+  }
+  
+  body.mainBlue {
+    background: var(--blueGrad);
+  }/* ============================================
+   zTypography.css - Typography System
+   Bootstrap-inspired typography with custom fonts
+   ============================================ */
+
+/* Custom Font: Kalam (Optional)
+   ============================== */
+@font-face {
+  font-family: 'Kalam';
+  src: url('fonts/Kalam-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('fonts/Kalam-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kalam';
+  src: url('fonts/Kalam-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Typography Variables
+   ==================== */
+:root {
+  /* Font Families */
+  --font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-kalam: 'Kalam', cursive;
+  
+  /* Font Sizes */
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  
+  /* Heading Sizes */
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.25rem;
+  --h6-font-size: 1rem;
+  
+  /* Title Heading Sizes */
+  --title-1-size: 5rem;
+  --title-2-size: 4.5rem;
+  --title-3-size: 4rem;
+  --title-4-size: 3.5rem;
+  --title-5-size: 3rem;
+  --title-6-size: 2.5rem;
+  
+  /* Lead Text */
+  --lead-font-size: 1.25rem;
+  --lead-font-weight: 300;
+  
+  /* Line Heights */
+  --line-height-base: 1.5;
+  --line-height-sm: 1.25;
+  --line-height-lg: 2;
+  
+  /* Headings */
+  --headings-margin-bottom: 0.5rem;
+  --headings-font-weight: 500;
+  --headings-line-height: 1.2;
+  
+  /* Legacy (Backward Compatibility) */
+  --bodyPsize: var(--font-size-base);
+  --bodySmPsize: var(--font-size-sm);
+  --h1size: var(--h1-font-size);
+  --h2size: var(--h2-font-size);
+  --h3size: var(--h3-font-size);
+  --h4size: var(--h4-font-size);
+  --h5size: var(--h5-font-size);
+  --h6size: var(--h6-font-size);
+}
+
+/* Headings (h1-h6)
+   ================ */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--headings-margin-bottom);
+  font-weight: var(--headings-font-weight);
+  line-height: var(--headings-line-height);
+  color: var(--color-darkgray);
+}
+
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size); }
+h5 { font-size: var(--h5-font-size); }
+h6 { font-size: var(--h6-font-size); }
+
+/* Heading Utility Classes (.h1-.h6)
+   ================================== */
+.zH1 { font-size: var(--h1-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+.zH2 { font-size: var(--h2-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+.zH3 { font-size: var(--h3-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+.zH4 { font-size: var(--h4-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+.zH5 { font-size: var(--h5-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+.zH6 { font-size: var(--h6-font-size); font-weight: var(--headings-font-weight); line-height: var(--headings-line-height); }
+
+/* Title Headings (.zTitle-1 through .zTitle-6)
+   ============================================== */
+.zTitle-1 {
+  font-size: var(--title-1-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+.zTitle-2 {
+  font-size: var(--title-2-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+.zTitle-3 {
+  font-size: var(--title-3-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+.zTitle-4 {
+  font-size: var(--title-4-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+.zTitle-5 {
+  font-size: var(--title-5-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+.zTitle-6 {
+  font-size: var(--title-6-size);
+  font-weight: 300;
+  line-height: var(--headings-line-height);
+}
+
+/* Lead Text
+   ========= */
+.zLead {
+  font-size: var(--lead-font-size);
+  font-weight: var(--lead-font-weight);
+}
+
+/* Paragraphs
+   ========== */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Inline Text Elements
+   ==================== */
+mark,
+.zMark {
+  padding: 0.2em;
+  background-color: var(--color-highlight);
+  color: var(--color-darkgray);
+}
+
+ins {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+u {
+  text-decoration: underline;
+}
+
+em {
+  font-style: italic;
+}
+
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bolder;
+}
+
+small,
+.zSmall {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+/* Text Color Utilities
+   ==================== */
+   
+/* Brand Colors */
+.zPrimary {
+  color: var(--color-primary) !important;
+}
+
+.zSecondary {
+  color: var(--color-secondary) !important;
+}
+
+/* Contextual Colors */
+.zSuccess {
+  color: var(--color-success) !important;
+}
+
+.zInfo {
+  color: var(--color-info) !important;
+}
+
+.zWarning {
+  color: var(--color-warning) !important;
+}
+
+.zDanger {
+  color: var(--color-error) !important;
+}
+
+/* Neutral Colors */
+.zMuted {
+  color: var(--color-gray) !important;
+}
+
+.zDark {
+  color: var(--color-dark) !important;
+}
+
+.zLight {
+  color: var(--color-light) !important;
+}
+
+.zWhite {
+  color: var(--color-white) !important;
+}
+
+.zBody {
+  color: var(--color-body) !important;
+}
+
+/* Abbreviations
+   ============= */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+
+.zAcronym {
+  font-size: 0.875em;
+  text-transform: uppercase;
+}
+
+/* Blockquotes
+   =========== */
+.zBlockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  border-left: 0.25rem solid var(--color-border);
+}
+
+.zBlockquote-footer {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875em;
+  color: var(--color-gray);
+}
+
+.zBlockquote-footer::before {
+  content: "— ";
+}
+
+
+/* Lists
+   ===== */
+.zList-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.zList-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.zList-inline-item {
+  display: inline-block;
+}
+
+.zList-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+
+/* Font Family Utilities
+   ===================== */
+/* NOTE: .zFont-monospace now in zText.css */
+
+.zFont-kalam {
+  font-family: var(--font-family-kalam) !important;
+}
+
+/* NOTE: Text utilities (.zText-reset, .zText-decoration-*, .zLh-*) 
+   are now centralized in zText.css for better organization */
+
+/* ============================================
+   zReboot.css - CSS Reset & Base Styles
+   Element-specific CSS changes for a consistent baseline
+   Based on Bootstrap 5.0 Reboot
+   ============================================ */
+
+/* Box Sizing
+   ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page Defaults
+   ============= */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  /* Dimensions */
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  
+  /* Typography */
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-darkgray);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  
+  /* Text Direction (LTR default) */
+  text-align: left;
+  direction: ltr;
+  
+  /* Background */
+  background-color: var(--color-base);
+}
+
+main {
+  flex: 1;
+}
+
+/* Headings
+   ======== */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+/* Paragraphs
+   ========== */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Lists
+   ===== */
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+/* Inline Code
+   =========== */
+code {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  color: var(--color-error, #d63384);
+  word-wrap: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+/* Code Blocks
+   =========== */
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  color: var(--textPrimary, #212529);
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+/* Keyboard Input
+   ============== */
+kbd {
+  padding: 0.2rem 0.4rem;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0.2rem;
+}
+
+kbd kbd {
+  padding: 0;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* Variables
+   ========= */
+var {
+  font-style: italic;
+}
+
+/* Sample Output
+   ============= */
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+/* Links
+   ===== */
+a {
+  color: var(--mainAccent, #0d6efd);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-primary, #0a58ca);
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images & Content
+   ================ */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none; /* Remove border in IE 10 */
+}
+
+svg {
+  vertical-align: middle;
+  overflow: hidden; /* Hide overflow in IE */
+}
+
+picture {
+  display: inline-block;
+}
+
+/* Tables
+   ====== */
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-gray);
+  text-align: left;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Figures
+   ======= */
+figure {
+  margin: 0 0 1rem;
+}
+
+figcaption {
+  font-size: 0.875em;
+  color: var(--color-gray);
+}
+
+/* Forms
+   ===== */
+label {
+  display: inline-block;
+}
+
+/* Buttons
+   ======= */
+button {
+  border-radius: 0; /* Remove inconsistent default border-radius */
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* Form Controls (Shared)
+   ====================== */
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+
+select:disabled {
+  opacity: 1;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: inherit;
+}
+
+@media (min-width: 1200px) {
+  legend {
+    font-size: 1.5rem;
+  }
+}
+
+legend + * {
+  clear: left;
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::file-selector-button {
+  font: inherit;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* Progress
+   ======== */
+progress {
+  vertical-align: baseline;
+}
+
+/* Hidden Attribute
+   ================ */
+[hidden] {
+  display: none !important;
+}
+
+/* Blockquote
+   ========== */
+blockquote {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  border-left: 0.25rem solid var(--color-border);
+}
+
+/* Address
+   ======= */
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+/* Abbreviation
+   ============ */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  text-decoration-skip-ink: none;
+}
+
+/* Strong & Bold
+   ============= */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* Small
+   ===== */
+small {
+  font-size: 0.875em;
+}
+
+/* Mark
+   ==== */
+mark {
+  padding: 0.2em;
+  background-color: var(--color-highlight);
+}
+
+/* Inserted Text
+   ============= */
+ins {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Deleted Text
+   ============ */
+del {
+  text-decoration: line-through;
+}
+
+/* Strikethrough (Non-Semantic)
+   ============================ */
+s {
+  text-decoration: line-through;
+}
+
+/* Underline (Non-Semantic)
+   ======================== */
+u {
+  text-decoration: underline;
+}
+
+/* Emphasis (Semantic)
+   =================== */
+em {
+  font-style: italic;
+}
+
+/* Italic (Non-Semantic)
+   ===================== */
+i {
+  font-style: italic;
+}
+
+/* Sub & Sup
+   ========= */
+sub,
+sup {
+  position: relative;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Horizontal Rule
+   =============== */
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr:not([size]) {
+  height: 1px;
+}
+
+/* HR Utilities */
+.hr-visible {
+  opacity: 1;
+  border-top: 1px solid var(--color-gray, #dee2e6);
+  background-color: transparent;
+}
+
+/* ============================================
+   zMain.css - Layout & Direction Utilities
+   Note: Body styling is in zReboot.css
+   ============================================ */
+
+/* Text Direction Utilities
+   ========================= */
+.zDirection-rtl {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.zDirection-ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* zVaF Element - Full Declarative UI Canvas
+   ========================================== */
+zVaF {
+  display: block;
+  min-height: 100vh;
+  padding-bottom: 4rem; /* Space for fixed connection bar */
+}
+
+#zVaF-content {
+  display: block;
+  width: 100%;
+}
+/* ============================================================================
+   zBadges.css - Badge Component System
+   ============================================================================
+   
+   Bootstrap-inspired small count and labeling component with zTheme design.
+   
+   Base Class: .zBadge
+   
+   Badges scale to match parent element size using relative font sizing (em).
+   ============================================================================ */
+
+/* Base Badge
+   ========== */
+.zBadge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-white);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+/* Empty badges collapse automatically */
+.zBadge:empty {
+  display: none;
+}
+
+/* Badge Variants
+   ============== */
+.zBadge-primary {
+  color: var(--color-darkgray);
+  background-color: var(--color-primary);
+}
+
+.zBadge-secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+.zBadge-success {
+  color: var(--color-darkgray);
+  background-color: var(--color-success);
+}
+
+.zBadge-danger {
+  color: var(--color-white);
+  background-color: var(--color-error);
+}
+
+.zBadge-warning {
+  color: var(--color-darkgray);
+  background-color: var(--color-warning);
+}
+
+.zBadge-info {
+  color: var(--color-white);
+  background-color: var(--color-info);
+}
+
+.zBadge-light {
+  color: var(--color-darkgray);
+  background-color: var(--color-light);
+}
+
+.zBadge-dark {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
+
+/* Pill Badges
+   =========== */
+/* Note: .zRounded-pill is now centralized in zBorders.css (50rem for fully rounded ends) */
+
+/* Badge in Buttons
+   ================ */
+.zBtn .zBadge {
+  position: relative;
+  top: -1px;
+}
+
+/* Positioned Badges
+   ================= */
+/* Used with positioning utilities for notification dots */
+.zBadge.zPosition-absolute {
+  /* Requires parent with position: relative */
+  /* Use utility classes: .zPosition-relative, .zTop-0, .zStart-100, .zTranslate-middle */
+}
+
+/* ═══════════════════════════════════════════════════════════
+ * Special Badge Variants (zTheme Extensions)
+ * ═══════════════════════════════════════════════════════════ */
+
+/* Connection Status Bar (used in zVaF.html for zBifrost) */
+.zBadge-connection {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-family: 'Kalam', cursive;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-white);
+  border-radius: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zBadge-connection .zBadge-dot {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+.zBadge-pending {
+  background-color: var(--color-warning);
+  color: var(--color-darkgray);
+}
+
+.zBadge-pending .zBadge-dot {
+  animation: zBadgePulse 1.5s ease-in-out infinite;
+}
+
+.zBadge-success {
+  background-color: var(--color-success);
+}
+
+.zBadge-error {
+  background-color: var(--color-error);
+}
+
+/* Pulse Animation for Connection Badge */
+@keyframes zBadgePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .zBadge {
+    font-size: 0.7em;
+    padding: 0.3em 0.5em;
+  }
+  
+  .zBadge-connection {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* ============================================
+   zIcons.css - SVG Icon Utilities
+   ============================================
+   
+   Utilities for styling SVG icons from the sprite system.
+   Icons inherit color from parent using fill="currentColor".
+   
+   Usage:
+   <svg class="zIcon" width="24" height="24">
+     <use xlink:href="#icon-house"></use>
+   </svg>
+   
+   ============================================ */
+
+/* ============================================
+   Base Icon Class
+   ============================================ */
+
+.zIcon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+/* ============================================
+   Icon Sizes
+   ============================================ */
+
+.zIcon-sm {
+  width: 0.875rem;  /* 14px */
+  height: 0.875rem;
+}
+
+.zIcon-md {
+  width: 1rem;      /* 16px - default */
+  height: 1rem;
+}
+
+.zIcon-lg {
+  width: 1.5rem;    /* 24px */
+  height: 1.5rem;
+}
+
+.zIcon-xl {
+  width: 2rem;      /* 32px */
+  height: 2rem;
+}
+
+.zIcon-2xl {
+  width: 3rem;      /* 48px */
+  height: 3rem;
+}
+
+/* ============================================
+   Button Icons
+   ============================================ */
+
+/* Icon inside button - proper spacing */
+.zBtn .zIcon {
+  margin-right: 0.25rem;
+  vertical-align: -0.125em; /* Slight adjustment for better alignment */
+}
+
+.zBtn .zIcon:last-child {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+.zBtn .zIcon:only-child {
+  margin: 0;
+}
+
+/* ============================================
+   Link Icons
+   ============================================ */
+
+a .zIcon {
+  transition: transform 0.2s ease;
+}
+
+a:hover .zIcon {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Inline Icons
+   ============================================ */
+
+/* Icon next to text in paragraphs */
+p .zIcon,
+span .zIcon,
+.zText-inline .zIcon {
+  vertical-align: -0.125em;
+  margin: 0 0.125rem;
+}
+
+/* ============================================
+   Avatar/Profile Icons
+   ============================================ */
+
+.zIcon-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-light);
+}
+
+/* ============================================
+   Icon Colors
+   ============================================ */
+
+/* Icons inherit text color by default via fill="currentColor" */
+/* Use text color utilities to change icon colors */
+
+.zIcon-primary {
+  color: var(--color-primary);
+}
+
+.zIcon-secondary {
+  color: var(--color-secondary);
+}
+
+.zIcon-success {
+  color: var(--color-success);
+}
+
+.zIcon-danger {
+  color: var(--color-danger);
+}
+
+.zIcon-warning {
+  color: var(--color-warning);
+}
+
+.zIcon-info {
+  color: var(--color-info);
+}
+
+.zIcon-muted {
+  color: var(--color-muted);
+}
+
+/* ============================================
+   Icon States
+   ============================================ */
+
+.zIcon-spin {
+  animation: zIcon-spin 2s linear infinite;
+}
+
+@keyframes zIcon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.zIcon-pulse {
+  animation: zIcon-pulse 2s ease-in-out infinite;
+}
+
+@keyframes zIcon-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+/* Hide decorative icons from screen readers */
+.zIcon[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Ensure interactive icons are accessible */
+button .zIcon,
+a .zIcon {
+  pointer-events: none; /* Let parent handle clicks */
+}
+
+/* ============================================================================
+   zButtons.css - Modern Button System
+   ============================================================================
+   
+   A comprehensive button system following Bootstrap conventions with zTheme's
+   design language. Includes color variants, sizes, states, and outline styles.
+   
+   Base Class: .zBtn (required on all buttons)
+   ============================================================================ */
+
+/* Base Button Class
+   ================= */
+.zBtn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-darkgray);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
+              border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Links as Buttons
+   ================ */
+a.zBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover State
+   =========== */
+.zBtn:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Focus State
+   =========== */
+.zBtn:focus,
+.zBtn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(162, 212, 110, 0.25);
+}
+
+/* Active State
+   ============ */
+.zBtn:active,
+.zBtn.zActive {
+  transform: scale(0.98);
+}
+
+/* Disabled State
+   ============== */
+.zBtn:disabled,
+.zBtn.zDisabled {
+  pointer-events: none;
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ============================================================================
+   Color Variants - Solid Buttons
+   ============================================================================ */
+
+/* Primary Button (Green)
+   ====================== */
+.zBtn-primary {
+  color: var(--color-darkgray);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.zBtn-primary:hover {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.zBtn-primary:focus,
+.zBtn-primary:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(162, 212, 110, 0.5);
+}
+
+/* Secondary Button (Purple)
+   ========================= */
+.zBtn-secondary {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.zBtn-secondary:hover {
+  background-color: #7e57a1;
+  border-color: #7e57a1;
+  color: var(--color-white);
+}
+
+.zBtn-secondary:focus,
+.zBtn-secondary:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(146, 115, 172, 0.5);
+}
+
+/* Success Button (Green)
+   ====================== */
+.zBtn-success {
+  color: var(--color-white);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.zBtn-success:hover {
+  background-color: #7ac143;
+  border-color: #7ac143;
+  color: var(--color-white);
+}
+
+.zBtn-success:focus,
+.zBtn-success:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(130, 194, 74, 0.5);
+}
+
+/* Info Button (Blue)
+   ================== */
+.zBtn-info {
+  color: var(--color-white);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+.zBtn-info:hover {
+  background-color: #4a9bd6;
+  border-color: #4a9bd6;
+  color: var(--color-white);
+}
+
+.zBtn-info:focus,
+.zBtn-info:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(91, 184, 238, 0.5);
+}
+
+/* Warning Button (Orange)
+   ======================= */
+.zBtn-warning {
+  color: var(--color-white);
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.zBtn-warning:hover {
+  background-color: #ff9f3d;
+  border-color: #ff9f3d;
+  color: var(--color-white);
+}
+
+.zBtn-warning:focus,
+.zBtn-warning:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(255, 179, 71, 0.5);
+}
+
+/* Danger Button (Red)
+   =================== */
+.zBtn-danger {
+  color: var(--color-white);
+  background-color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.zBtn-danger:hover {
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+  color: var(--color-white);
+}
+
+.zBtn-danger:focus,
+.zBtn-danger:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(244, 67, 54, 0.5);
+}
+
+/* Light Button
+   ============ */
+.zBtn-light {
+  color: var(--color-darkgray);
+  background-color: var(--color-light);
+  border-color: var(--color-light);
+}
+
+.zBtn-light:hover {
+  background-color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.zBtn-light:focus,
+.zBtn-light:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(245, 245, 245, 0.5);
+}
+
+/* Dark Button
+   =========== */
+.zBtn-dark {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.zBtn-dark:hover {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: var(--color-white);
+}
+
+.zBtn-dark:focus,
+.zBtn-dark:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(51, 51, 51, 0.5);
+}
+
+/* Link Button
+   =========== */
+.zBtn-link {
+  font-weight: 400;
+  color: var(--color-info);
+  text-decoration: underline;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0; /* Remove button padding */
+  border-radius: 0; /* Remove rounded corners */
+  border: none; /* Remove border */
+}
+
+.zBtn-link:hover {
+  color: var(--color-primary);
+  background-color: transparent;
+  border-color: transparent;
+  opacity: 1;
+  text-decoration: underline; /* Keep underline on hover */
+}
+
+.zBtn-link:focus,
+.zBtn-link:focus-visible {
+  box-shadow: none; /* No focus shadow */
+  outline: 2px dotted var(--color-info); /* Simple outline for accessibility */
+  outline-offset: 2px;
+}
+
+.zBtn-link:disabled,
+.zBtn-link.zDisabled {
+  color: var(--color-gray);
+  text-decoration: none;
+}
+
+/* ============================================================================
+   Outline Variants
+   ============================================================================ */
+
+/* Outline Primary
+   =============== */
+.zBtn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: transparent;
+}
+
+.zBtn-outline-primary:hover {
+  color: var(--color-darkgray);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Outline Secondary
+   ================= */
+.zBtn-outline-secondary {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  background-color: transparent;
+}
+
+.zBtn-outline-secondary:hover {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* Outline Success
+   =============== */
+.zBtn-outline-success {
+  color: var(--color-success);
+  border-color: var(--color-success);
+  background-color: transparent;
+}
+
+.zBtn-outline-success:hover {
+  color: var(--color-darkgray);
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+/* Outline Info
+   ============ */
+.zBtn-outline-info {
+  color: var(--color-info);
+  border-color: var(--color-info);
+  background-color: transparent;
+}
+
+.zBtn-outline-info:hover {
+  color: var(--color-white);
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+/* Outline Warning
+   =============== */
+.zBtn-outline-warning {
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+  background-color: transparent;
+}
+
+.zBtn-outline-warning:hover {
+  color: var(--color-darkgray);
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+/* Outline Danger
+   ============== */
+.zBtn-outline-danger {
+  color: var(--color-error);
+  border-color: var(--color-error);
+  background-color: transparent;
+}
+
+.zBtn-outline-danger:hover {
+  color: var(--color-white);
+  background-color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+/* Outline Light
+   ============= */
+.zBtn-outline-light {
+  color: var(--color-light);
+  border-color: var(--color-light);
+  background-color: transparent;
+}
+
+.zBtn-outline-light:hover {
+  color: var(--color-darkgray);
+  background-color: var(--color-light);
+  border-color: var(--color-light);
+}
+
+/* Outline Dark
+   ============ */
+.zBtn-outline-dark {
+  color: var(--color-dark);
+  border-color: var(--color-dark);
+  background-color: transparent;
+}
+
+.zBtn-outline-dark:hover {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+/* ============================================================================
+   Button Sizes
+   ============================================================================ */
+
+/* Large Button
+   ============ */
+.zBtn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+/* Small Button
+   ============ */
+.zBtn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+/* ============================================================================
+   Block Button (Full Width)
+   ============================================================================ */
+.zBtn-block {
+  display: block;
+  width: 100%;
+}
+
+/* For responsive block buttons */
+@media (max-width: 576px) {
+  .zBtn-block-sm {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .zBtn-block-md {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ============================================================================
+   Special Button Variants (Legacy/Domain-Specific)
+   ============================================================================
+   
+   These are kept for backward compatibility but may be deprecated in future.
+   Consider using standard .zBtn with modifiers instead.
+   ============================================================================ */
+
+/* Tab Button Variant
+   ================== */
+.zBtn-tab {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  border-radius: 0.5rem 0.5rem 0 0;
+  border-bottom: 3px solid transparent;
+}
+
+.zBtn-tab:hover {
+  background-color: var(--color-primary);
+  color: var(--color-darkgray);
+  opacity: 1;
+}
+
+.zBtn-tab.zActive {
+  background-color: var(--color-info);
+  color: var(--color-white);
+  border-bottom-color: var(--color-primary);
+  transform: none;
+}
+
+/* Large Square Button (Specialized)
+   ================================= */
+.zBtn-square-lg {
+  width: 200px;
+  height: 200px;
+  font-size: 1.125rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zBtn-square-lg:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.zBtn-square-lg:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* AI Enhance Button (Specialized)
+   =============================== */
+.zBtn-ai-enhance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Close Button
+   ============= */
+.zBtn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em;
+  color: #000;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.zBtn-close:hover {
+  color: #000;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.zBtn-close:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  opacity: 1;
+}
+
+.zBtn-close:disabled,
+.zBtn-close.zDisabled {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.25;
+}
+
+/* Close button on dark backgrounds */
+.zBtn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+/* ============================================
+   zContainers.css - Responsive Containers
+   Bootstrap-inspired container system
+   ============================================ */
+
+/* Global Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Base Container Styles
+   ===================== */
+.zContainer,
+.zContainer-sm,
+.zContainer-md,
+.zContainer-lg,
+.zContainer-xl,
+.zContainer-xxl,
+.zContainer-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive Container (.zContainer)
+   Adapts max-width at each breakpoint
+   ==================================== */
+@media (min-width: 576px) {
+  .zContainer, .zContainer-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .zContainer, .zContainer-sm, .zContainer-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg, .zContainer-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg, .zContainer-xl, .zContainer-xxl {
+    max-width: 1320px;
+  }
+}
+
+/* Fluid Container (.zContainer-fluid)
+   Always 100% width, never constrained
+   ===================================== */
+.zContainer-fluid {
+  max-width: 100%;
+}
+
+/* Responsive Padding
+   ================== */
+@media (max-width: 575.98px) {
+  .zContainer,
+  .zContainer-sm,
+  .zContainer-md,
+  .zContainer-lg,
+  .zContainer-xl,
+  .zContainer-xxl {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+/* ============================================
+   zSpacing.css - Spacing Utilities
+   ============================================
+   
+   Margin, padding, and gap utilities for consistent spacing.
+   Aligned with modern responsive design patterns.
+   
+   Classes:
+   - Margin: .zm-*, .zmt-*, .zmb-*, .zms-*, .zme-*, .zmx-*, .zmy-*
+   - Padding: .zp-*, .zpt-*, .zpb-*, .zps-*, .zpe-*, .zpx-*, .zpy-*
+   - Gap: .zGap-*
+   - Negative: .zm-n*, .zmt-n*, etc.
+   - Auto: .zmx-auto (centering)
+   
+   Example:
+   <div class="zmt-3 zpx-4">Margin top 1rem, padding horizontal 1.5rem</div>
+   <div class="zmx-auto">Centered horizontally</div>
+   
+   ============================================ */
+
+/* CSS Variables - Spacing Scale
+   ============================== */
+:root {
+  --zSpacing-0: 0;
+  --zSpacing-1: 0.25rem;  /* 4px */
+  --zSpacing-2: 0.5rem;   /* 8px */
+  --zSpacing-3: 1rem;     /* 16px - base */
+  --zSpacing-4: 1.5rem;   /* 24px */
+  --zSpacing-5: 3rem;     /* 48px - Bootstrap 5 aligned */
+}
+
+/* ============================================
+   Margin Utilities
+   ============================================ */
+
+/* Margin All Sides */
+.zm-0 { margin: var(--zSpacing-0) !important; }
+.zm-1 { margin: var(--zSpacing-1) !important; }
+.zm-2 { margin: var(--zSpacing-2) !important; }
+.zm-3 { margin: var(--zSpacing-3) !important; }
+.zm-4 { margin: var(--zSpacing-4) !important; }
+.zm-5 { margin: var(--zSpacing-5) !important; }
+.zm-auto { margin: auto !important; }
+
+/* Margin Top */
+.zmt-0 { margin-top: var(--zSpacing-0) !important; }
+.zmt-1 { margin-top: var(--zSpacing-1) !important; }
+.zmt-2 { margin-top: var(--zSpacing-2) !important; }
+.zmt-3 { margin-top: var(--zSpacing-3) !important; }
+.zmt-4 { margin-top: var(--zSpacing-4) !important; }
+.zmt-5 { margin-top: var(--zSpacing-5) !important; }
+.zmt-auto { margin-top: auto !important; }
+
+/* Margin Bottom */
+.zmb-0 { margin-bottom: var(--zSpacing-0) !important; }
+.zmb-1 { margin-bottom: var(--zSpacing-1) !important; }
+.zmb-2 { margin-bottom: var(--zSpacing-2) !important; }
+.zmb-3 { margin-bottom: var(--zSpacing-3) !important; }
+.zmb-4 { margin-bottom: var(--zSpacing-4) !important; }
+.zmb-5 { margin-bottom: var(--zSpacing-5) !important; }
+.zmb-auto { margin-bottom: auto !important; }
+
+/* Margin Start (Left in LTR, Right in RTL) */
+.zms-0 { margin-left: var(--zSpacing-0) !important; }
+.zms-1 { margin-left: var(--zSpacing-1) !important; }
+.zms-2 { margin-left: var(--zSpacing-2) !important; }
+.zms-3 { margin-left: var(--zSpacing-3) !important; }
+.zms-4 { margin-left: var(--zSpacing-4) !important; }
+.zms-5 { margin-left: var(--zSpacing-5) !important; }
+.zms-auto { margin-left: auto !important; }
+
+/* Margin End (Right in LTR, Left in RTL) */
+.zme-0 { margin-right: var(--zSpacing-0) !important; }
+.zme-1 { margin-right: var(--zSpacing-1) !important; }
+.zme-2 { margin-right: var(--zSpacing-2) !important; }
+.zme-3 { margin-right: var(--zSpacing-3) !important; }
+.zme-4 { margin-right: var(--zSpacing-4) !important; }
+.zme-5 { margin-right: var(--zSpacing-5) !important; }
+.zme-auto { margin-right: auto !important; }
+
+/* Margin Horizontal (X-axis: Left & Right) */
+.zmx-0 { margin-left: var(--zSpacing-0) !important; margin-right: var(--zSpacing-0) !important; }
+.zmx-1 { margin-left: var(--zSpacing-1) !important; margin-right: var(--zSpacing-1) !important; }
+.zmx-2 { margin-left: var(--zSpacing-2) !important; margin-right: var(--zSpacing-2) !important; }
+.zmx-3 { margin-left: var(--zSpacing-3) !important; margin-right: var(--zSpacing-3) !important; }
+.zmx-4 { margin-left: var(--zSpacing-4) !important; margin-right: var(--zSpacing-4) !important; }
+.zmx-5 { margin-left: var(--zSpacing-5) !important; margin-right: var(--zSpacing-5) !important; }
+.zmx-auto { margin-left: auto !important; margin-right: auto !important; }
+
+/* Margin Vertical (Y-axis: Top & Bottom) */
+.zmy-0 { margin-top: var(--zSpacing-0) !important; margin-bottom: var(--zSpacing-0) !important; }
+.zmy-1 { margin-top: var(--zSpacing-1) !important; margin-bottom: var(--zSpacing-1) !important; }
+.zmy-2 { margin-top: var(--zSpacing-2) !important; margin-bottom: var(--zSpacing-2) !important; }
+.zmy-3 { margin-top: var(--zSpacing-3) !important; margin-bottom: var(--zSpacing-3) !important; }
+.zmy-4 { margin-top: var(--zSpacing-4) !important; margin-bottom: var(--zSpacing-4) !important; }
+.zmy-5 { margin-top: var(--zSpacing-5) !important; margin-bottom: var(--zSpacing-5) !important; }
+.zmy-auto { margin-top: auto !important; margin-bottom: auto !important; }
+
+/* ============================================
+   Negative Margin Utilities
+   ============================================ */
+
+/* Negative Margin All Sides */
+.zm-n1 { margin: calc(var(--zSpacing-1) * -1) !important; }
+.zm-n2 { margin: calc(var(--zSpacing-2) * -1) !important; }
+.zm-n3 { margin: calc(var(--zSpacing-3) * -1) !important; }
+.zm-n4 { margin: calc(var(--zSpacing-4) * -1) !important; }
+.zm-n5 { margin: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin Top */
+.zmt-n1 { margin-top: calc(var(--zSpacing-1) * -1) !important; }
+.zmt-n2 { margin-top: calc(var(--zSpacing-2) * -1) !important; }
+.zmt-n3 { margin-top: calc(var(--zSpacing-3) * -1) !important; }
+.zmt-n4 { margin-top: calc(var(--zSpacing-4) * -1) !important; }
+.zmt-n5 { margin-top: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin Bottom */
+.zmb-n1 { margin-bottom: calc(var(--zSpacing-1) * -1) !important; }
+.zmb-n2 { margin-bottom: calc(var(--zSpacing-2) * -1) !important; }
+.zmb-n3 { margin-bottom: calc(var(--zSpacing-3) * -1) !important; }
+.zmb-n4 { margin-bottom: calc(var(--zSpacing-4) * -1) !important; }
+.zmb-n5 { margin-bottom: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin Start */
+.zms-n1 { margin-left: calc(var(--zSpacing-1) * -1) !important; }
+.zms-n2 { margin-left: calc(var(--zSpacing-2) * -1) !important; }
+.zms-n3 { margin-left: calc(var(--zSpacing-3) * -1) !important; }
+.zms-n4 { margin-left: calc(var(--zSpacing-4) * -1) !important; }
+.zms-n5 { margin-left: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin End */
+.zme-n1 { margin-right: calc(var(--zSpacing-1) * -1) !important; }
+.zme-n2 { margin-right: calc(var(--zSpacing-2) * -1) !important; }
+.zme-n3 { margin-right: calc(var(--zSpacing-3) * -1) !important; }
+.zme-n4 { margin-right: calc(var(--zSpacing-4) * -1) !important; }
+.zme-n5 { margin-right: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin Horizontal */
+.zmx-n1 { margin-left: calc(var(--zSpacing-1) * -1) !important; margin-right: calc(var(--zSpacing-1) * -1) !important; }
+.zmx-n2 { margin-left: calc(var(--zSpacing-2) * -1) !important; margin-right: calc(var(--zSpacing-2) * -1) !important; }
+.zmx-n3 { margin-left: calc(var(--zSpacing-3) * -1) !important; margin-right: calc(var(--zSpacing-3) * -1) !important; }
+.zmx-n4 { margin-left: calc(var(--zSpacing-4) * -1) !important; margin-right: calc(var(--zSpacing-4) * -1) !important; }
+.zmx-n5 { margin-left: calc(var(--zSpacing-5) * -1) !important; margin-right: calc(var(--zSpacing-5) * -1) !important; }
+
+/* Negative Margin Vertical */
+.zmy-n1 { margin-top: calc(var(--zSpacing-1) * -1) !important; margin-bottom: calc(var(--zSpacing-1) * -1) !important; }
+.zmy-n2 { margin-top: calc(var(--zSpacing-2) * -1) !important; margin-bottom: calc(var(--zSpacing-2) * -1) !important; }
+.zmy-n3 { margin-top: calc(var(--zSpacing-3) * -1) !important; margin-bottom: calc(var(--zSpacing-3) * -1) !important; }
+.zmy-n4 { margin-top: calc(var(--zSpacing-4) * -1) !important; margin-bottom: calc(var(--zSpacing-4) * -1) !important; }
+.zmy-n5 { margin-top: calc(var(--zSpacing-5) * -1) !important; margin-bottom: calc(var(--zSpacing-5) * -1) !important; }
+
+/* ============================================
+   Padding Utilities
+   ============================================ */
+
+/* Padding All Sides */
+.zp-0 { padding: var(--zSpacing-0) !important; }
+.zp-1 { padding: var(--zSpacing-1) !important; }
+.zp-2 { padding: var(--zSpacing-2) !important; }
+.zp-3 { padding: var(--zSpacing-3) !important; }
+.zp-4 { padding: var(--zSpacing-4) !important; }
+.zp-5 { padding: var(--zSpacing-5) !important; }
+
+/* Padding Top */
+.zpt-0 { padding-top: var(--zSpacing-0) !important; }
+.zpt-1 { padding-top: var(--zSpacing-1) !important; }
+.zpt-2 { padding-top: var(--zSpacing-2) !important; }
+.zpt-3 { padding-top: var(--zSpacing-3) !important; }
+.zpt-4 { padding-top: var(--zSpacing-4) !important; }
+.zpt-5 { padding-top: var(--zSpacing-5) !important; }
+
+/* Padding Bottom */
+.zpb-0 { padding-bottom: var(--zSpacing-0) !important; }
+.zpb-1 { padding-bottom: var(--zSpacing-1) !important; }
+.zpb-2 { padding-bottom: var(--zSpacing-2) !important; }
+.zpb-3 { padding-bottom: var(--zSpacing-3) !important; }
+.zpb-4 { padding-bottom: var(--zSpacing-4) !important; }
+.zpb-5 { padding-bottom: var(--zSpacing-5) !important; }
+
+/* Padding Start (Left in LTR, Right in RTL) */
+.zps-0 { padding-left: var(--zSpacing-0) !important; }
+.zps-1 { padding-left: var(--zSpacing-1) !important; }
+.zps-2 { padding-left: var(--zSpacing-2) !important; }
+.zps-3 { padding-left: var(--zSpacing-3) !important; }
+.zps-4 { padding-left: var(--zSpacing-4) !important; }
+.zps-5 { padding-left: var(--zSpacing-5) !important; }
+
+/* Padding End (Right in LTR, Left in RTL) */
+.zpe-0 { padding-right: var(--zSpacing-0) !important; }
+.zpe-1 { padding-right: var(--zSpacing-1) !important; }
+.zpe-2 { padding-right: var(--zSpacing-2) !important; }
+.zpe-3 { padding-right: var(--zSpacing-3) !important; }
+.zpe-4 { padding-right: var(--zSpacing-4) !important; }
+.zpe-5 { padding-right: var(--zSpacing-5) !important; }
+
+/* Padding Horizontal (X-axis: Left & Right) */
+.zpx-0 { padding-left: var(--zSpacing-0) !important; padding-right: var(--zSpacing-0) !important; }
+.zpx-1 { padding-left: var(--zSpacing-1) !important; padding-right: var(--zSpacing-1) !important; }
+.zpx-2 { padding-left: var(--zSpacing-2) !important; padding-right: var(--zSpacing-2) !important; }
+.zpx-3 { padding-left: var(--zSpacing-3) !important; padding-right: var(--zSpacing-3) !important; }
+.zpx-4 { padding-left: var(--zSpacing-4) !important; padding-right: var(--zSpacing-4) !important; }
+.zpx-5 { padding-left: var(--zSpacing-5) !important; padding-right: var(--zSpacing-5) !important; }
+
+/* Padding Vertical (Y-axis: Top & Bottom) */
+.zpy-0 { padding-top: var(--zSpacing-0) !important; padding-bottom: var(--zSpacing-0) !important; }
+.zpy-1 { padding-top: var(--zSpacing-1) !important; padding-bottom: var(--zSpacing-1) !important; }
+.zpy-2 { padding-top: var(--zSpacing-2) !important; padding-bottom: var(--zSpacing-2) !important; }
+.zpy-3 { padding-top: var(--zSpacing-3) !important; padding-bottom: var(--zSpacing-3) !important; }
+.zpy-4 { padding-top: var(--zSpacing-4) !important; padding-bottom: var(--zSpacing-4) !important; }
+.zpy-5 { padding-top: var(--zSpacing-5) !important; padding-bottom: var(--zSpacing-5) !important; }
+
+/* ============================================
+   Gap Utilities (CSS Grid / Flexbox)
+   ============================================ */
+
+.zGap-0 { gap: var(--zSpacing-0) !important; }
+.zGap-1 { gap: var(--zSpacing-1) !important; }
+.zGap-2 { gap: var(--zSpacing-2) !important; }
+.zGap-3 { gap: var(--zSpacing-3) !important; }
+.zGap-4 { gap: var(--zSpacing-4) !important; }
+.zGap-5 { gap: var(--zSpacing-5) !important; }
+
+/* Row Gap (Vertical spacing between rows) */
+.zRow-gap-0 { row-gap: var(--zSpacing-0) !important; }
+.zRow-gap-1 { row-gap: var(--zSpacing-1) !important; }
+.zRow-gap-2 { row-gap: var(--zSpacing-2) !important; }
+.zRow-gap-3 { row-gap: var(--zSpacing-3) !important; }
+.zRow-gap-4 { row-gap: var(--zSpacing-4) !important; }
+.zRow-gap-5 { row-gap: var(--zSpacing-5) !important; }
+
+/* Column Gap (Horizontal spacing between columns) */
+.zColumn-gap-0 { column-gap: var(--zSpacing-0) !important; }
+.zColumn-gap-1 { column-gap: var(--zSpacing-1) !important; }
+.zColumn-gap-2 { column-gap: var(--zSpacing-2) !important; }
+.zColumn-gap-3 { column-gap: var(--zSpacing-3) !important; }
+.zColumn-gap-4 { column-gap: var(--zSpacing-4) !important; }
+.zColumn-gap-5 { column-gap: var(--zSpacing-5) !important; }
+
+/* ============================================
+   Legacy Support (Backward Compatibility)
+   ============================================
+   
+   Old naming (.zmr, .zml, .zpr, .zpl) still works.
+   Use new .zms/.zme/.zps/.zpe for better RTL support.
+   ============================================ */
+
+/* Legacy Margin Left/Right */
+.zml-0 { margin-left: var(--zSpacing-0) !important; }
+.zml-1 { margin-left: var(--zSpacing-1) !important; }
+.zml-2 { margin-left: var(--zSpacing-2) !important; }
+.zml-3 { margin-left: var(--zSpacing-3) !important; }
+.zml-4 { margin-left: var(--zSpacing-4) !important; }
+.zml-5 { margin-left: var(--zSpacing-5) !important; }
+.zml-auto { margin-left: auto !important; }
+
+.zmr-0 { margin-right: var(--zSpacing-0) !important; }
+.zmr-1 { margin-right: var(--zSpacing-1) !important; }
+.zmr-2 { margin-right: var(--zSpacing-2) !important; }
+.zmr-3 { margin-right: var(--zSpacing-3) !important; }
+.zmr-4 { margin-right: var(--zSpacing-4) !important; }
+.zmr-5 { margin-right: var(--zSpacing-5) !important; }
+.zmr-auto { margin-right: auto !important; }
+
+/* Legacy Padding Left/Right */
+.zpl-0 { padding-left: var(--zSpacing-0) !important; }
+.zpl-1 { padding-left: var(--zSpacing-1) !important; }
+.zpl-2 { padding-left: var(--zSpacing-2) !important; }
+.zpl-3 { padding-left: var(--zSpacing-3) !important; }
+.zpl-4 { padding-left: var(--zSpacing-4) !important; }
+.zpl-5 { padding-left: var(--zSpacing-5) !important; }
+
+.zpr-0 { padding-right: var(--zSpacing-0) !important; }
+.zpr-1 { padding-right: var(--zSpacing-1) !important; }
+.zpr-2 { padding-right: var(--zSpacing-2) !important; }
+.zpr-3 { padding-right: var(--zSpacing-3) !important; }
+.zpr-4 { padding-right: var(--zSpacing-4) !important; }
+.zpr-5 { padding-right: var(--zSpacing-5) !important; }
+
+/* ============================================
+   zText.css - Text Utilities
+   ============================================
+   
+   Text alignment, wrapping, transformation, sizing, weight, and styling.
+   Aligned with modern typography patterns.
+   
+   Classes:
+   - Alignment: .zText-start, .zText-center, .zText-end
+   - Wrapping: .zText-wrap, .zText-nowrap, .zText-break
+   - Transform: .zText-lowercase, .zText-uppercase, .zText-capitalize
+   - Font Size: .zFs-1 through .zFs-6
+   - Font Weight: .zFw-bold, .zFw-normal, .zFw-light
+   - Font Style: .zFst-italic, .zFst-normal
+   - Line Height: .zLh-1, .zLh-sm, .zLh-base, .zLh-lg
+   - Monospace: .zFont-monospace
+   - Decoration: .zText-decoration-none, -underline, -line-through
+   - Reset: .zText-reset
+   
+   Example:
+   <p class="zText-center zFs-4 zFw-bold">Centered, large, bold</p>
+   <p class="zText-uppercase zFst-italic">Uppercase italic</p>
+   
+   ============================================ */
+
+/* ============================================
+   Text Alignment
+   ============================================ */
+
+.zText-start { text-align: left !important; }
+.zText-center { text-align: center !important; }
+.zText-end { text-align: right !important; }
+
+/* ============================================
+   Text Wrapping & Overflow
+   ============================================ */
+
+/* Wrap Text */
+.zText-wrap { white-space: normal !important; }
+
+/* Prevent Wrapping */
+.zText-nowrap { white-space: nowrap !important; }
+
+/* Break Long Words */
+.zText-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* Truncate with Ellipsis */
+.zText-truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* ============================================
+   Text Transform
+   ============================================ */
+
+.zText-lowercase { text-transform: lowercase !important; }
+.zText-uppercase { text-transform: uppercase !important; }
+.zText-capitalize { text-transform: capitalize !important; }
+
+/* ============================================
+   Font Size
+   ============================================ */
+
+.zFs-1 { font-size: 2.5rem !important; }    /* h1 size */
+.zFs-2 { font-size: 2rem !important; }      /* h2 size */
+.zFs-3 { font-size: 1.75rem !important; }   /* h3 size */
+.zFs-4 { font-size: 1.5rem !important; }    /* h4 size */
+.zFs-5 { font-size: 1.25rem !important; }   /* h5 size */
+.zFs-6 { font-size: 1rem !important; }      /* h6 size */
+
+/* ============================================
+   Font Weight
+   ============================================ */
+
+.zFw-light { font-weight: 300 !important; }
+.zFw-lighter { font-weight: lighter !important; }
+.zFw-normal { font-weight: 400 !important; }
+.zFw-bold { font-weight: 700 !important; }
+.zFw-bolder { font-weight: bolder !important; }
+
+/* ============================================
+   Font Style
+   ============================================ */
+
+.zFst-normal { font-style: normal !important; }
+.zFst-italic { font-style: italic !important; }
+
+/* ============================================
+   Line Height
+   ============================================ */
+
+.zLh-1 { line-height: 1 !important; }
+.zLh-sm { line-height: 1.25 !important; }
+.zLh-base { line-height: 1.5 !important; }
+.zLh-lg { line-height: 2 !important; }
+
+/* ============================================
+   Font Family
+   ============================================ */
+
+.zFont-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* ============================================
+   Text Decoration
+   ============================================ */
+
+.zText-decoration-none { text-decoration: none !important; }
+.zText-decoration-underline { text-decoration: underline !important; }
+.zText-decoration-line-through { text-decoration: line-through !important; }
+
+/* ============================================
+   Text Reset
+   ============================================ */
+
+.zText-reset { color: inherit !important; }
+
+
+/* ============================================
+   zColors.css - Text Color Utilities
+   ============================================
+   
+   Bootstrap-inspired text color utilities with z prefix.
+   Convey meaning through text color for semantic communication.
+   
+   Classes:
+   - .zText-primary, .zText-secondary, .zText-success, .zText-info, .zText-warning, .zText-danger
+   - .zText-light, .zText-dark, .zText-body, .zText-muted, .zText-white
+   - .zText-black-50, .zText-white-50 (50% opacity)
+   
+   Note: For links with hover states, see zLinks.css (.zLink-* classes).
+   
+   Example:
+   <p class="zText-primary">Primary text</p>
+   <p class="zText-muted">Muted secondary text</p>
+   
+   ============================================ */
+
+/* ============================================
+   Theme Color Text
+   ============================================
+   
+   Semantic colors for conveying meaning.
+   ============================================ */
+
+.zText-primary {
+    color: var(--color-primary) !important;
+}
+
+.zText-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.zText-success {
+    color: var(--color-success) !important;
+}
+
+.zText-info {
+    color: var(--color-info) !important;
+}
+
+.zText-warning {
+    color: var(--color-warning) !important;
+}
+
+.zText-danger,
+.zText-error {
+    color: var(--color-error) !important;
+}
+
+/* ============================================
+   Neutral Text Colors
+   ============================================ */
+
+.zText-light {
+    color: var(--color-light) !important;
+}
+
+.zText-dark {
+    color: var(--color-dark) !important;
+}
+
+.zText-body {
+    color: var(--color-body) !important;
+}
+
+.zText-muted {
+    color: var(--color-gray) !important;
+}
+
+.zText-white {
+    color: var(--color-white) !important;
+}
+
+.zText-black {
+    color: #000 !important;
+}
+
+/* ============================================
+   Opacity Variants
+   ============================================
+   
+   50% opacity versions of black and white.
+   Useful for subtle overlays and secondary text.
+   ============================================ */
+
+.zText-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.zText-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ============================================
+   Legacy/Compatibility Classes
+   ============================================
+   
+   Support for templates using non-prefixed classes.
+   These map to the z-prefixed versions above.
+   Will be deprecated in a future version.
+   ============================================ */
+
+.text-muted {
+    color: var(--color-gray) !important;
+}
+
+.text-white {
+    color: var(--color-white) !important;
+}
+
+.text-dark {
+    color: var(--color-dark) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-info {
+    color: var(--color-info) !important;
+}
+
+.text-warning {
+    color: var(--color-warning) !important;
+}
+
+.text-danger {
+    color: var(--color-error) !important;
+}
+
+.text-light {
+    color: var(--color-light) !important;
+}
+
+.text-body {
+    color: var(--color-body) !important;
+}
+
