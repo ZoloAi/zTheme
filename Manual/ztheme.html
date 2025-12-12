@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="zContainer zp-5">
+    <h1 class="zmb-2">🎨 zTheme Documentation</h1>
+    <p class="zLead text-muted zmb-6">
+        Professional CSS framework for zCLI applications
+    </p>
+    
+    <hr class="zmy-5 hr-visible">
+    
+    <!-- Layout -->
+    <section class="zmy-6">
+        <h2 class="zPrimary">📐 Layout</h2>
+        <p>Responsive layout system with breakpoints, containers, and grid</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/breakpoints">Breakpoints</a> - Responsive design breakpoints</li>
+            <li><a href="/ztheme/containers">Containers</a> - Layout containers (.zContainer)</li>
+            <li><a href="/ztheme/grid">Grid</a> - Flexible grid system</li>
+            <li><a href="/ztheme/columns">Columns</a> - Column layouts</li>
+            <li><a href="/ztheme/gutters">Gutters</a> - Spacing between columns</li>
+            <li><a href="/ztheme/utilities">Layout Utilities</a> - Helper classes</li>
+            <li><a href="/ztheme/z-index">Z-index</a> - Layering system</li>
+        </ul>
+    </section>
+    
+    <!-- Content -->
+    <section class="zmy-6">
+        <h2 class="zSecondary">📝 Content</h2>
+        <p>Typography, tables, and content styling</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/reboot">Reboot</a> - CSS reset</li>
+            <li><a href="/ztheme/typography">Typography</a> - Headings, paragraphs, lists</li>
+            <li><a href="/ztheme/images">Images</a> - Responsive images, figures</li>
+            <li><a href="/ztheme/tables">Tables</a> - Table styling</li>
+            <li><a href="/ztheme/figures">Figures</a> - Image and text captions</li>
+        </ul>
+    </section>
+    
+    <!-- Forms -->
+    <section class="zmy-6">
+        <h2 class="zInfo">📋 Forms</h2>
+        <p>Form controls, inputs, and validation</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/forms-overview">Overview</a> - Form basics</li>
+            <li><a href="/ztheme/form-control">Form Control</a> - Input fields</li>
+            <li><a href="/ztheme/select">Select</a> - Dropdown selects</li>
+            <li><a href="/ztheme/checks-radios">Checks & Radios</a> - Checkboxes and radio buttons</li>
+            <li><a href="/ztheme/range">Range</a> - Range sliders</li>
+            <li><a href="/ztheme/input-group">Input Group</a> - Combined inputs</li>
+            <li><a href="/ztheme/floating-labels">Floating Labels</a> - Material-style inputs</li>
+            <li><a href="/ztheme/form-layout">Layout</a> - Form layouts</li>
+            <li><a href="/ztheme/validation">Validation</a> - Form validation styles</li>
+        </ul>
+    </section>
+    
+    <!-- Components -->
+    <section class="zmy-6">
+        <h2 class="zSuccess">🧩 Components</h2>
+        <p>Pre-built UI components</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/accordion">Accordion</a> - Collapsible panels</li>
+            <li><a href="/ztheme/alerts">Alerts</a> - Alert messages (.zAlert)</li>
+            <li><a href="/ztheme/badges">Badges</a> - Count and label components (.zBadge)</li>
+            <li><a href="/ztheme/breadcrumb">Breadcrumb</a> - Hierarchical navigation (.zBreadcrumb)</li>
+            <li><a href="/ztheme/buttons">Buttons</a> - Button styles (.zBtn)</li>
+            <li><a href="/ztheme/button-group">Button Group</a> - Grouped buttons</li>
+            <li><a href="/ztheme/cards">Cards</a> - Content cards</li>
+            <li><a href="/ztheme/carousel">Carousel</a> - Image/content slideshows (.zCarousel) ✅</li>
+            <li><a href="/ztheme/collapse">Collapse</a> - Collapsible content (.zCollapse) ✅</li>
+            <li><a href="/ztheme/dropdown">Dropdowns</a> - Dropdown menus (.zDropdown) ✅</li>
+            <li><a href="/ztheme/list-group">List Group</a> - List components (.zList-group) ✅</li>
+            <li><a href="/ztheme/modal">Modal</a> - Modal dialogs (.zModal) ✅</li>
+            <li><a href="/ztheme/navs">Navs & Tabs</a> - Navigation and tabbed interfaces (.zNav) ✅</li>
+            <li><a href="/ztheme/navbar">Navbar</a> - Navigation bars (.zNavbar) ✅</li>
+            <li><a href="/ztheme/offcanvas">Offcanvas</a> - Slide-out sidebar panels (.zOffcanvas) ✅</li>
+            <li><a href="/ztheme/pagination">Pagination</a> - Page navigation (.zPagination) ✅</li>
+            <li><a href="/ztheme/popover">Popover</a> - Contextual content overlays (.zPopover) ✅</li>
+            <li><a href="/ztheme/progress">Progress</a> - Progress bars (.zProgress) ✅</li>
+            <li><a href="/ztheme/scrollspy">Scrollspy</a> - Scroll-based navigation (.zActive state) ✅</li>
+            <li><a href="/ztheme/spinners">Spinners</a> - Loading indicators (.zSpinner-border, .zSpinner-grow) ✅</li>
+            <li><a href="/ztheme/toasts">Toasts</a> - Notification pop-ups (.zToast) ✅</li>
+            <li><a href="/ztheme/tooltips">Tooltips</a> - Contextual hover hints (.zTooltip) ✅</li>
+        </ul>
+    </section>
+    
+    <!-- Helpers -->
+    <section class="zmy-6">
+        <h2 class="zWarning">🛠️ Helpers</h2>
+        <p>Utility helper classes</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/clearfix">Clearfix</a> - Float clearing (.zClearfix) ✅</li>
+            <li><a href="/ztheme/colored-links">Colored Links</a> - Link color utilities (.zLink-*) ✅</li>
+            <li><a href="/ztheme/ratio">Ratio</a> - Aspect ratio helpers (.zRatio-*) ✅</li>
+            <li><a href="/ztheme/position">Position</a> - Fixed & sticky positioning (.zFixed-*, .zSticky-*) ✅</li>
+            <li><a href="/ztheme/visually-hidden">Visually Hidden</a> - Screen reader utilities (.zVisually-hidden*) ✅</li>
+            <li><a href="/ztheme/stretched-link">Stretched Link</a> - Clickable containers</li>
+            <li><a href="/ztheme/text-truncation">Text Truncation</a> - Ellipsis overflow (.zText-truncate) ✅</li>
+        </ul>
+    </section>
+    
+    <!-- Utilities -->
+    <section class="zmy-6">
+        <h2 class="zDanger">⚡ Utilities</h2>
+        <p>Low-level utility classes</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/utilities-api">API</a> - Utility API overview (Sass + Bifrost runtime) 🔮 TODO</li>
+            <li><a href="/ztheme/background">Background</a> - Background color & gradient utilities (.zBg-*) ✅</li>
+            <li><a href="/ztheme/borders">Borders</a> - Border & border-radius utilities (.zBorder-*, .zRounded-*) ✅</li>
+            <li><a href="/ztheme/colors">Colors</a> - Text color utilities (.zText-*) ✅</li>
+            <li><a href="/ztheme/display">Display</a> - Display property utilities (.zD-*) with responsive & print support ✅</li>
+            <li><a href="/ztheme/flex">Flex</a> - Flexbox utilities (.zFlex-*, .zGap-*) ✅</li>
+            <li><a href="/ztheme/float">Float</a> - Float utilities (.zFloat-*) with responsive support ✅</li>
+            <li><a href="/ztheme/interactions">Interactions</a> - User interaction utilities (.zUser-select-*, .zPe-*, .zCursor-*) ✅</li>
+            <li><a href="/ztheme/overflow">Overflow</a> - Overflow utilities (.zOverflow-*, .zText-truncate) ✅</li>
+            <li><a href="/ztheme/position">Position</a> - Position utilities (.zPosition-*, .zTop-*, .zStart-*, .zFixed-*, .zSticky-*, .zZ-*) ✅</li>
+            <li><a href="/ztheme/shadows">Shadows</a> - Shadow utilities (.zShadow-*, box elevation & depth) ✅</li>
+            <li><a href="/ztheme/sizing">Sizing</a> - Width/height utilities (.zW-*, .zH-*, .zVw-*, .zVh-*, .zMw-*, .zMh-*) ✅</li>
+            <li><a href="/ztheme/spacing">Spacing</a> - Margin, padding, gap (.zm-*, .zp-*, .zGap-*, .zmx-auto, negative) ✅</li>
+            <li><a href="/ztheme/text">Text</a> - Text utilities (.zText-*, .zFs-*, .zFw-*, .zFst-*, .zLh-*, alignment, transform) ✅</li>
+            <li><a href="/ztheme/vertical-align">Vertical Align</a> - Inline & table alignment (.zAlign-baseline, .zAlign-top, .zAlign-middle, .zAlign-bottom) ✅</li>
+            <li><a href="/ztheme/visibility">Visibility</a> - Visibility utilities</li>
+        </ul>
+
+        <h3 style="margin: 2rem 0 1rem; color: var(--color-success);">Internationalization</h3>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/rtl">RTL Support</a> - Right-to-Left language support (Hebrew עברית, Arabic العربية, Persian فارسی, Urdu اردو) - Global <code>dir="rtl"</code> attribute, start/end utilities ✅</li>
+        </ul>
+    </section>
+    
+    <!-- Extend -->
+    <section class="zmy-6">
+        <h2 class="zWarning">🚀 Extend</h2>
+        <p>Understanding zTheme's design philosophy and extending it for your projects</p>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/approach">Approach</a> - Guiding principles: mobile-first, base+modifiers, z prefix, utilities over custom CSS ✅</li>
+            <li><a href="/ztheme/icons">Icons</a> - SVG sprite system: 20+ icons, 0 HTTP requests, full color control (.zIcon, sizes, animations) ✅</li>
+        </ul>
+    </section>
+    
+</div>
+{% endblock %}

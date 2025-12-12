@@ -1,0 +1,577 @@
+{% extends "base.html" %}
+
+{% block title %}Icons - zTheme{% endblock %}
+
+{% block content %}
+<!-- Include SVG sprite system -->
+{% include "shared/svg-icons.html" %}
+
+<div class="zContainer-lg zpy-5" style="max-width: 900px;">
+    <h1 class="zText-success" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Icons</h1>
+    <p class="zText-muted" style="font-size: 1.1rem; margin-bottom: 3rem;">
+        SVG icon sprite system for zTheme applications
+    </p>
+
+    <!-- Understanding Icons -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">Understanding the Icon System</h2>
+        <p style="line-height: 1.7; margin-bottom: 1rem;">
+            zTheme uses an <strong>SVG sprite system</strong> - a modern, performant approach to icons that:
+        </p>
+
+        <ul style="line-height: 1.8;">
+            <li><strong>Zero HTTP requests</strong> - All icons loaded once, inline with HTML</li>
+            <li><strong>Scalable</strong> - Vector graphics look perfect at any size</li>
+            <li><strong>Themeable</strong> - Icons inherit text color via <code>fill="currentColor"</code></li>
+            <li><strong>Customizable</strong> - Easy to add, modify, or remove icons</li>
+            <li><strong>Accessible</strong> - Full control over ARIA attributes</li>
+        </ul>
+
+        <blockquote style="background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin: 2rem 0;">
+            <p style="margin: 0;"><strong>💡 Why not Font Awesome or Bootstrap Icons?</strong> External icon libraries add HTTP requests, 
+            bloat your bundle, and include hundreds of icons you'll never use. The sprite system gives you complete control with better performance.</p>
+        </blockquote>
+    </section>
+
+    <!-- Basic Usage -->
+    <section class="zmy-6">
+        <h2 class="zText-success">Basic Usage</h2>
+        <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+            Use icons by referencing their <code>id</code> from the sprite:
+        </p>
+
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0;">
+            <p style="font-size: 1.2rem;">
+                <svg class="zIcon zIcon-lg" style="color: #2196f3;">
+                    <use xlink:href="#icon-house"></use>
+                </svg>
+                Home
+            </p>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;svg class="zIcon" width="24" height="24"&gt;
+  &lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Icon Sizes</h3>
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0; display: flex; align-items: center; gap: 1.5rem;">
+            <svg class="zIcon zIcon-sm">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-md">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-xl">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-2xl">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;svg class="zIcon zIcon-sm"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;  &lt;!-- 14px --&gt;
+&lt;svg class="zIcon zIcon-md"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;  &lt;!-- 16px --&gt;
+&lt;svg class="zIcon zIcon-lg"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;  &lt;!-- 24px --&gt;
+&lt;svg class="zIcon zIcon-xl"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;  &lt;!-- 32px --&gt;
+&lt;svg class="zIcon zIcon-2xl"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt; &lt;!-- 48px --&gt;</code></pre>
+    </section>
+
+    <!-- Complete Icon Gallery -->
+    <section class="zmy-6">
+        <h2 class="zText-success">Complete Icon Gallery</h2>
+        <p style="line-height: 1.7; margin-bottom: 2rem;">
+            All available icons in the zTheme sprite system:
+        </p>
+
+        <h3 style="margin-bottom: 1.5rem;">Navigation Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #2196f3; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-house"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-house</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #2196f3; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-apps"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-apps</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #2196f3; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-hamburger-fill"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-hamburger-fill</code></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">User & People Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #4caf50; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-user-fill"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-user-fill</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #4caf50; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-people"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-people</code></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">Business Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #ff9800; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-building"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-building</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #ff9800; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-dept-fill"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-dept-fill</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #ff9800; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-cart-fill"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-cart-fill</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #ff9800; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-piggy-bank"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-piggy-bank</code></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">Package & Inventory Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #9c27b0; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-box"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-box</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #9c27b0; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-boxes"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-boxes</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #9c27b0; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-checklist"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-checklist</code></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">Action Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #f44336; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-arrow-repeat"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-arrow-repeat</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #f44336; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-magic"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-magic</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #f44336; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-pen"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-pen</code></p>
+            </div>
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #f44336; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-usb"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-usb</code></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 1.5rem;">Communication Icons</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+            <div style="padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; text-align: center;">
+                <svg class="zIcon zIcon-2xl" style="color: #00bcd4; margin-bottom: 0.5rem;">
+                    <use xlink:href="#icon-chat-square"></use>
+                </svg>
+                <p style="margin: 0; font-size: 0.9rem; color: #666;"><code>icon-chat-square</code></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Styling Icons -->
+    <section class="zmy-6">
+        <h2 class="zText-success">Styling Icons</h2>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Icon Colors</h3>
+        <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+            Icons automatically inherit text color. Use text color utilities or custom colors:
+        </p>
+
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            <svg class="zIcon zIcon-lg zText-primary">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg zText-success">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg zText-danger">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg zText-warning">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg zText-info">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+            <svg class="zIcon zIcon-lg zText-muted">
+                <use xlink:href="#icon-house"></use>
+            </svg>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;svg class="zIcon zText-primary"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;svg class="zIcon zText-success"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;svg class="zIcon" style="color: #9c27b0;"&gt;&lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Icons in Buttons</h3>
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="zBtn zBtn-primary">
+                <svg class="zIcon">
+                    <use xlink:href="#icon-house"></use>
+                </svg>
+                Home
+            </button>
+            <button class="zBtn zBtn-success">
+                <svg class="zIcon">
+                    <use xlink:href="#icon-people"></use>
+                </svg>
+                Users
+            </button>
+            <button class="zBtn zBtn-danger">
+                <svg class="zIcon">
+                    <use xlink:href="#icon-cart-fill"></use>
+                </svg>
+                Cart
+            </button>
+            <button class="zBtn zBtn-outline-primary">
+                <svg class="zIcon">
+                    <use xlink:href="#icon-arrow-repeat"></use>
+                </svg>
+                Refresh
+            </button>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;button class="zBtn zBtn-primary"&gt;
+  &lt;svg class="zIcon"&gt;
+    &lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  Home
+&lt;/button&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Icons in Text</h3>
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0;">
+            <p style="font-size: 1.1rem;">
+                Visit your
+                <svg class="zIcon zAlign-middle" style="color: #2196f3;">
+                    <use xlink:href="#icon-house"></use>
+                </svg>
+                dashboard to see
+                <svg class="zIcon zAlign-middle" style="color: #4caf50;">
+                    <use xlink:href="#icon-people"></use>
+                </svg>
+                team members and
+                <svg class="zIcon zAlign-middle" style="color: #ff9800;">
+                    <use xlink:href="#icon-cart-fill"></use>
+                </svg>
+                shopping cart.
+            </p>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;p&gt;
+  Visit your 
+  &lt;svg class="zIcon zAlign-middle"&gt;
+    &lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;
+  &lt;/svg&gt; 
+  dashboard
+&lt;/p&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Animated Icons</h3>
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0; display: flex; gap: 2rem; align-items: center;">
+            <div style="text-align: center;">
+                <svg class="zIcon zIcon-2xl zIcon-spin zText-primary">
+                    <use xlink:href="#icon-arrow-repeat"></use>
+                </svg>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Spinning</p>
+            </div>
+            <div style="text-align: center;">
+                <svg class="zIcon zIcon-2xl zIcon-pulse zText-warning">
+                    <use xlink:href="#icon-magic"></use>
+                </svg>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Pulsing</p>
+            </div>
+        </div>
+
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;svg class="zIcon zIcon-spin"&gt;
+  &lt;use xlink:href="#icon-arrow-repeat"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+
+&lt;svg class="zIcon zIcon-pulse"&gt;
+  &lt;use xlink:href="#icon-magic"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+    </section>
+
+    <!-- Adding New Icons -->
+    <section class="zmy-6">
+        <h2 class="zText-success">Adding New Icons</h2>
+        <p style="line-height: 1.7; margin-bottom: 1.5rem;">
+            To add new icons to the sprite system:
+        </p>
+
+        <div style="background: white; padding: 2rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0;">
+            <h4 style="margin-top: 0;">Step 1: Find or Create SVG</h4>
+            <p style="line-height: 1.7;">
+                Get SVG icons from:
+            </p>
+            <ul style="line-height: 1.8;">
+                <li><strong>Bootstrap Icons</strong> - Open source, MIT licensed</li>
+                <li><strong>Heroicons</strong> - Free, MIT licensed</li>
+                <li><strong>Feather Icons</strong> - Simple, open source</li>
+                <li><strong>Custom design</strong> - Create in Figma, Illustrator, etc.</li>
+            </ul>
+
+            <h4 style="margin-top: 2rem;">Step 2: Convert to Symbol</h4>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;"><code>&lt;!-- Original SVG --&gt;
+&lt;svg viewBox="0 0 16 16"&gt;
+  &lt;path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/&gt;
+&lt;/svg&gt;
+
+&lt;!-- Convert to symbol --&gt;
+&lt;symbol id="icon-circle" viewBox="0 0 16 16" fill="currentColor"&gt;
+  &lt;path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/&gt;
+&lt;/symbol&gt;</code></pre>
+
+            <h4 style="margin-top: 2rem;">Step 3: Add to Sprite File</h4>
+            <p style="line-height: 1.7;">
+                Edit <code>zCloud/templates/shared/svg-icons.html</code> and add your new symbol inside the main <code>&lt;svg&gt;</code> container.
+            </p>
+
+            <h4 style="margin-top: 2rem;">Step 4: Use Immediately</h4>
+            <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto; font-size: 0.9rem;"><code>&lt;svg class="zIcon"&gt;
+  &lt;use xlink:href="#icon-circle"&gt;&lt;/use&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+
+        <blockquote style="background: #fff3cd; padding: 1rem; border-left: 4px solid #ffc107; margin: 2rem 0;">
+            <p style="margin: 0;"><strong>⚠️ Important:</strong> Always use <code>fill="currentColor"</code> in the symbol definition 
+            so icons inherit text color from their parent element.</p>
+        </blockquote>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">Best Practices</h2>
+        
+        <div style="background: white; padding: 1.5rem; border: 2px solid #dee2e6; border-radius: 4px; margin: 2rem 0;">
+            <h4 style="margin-top: 0; color: #4caf50;">✅ Do</h4>
+            <ul style="line-height: 1.8; margin-bottom: 2rem;">
+                <li>Use consistent icon sizing across similar UI elements</li>
+                <li>Ensure icons have proper contrast against backgrounds (WCAG AA minimum)</li>
+                <li>Use <code>.zAlign-middle</code> for inline icons next to text</li>
+                <li>Add <code>aria-hidden="true"</code> for purely decorative icons</li>
+                <li>Keep the sprite file organized with clear comments</li>
+                <li>Test icons at multiple sizes to ensure clarity</li>
+            </ul>
+            
+            <h4 style="color: #f44336;">❌ Don't</h4>
+            <ul style="line-height: 1.8; margin: 0;">
+                <li>Mix different icon styles (outlined vs filled) inconsistently</li>
+                <li>Use tiny icons (<12px) - they become unclear</li>
+                <li>Forget to test in high contrast mode</li>
+                <li>Add unused icons to the sprite (keep it lean)</li>
+                <li>Override <code>fill</code> directly - use color utilities instead</li>
+                <li>Use raster images when SVG works better</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Accessibility -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">Accessibility</h2>
+        
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Decorative Icons</h3>
+        <p style="line-height: 1.7; margin-bottom: 1rem;">
+            Icons that are purely decorative (next to text labels) should be hidden from screen readers:
+        </p>
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;button class="zBtn zBtn-primary"&gt;
+  &lt;svg class="zIcon" aria-hidden="true"&gt;
+    &lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  Home
+&lt;/button&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Standalone Icons</h3>
+        <p style="line-height: 1.7; margin-bottom: 1rem;">
+            If an icon is the ONLY indicator (no text), add a label:
+        </p>
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;button class="zBtn zBtn-primary" aria-label="Go to home page"&gt;
+  &lt;svg class="zIcon"&gt;
+    &lt;use xlink:href="#icon-house"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Interactive Icons</h3>
+        <p style="line-height: 1.7; margin-bottom: 1rem;">
+            For clickable icons, ensure proper focus states and size (minimum 44x44px touch target):
+        </p>
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>&lt;button 
+  class="zBtn" 
+  aria-label="Refresh data"
+  style="padding: 0.75rem;"&gt;
+  &lt;svg class="zIcon zIcon-lg"&gt;
+    &lt;use xlink:href="#icon-arrow-repeat"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;</code></pre>
+    </section>
+
+    <!-- Performance -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">Why This System Wins</h2>
+        
+        <table class="zTable zTable-bordered" style="margin: 2rem 0;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Method</th>
+                    <th style="width: 25%;">HTTP Requests</th>
+                    <th style="width: 25%;">File Size</th>
+                    <th style="width: 25%;">Flexibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>SVG Sprite</strong> ✅</td>
+                    <td style="color: #4caf50;"><strong>0</strong> (inline)</td>
+                    <td style="color: #4caf50;"><strong>~5KB</strong> (20 icons)</td>
+                    <td style="color: #4caf50;"><strong>Full control</strong></td>
+                </tr>
+                <tr>
+                    <td>Font Awesome</td>
+                    <td style="color: #ff9800;">1-2</td>
+                    <td style="color: #f44336;">~80KB+ (1000+ icons)</td>
+                    <td style="color: #ff9800;">Limited</td>
+                </tr>
+                <tr>
+                    <td>Bootstrap Icons CDN</td>
+                    <td style="color: #f44336;">1</td>
+                    <td style="color: #f44336;">~100KB+ (1800+ icons)</td>
+                    <td style="color: #f44336;">None</td>
+                </tr>
+                <tr>
+                    <td>Individual SVG files</td>
+                    <td style="color: #f44336;">20+</td>
+                    <td style="color: #4caf50;">~4KB</td>
+                    <td style="color: #4caf50;">Full control</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <blockquote style="background: #e8f5e9; padding: 1rem; border-left: 4px solid #4caf50; margin: 2rem 0;">
+            <p style="margin: 0;"><strong>🚀 Result:</strong> The sprite system loads instantly (0 HTTP requests), uses minimal bandwidth 
+            (only icons you need), and gives you complete styling control. Perfect for production.</p>
+        </blockquote>
+    </section>
+
+    <!-- CSS Reference -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">CSS Reference</h2>
+        
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Base Classes</h3>
+        <table class="zTable zTable-bordered" style="margin: 2rem 0;">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Class</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>.zIcon</code></td>
+                    <td>Base icon class (required)</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-sm</code></td>
+                    <td>14px icons</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-md</code></td>
+                    <td>16px icons (default)</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-lg</code></td>
+                    <td>24px icons</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-xl</code></td>
+                    <td>32px icons</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-2xl</code></td>
+                    <td>48px icons</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Animation Classes</h3>
+        <table class="zTable zTable-bordered" style="margin: 2rem 0;">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Class</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>.zIcon-spin</code></td>
+                    <td>Continuous rotation (loading indicators)</td>
+                </tr>
+                <tr>
+                    <td><code>.zIcon-pulse</code></td>
+                    <td>Fade in/out animation</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Related Topics -->
+    <section class="zmy-6">
+        <h2 class="zText-primary">Related Topics</h2>
+        <ul class="lh-lg">
+            <li><a href="/ztheme/buttons">Buttons</a> - Using icons in buttons</li>
+            <li><a href="/ztheme/colors">Colors</a> - Icon color utilities</li>
+            <li><a href="/ztheme/vertical-align">Vertical Align</a> - Aligning icons with text</li>
+            <li><a href="/ztheme/approach">Approach</a> - Design philosophy</li>
+        </ul>
+    </section>
+
+    <!-- Navigation -->
+    <div style="display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #dee2e6;">
+        <a href="/ztheme/approach" class="zBtn zBtn-outline-primary">&larr; Approach</a>
+        <a href="/ztheme" class="zBtn zBtn-primary">Back to zTheme</a>
+        <span style="color: #999;"><!-- End of utilities --></span>
+    </div>
+</div>
+{% endblock %}
+
