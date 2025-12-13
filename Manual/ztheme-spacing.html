@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Spacing Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -475,14 +493,22 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/sizing">Sizing</a> - Width and height utilities</li>
-            <li><a href="/ztheme/flex">Flex</a> - Flexbox utilities (pairs well with gap)</li>
-            <li><a href="/ztheme/grid">Grid</a> - Grid system (uses gap extensively)</li>
-            <li><a href="/ztheme/display">Display</a> - Display utilities</li>
-            <li><a href="/ztheme/position">Position</a> - Positioning utilities</li>
+            <li><a href="ztheme-sizing.html">Sizing</a> - Width and height utilities</li>
+            <li><a href="ztheme-flex.html">Flex</a> - Flexbox utilities (pairs well with gap)</li>
+            <li><a href="ztheme-grid.html">Grid</a> - Grid system (uses gap extensively)</li>
+            <li><a href="ztheme-display.html">Display</a> - Display utilities</li>
+            <li><a href="ztheme-position.html">Position</a> - Positioning utilities</li>
         </ul>
     </section>
 
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

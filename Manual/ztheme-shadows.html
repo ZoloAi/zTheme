@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Shadow Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -365,11 +383,11 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/borders">Borders</a> - Border utilities (alternative to shadows)</li>
-            <li><a href="/ztheme/cards">Cards</a> - Card components that use shadows</li>
-            <li><a href="/ztheme/buttons">Buttons</a> - Button shadows and hover effects</li>
-            <li><a href="/ztheme/modal">Modal</a> - Modal overlays with large shadows</li>
-            <li><a href="/ztheme/dropdown">Dropdown</a> - Dropdowns with shadow depth</li>
+            <li><a href="ztheme-borders.html">Borders</a> - Border utilities (alternative to shadows)</li>
+            <li><a href="ztheme-cards.html">Cards</a> - Card components that use shadows</li>
+            <li><a href="ztheme-buttons.html">Buttons</a> - Button shadows and hover effects</li>
+            <li><a href="ztheme-modal.html">Modal</a> - Modal overlays with large shadows</li>
+            <li><a href="ztheme-dropdown.html">Dropdown</a> - Dropdowns with shadow depth</li>
         </ul>
     </section>
 
@@ -378,5 +396,13 @@
 <script>
 // No JavaScript needed for static shadow display
 </script>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

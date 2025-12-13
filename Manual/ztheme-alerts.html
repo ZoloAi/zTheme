@@ -1,14 +1,32 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Alerts - zTheme{% endblock %}
-
-{% block content %}
 <article style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
     <header style="margin-bottom: 2rem;">
         <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
             <ol class="zBreadcrumb">
-                <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-                <li class="zBreadcrumb-item"><a href="/ztheme#components">Components</a></li>
+                <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+                <li class="zBreadcrumb-item"><a href="../ztheme.html#components">Components</a></li>
                 <li class="zBreadcrumb-item zActive" aria-current="page">Alerts</li>
             </ol>
         </nav>
@@ -330,11 +348,19 @@
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/buttons">Buttons</a> - Action buttons within alerts</li>
-            <li><a href="/ztheme/typography">Typography</a> - Text styling for alert content</li>
-            <li><a href="/ztheme/validation">Form Validation</a> - Alert-style error messages</li>
+            <li><a href="ztheme-buttons.html">Buttons</a> - Action buttons within alerts</li>
+            <li><a href="ztheme-typography.html">Typography</a> - Text styling for alert content</li>
+            <li><a href="ztheme-validation.html">Form Validation</a> - Alert-style error messages</li>
         </ul>
     </section>
 </article>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

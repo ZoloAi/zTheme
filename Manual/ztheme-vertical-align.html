@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Align - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Vertical Alignment - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer-lg zpy-5" style="max-width: 900px;">
     <h1 class="zText-success" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Vertical Alignment</h1>
     <p class="zText-muted" style="font-size: 1.1rem; margin-bottom: 3rem;">
@@ -20,7 +38,7 @@
         <blockquote style="background: #fff3cd; padding: 1rem; border-left: 4px solid #ffc107; margin: 2rem 0;">
             <p style="margin: 0;"><strong>⚠️ Important:</strong> These utilities only work on inline, inline-block, 
             inline-table, and table cell elements. For vertically centering block elements like <code>&lt;div&gt;</code>, 
-            use <a href="/ztheme/flex">Flexbox utilities</a> instead!</p>
+            use <a href="ztheme-flex.html">Flexbox utilities</a> instead!</p>
         </blockquote>
     </section>
 
@@ -192,7 +210,7 @@
             <h4 style="color: #f44336;">❌ Don't</h4>
             <ul style="line-height: 1.8; margin: 0;">
                 <li>Try to use on block elements (<code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>) - won't work!</li>
-                <li>Use for centering page layouts - use <a href="/ztheme/flex">Flexbox</a> instead</li>
+                <li>Use for centering page layouts - use <a href="ztheme-flex.html">Flexbox</a> instead</li>
                 <li>Forget that alignment is relative to the line or cell height</li>
                 <li>Overcomplicate - <code>.zAlign-middle</code> solves 90% of use cases</li>
             </ul>
@@ -236,19 +254,27 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/flex">Flexbox</a> - For vertical centering of block elements</li>
-            <li><a href="/ztheme/display">Display</a> - Control element display type</li>
-            <li><a href="/ztheme/text">Text Utilities</a> - Text alignment and styling</li>
-            <li><a href="/ztheme/tables">Tables</a> - Table styling and structure</li>
+            <li><a href="ztheme-flex.html">Flexbox</a> - For vertical centering of block elements</li>
+            <li><a href="ztheme-display.html">Display</a> - Control element display type</li>
+            <li><a href="ztheme-text.html">Text Utilities</a> - Text alignment and styling</li>
+            <li><a href="ztheme-tables.html">Tables</a> - Table styling and structure</li>
         </ul>
     </section>
 
     <!-- Navigation -->
     <div style="display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #dee2e6;">
-        <a href="/ztheme/text" class="zBtn zBtn-outline-primary">&larr; Text Utilities</a>
-        <a href="/ztheme" class="zBtn zBtn-primary">Back to zTheme</a>
-        <a href="/ztheme/visibility" class="zBtn zBtn-outline-primary">Visibility &rarr;</a>
+        <a href="ztheme-text.html" class="zBtn zBtn-outline-primary">&larr; Text Utilities</a>
+        <a href="../ztheme.html" class="zBtn zBtn-primary">Back to zTheme</a>
+        <a href="ztheme-visibility.html" class="zBtn zBtn-outline-primary">Visibility &rarr;</a>
     </div>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

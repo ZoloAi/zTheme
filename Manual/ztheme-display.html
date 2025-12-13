@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Display Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <h1 class="zmb-2">📺 Display Utilities</h1>
     <p class="zLead text-muted zmb-6">
@@ -420,10 +438,10 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/flex">Flex</a> - Flexbox layout utilities (use with .zD-flex)</li>
-            <li><a href="/ztheme/visibility">Visibility</a> - Visibility utilities (hide without removing from layout)</li>
-            <li><a href="/ztheme/visually-hidden">Visually Hidden</a> - Accessibility-friendly hiding</li>
-            <li><a href="/ztheme/breakpoints">Breakpoints</a> - Responsive design breakpoints</li>
+            <li><a href="ztheme-flex.html">Flex</a> - Flexbox layout utilities (use with .zD-flex)</li>
+            <li><a href="ztheme-visibility.html">Visibility</a> - Visibility utilities (hide without removing from layout)</li>
+            <li><a href="ztheme-visually-hidden.html">Visually Hidden</a> - Accessibility-friendly hiding</li>
+            <li><a href="ztheme-breakpoints.html">Breakpoints</a> - Responsive design breakpoints</li>
         </ul>
     </section>
 
@@ -432,5 +450,13 @@
 <script>
 // No JavaScript needed for display utilities - they're pure CSS!
 </script>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

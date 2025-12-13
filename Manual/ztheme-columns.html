@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <!-- Breadcrumb -->
     <nav class="zSmall zmb-3">
-        <a href="/ztheme" class="zPrimary">zTheme</a>
+        <a href="../ztheme.html" class="zPrimary">zTheme</a>
         <span class="zMuted zmx-2">›</span>
-        <a href="/ztheme" class="zPrimary">{{ section }}</a>
+        <a href="../ztheme.html" class="zPrimary">Components</a>
         <span class="zMuted zmx-2">›</span>
-        <span>{{ title }}</span>
+        <span>Columns</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Columns</h1>
     <p class="zLead text-muted zmb-5">
         Reorder and offset columns for flexible layouts
     </p>
@@ -74,7 +92,7 @@
     <!-- Responsive Ordering -->
     <section class="zmy-6">
         <h2>Responsive Ordering</h2>
-        <p>Change order at different <a href="/ztheme/breakpoints" class="zPrimary">breakpoints</a>. Resize your browser to see the sidebar and main content swap positions:</p>
+        <p>Change order at different <a href="ztheme-breakpoints.html" class="zPrimary">breakpoints</a>. Resize your browser to see the sidebar and main content swap positions:</p>
         
         <div class="zRow zmy-5">
             <div class="zCol-12 zCol-md-4 zOrder-md-2 zp-3 zmb-3" style="background: #f3e5f5; border: 2px solid #9c27b0; text-align: center;">
@@ -194,16 +212,24 @@
     <section class="zmy-6">
         <h2>Related Topics</h2>
         <ul class="lh-lg zmy-3">
-            <li><a href="/ztheme/grid" class="zPrimary">Grid</a> - Core grid system</li>
-            <li><a href="/ztheme/gutters" class="zPrimary">Gutters</a> - Spacing between columns</li>
+            <li><a href="ztheme-grid.html" class="zPrimary">Grid</a> - Core grid system</li>
+            <li><a href="ztheme-gutters.html" class="zPrimary">Gutters</a> - Spacing between columns</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav class="zmt-6 zpt-5 zD-flex zFlex-between" style="border-top: 2px solid var(--borderColor, #dee2e6);">
-        <a href="/ztheme/grid" class="zPrimary">← Previous: Grid</a>
-        <a href="/ztheme/gutters" class="zPrimary">Next: Gutters →</a>
+        <a href="ztheme-grid.html" class="zPrimary">← Previous: Grid</a>
+        <a href="ztheme-gutters.html" class="zPrimary">Next: Gutters →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

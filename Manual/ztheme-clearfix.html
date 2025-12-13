@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clearfix - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
-        <a href="/ztheme" style="color: var(--color-primary);">zTheme</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">zTheme</a>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ section }}</span>
+        <span style="color: var(--color-darkgray);">Components</span>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ title }}</span>
+        <span style="color: var(--color-darkgray);">Clearfix</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Clearfix</h1>
     <p style="font-size: 1.25rem; color: var(--color-gray); margin-bottom: 2rem;">
         A legacy CSS utility that clears floated elements—rarely needed in modern Flexbox/Grid layouts, but essential for older code.
     </p>
@@ -256,17 +274,17 @@
         <h2>Related Topics</h2>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/utilities" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-utilities.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Float Utilities</strong> → See all float classes (<code>.zFloat-start</code>, <code>.zFloat-end</code>)
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/display" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-display.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Display Utilities</strong> → Modern layout with Flexbox and Grid
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/position" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-position.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Position Helper</strong> → Positioning utilities
                 </a>
             </li>
@@ -275,10 +293,18 @@
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/tooltips" style="color: var(--color-primary);">← Previous: Tooltips</a>
-        <a href="/ztheme" style="color: var(--color-primary);">Back to Helpers</a>
+        <a href="ztheme-tooltips.html" style="color: var(--color-primary);">← Previous: Tooltips</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">Back to Helpers</a>
     </nav>
 </div>
 
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

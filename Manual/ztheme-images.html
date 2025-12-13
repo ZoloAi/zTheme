@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
-        <a href="/ztheme" style="color: var(--color-primary);">zTheme</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">zTheme</a>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
         <span style="color: var(--color-darkgray);">Content</span>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ title }}</span>
+        <span style="color: var(--color-darkgray);">Images</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Images</h1>
     <p style="font-size: 1.25rem; color: var(--color-gray); margin-bottom: 2rem;">
         Make images look great on any device with responsive sizing, styling options, and alignment utilities.
     </p>
@@ -95,7 +113,7 @@
         <p>Position images within their containers using alignment utilities. You can float images to wrap text around them, center them, or align them within text. These utilities work on any element - images just benefit from them frequently!</p>
         
         <div style="background: #f5f5f5; padding: 1rem; border-left: 4px solid var(--color-primary); margin: 2rem 0;">
-            <p style="margin: 0;"><strong>→</strong> For more about Float, Display, and Text Alignment utilities, see <a href="/ztheme/utilities" style="color: var(--color-primary);">Utilities Overview</a></p>
+            <p style="margin: 0;"><strong>→</strong> For more about Float, Display, and Text Alignment utilities, see <a href="ztheme-utilities.html" style="color: var(--color-primary);">Utilities Overview</a></p>
         </div>
         
         <h3>Text Wrapping</h3>
@@ -264,7 +282,7 @@
         <p>Here are some real-world examples combining the techniques you've learned. Copy and adapt these for your own projects!</p>
         
         <h3>Profile Picture</h3>
-        <p>Use <code>.zRounded-circle</code> for circular profile images. Combine with <a href="/ztheme/utilities" style="color: var(--color-primary);">flexbox utilities</a> for nice user cards.</p>
+        <p>Use <code>.zRounded-circle</code> for circular profile images. Combine with <a href="ztheme-utilities.html" style="color: var(--color-primary);">flexbox utilities</a> for nice user cards.</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: 4px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem;">
@@ -285,7 +303,7 @@
 &lt;/div&gt;</code></pre>
         
         <h3 style="margin-top: 2rem;">Photo Gallery</h3>
-        <p>Use <code>.zImg-thumbnail</code> with <a href="/ztheme/grid" style="color: var(--color-primary);">CSS Grid</a> for responsive galleries that look great on any screen.</p>
+        <p>Use <code>.zImg-thumbnail</code> with <a href="ztheme-grid.html" style="color: var(--color-primary);">CSS Grid</a> for responsive galleries that look great on any screen.</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: 4px; margin: 1rem 0;">
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; justify-items: center;">
@@ -334,9 +352,17 @@
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/typography" style="color: var(--color-primary);">← Previous: Typography</a>
-        <a href="/ztheme/tables" style="color: var(--color-primary);">Next: Tables →</a>
+        <a href="ztheme-typography.html" style="color: var(--color-primary);">← Previous: Typography</a>
+        <a href="ztheme-tables.html" style="color: var(--color-primary);">Next: Tables →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

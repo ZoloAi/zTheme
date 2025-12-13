@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approach - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Approach - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer-lg zpy-5" style="max-width: 900px;">
     <h1 class="zText-success" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Approach</h1>
     <p class="zText-muted" style="font-size: 1.1rem; margin-bottom: 3rem;">
@@ -183,7 +201,7 @@
 
         <blockquote style="background: #fff3cd; padding: 1rem; border-left: 4px solid #ffc107; margin: 2rem 0;">
             <p style="margin: 0;"><strong>⚠️ Note:</strong> Avoid custom z-index values. Use the established scale to prevent 
-            layering conflicts. See <a href="/ztheme/z-index">Z-Index documentation</a> for details.</p>
+            layering conflicts. See <a href="ztheme-z-index.html">Z-Index documentation</a> for details.</p>
         </blockquote>
     </section>
 
@@ -378,19 +396,27 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/breakpoints">Breakpoints</a> - Responsive design breakpoints</li>
-            <li><a href="/ztheme/z-index">Z-Index</a> - Layering system</li>
-            <li><a href="/ztheme/utilities">Utilities</a> - Complete utility reference</li>
-            <li><a href="/ztheme">zTheme Overview</a> - Main documentation</li>
+            <li><a href="ztheme-breakpoints.html">Breakpoints</a> - Responsive design breakpoints</li>
+            <li><a href="ztheme-z-index.html">Z-Index</a> - Layering system</li>
+            <li><a href="ztheme-utilities.html">Utilities</a> - Complete utility reference</li>
+            <li><a href="../ztheme.html">zTheme Overview</a> - Main documentation</li>
         </ul>
     </section>
 
     <!-- Navigation -->
     <div style="display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #dee2e6;">
-        <a href="/ztheme/visibility" class="zBtn zBtn-outline-primary">&larr; Visibility</a>
-        <a href="/ztheme" class="zBtn zBtn-primary">Back to zTheme</a>
+        <a href="ztheme-visibility.html" class="zBtn zBtn-outline-primary">&larr; Visibility</a>
+        <a href="../ztheme.html" class="zBtn zBtn-primary">Back to zTheme</a>
         <span style="color: #999;"><!-- Icons next --></span>
     </div>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

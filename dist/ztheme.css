@@ -8827,8 +8827,8 @@ body.zModal-open {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  background-color: var(--mainBase, #ffffff);
-  border-bottom: 1px solid var(--borderColor, #dee2e6);
+  background-color: var(--color-white, #ffffff);
+  border-bottom: 1px solid var(--color-border, #dee2e6);
 }
 
 /* Brand/Logo */
@@ -8841,13 +8841,13 @@ body.zModal-open {
   font-weight: 600;
   line-height: inherit;
   white-space: nowrap;
-  color: var(--textPrimary, #212529);
+  color: var(--color-body, #212529);
   text-decoration: none;
 }
 
 .zNavbar-brand:hover,
 .zNavbar-brand:focus {
-  color: var(--mainAccent, #0d6efd);
+  color: var(--color-primary, #A2D46E);
   text-decoration: none;
 }
 
@@ -8873,32 +8873,33 @@ body.zModal-open {
 .zNav-link {
   display: inline-block;
   padding: 0.5rem 1rem;
-  color: var(--textSecondary, #6c757d);
+  color: var(--color-gray, #6c757d);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius, 0.25rem);
   font-weight: 500;
   white-space: nowrap;
 }
 
 .zNav-link:hover,
 .zNav-link:focus {
-  color: var(--mainAccent, #0d6efd);
-  background-color: var(--hoverBg, #f8f9fa);
+  color: var(--color-primary, #A2D46E);
+  background-color: var(--color-light, #f8f9fa);
 }
 
 /* Active State */
 .zNav-link.active {
-  color: var(--mainAccent, #0d6efd);
+  color: var(--color-primary, #A2D46E);
   font-weight: 600;
-  background-color: var(--activeBg, #e7f1ff);
+  background-color: rgba(162, 212, 110, 0.15);
 }
 
 /* Disabled State */
 .zNav-link.disabled {
-  color: var(--textMuted, #adb5bd);
+  color: var(--color-gray, #adb5bd);
   pointer-events: none;
   cursor: default;
+  opacity: 0.6;
 }
 
 /* Navbar Toggle (Mobile) */
@@ -8907,14 +8908,14 @@ body.zModal-open {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid var(--borderColor, #dee2e6);
-  border-radius: 0.25rem;
+  border: 1px solid var(--color-border, #dee2e6);
+  border-radius: var(--border-radius, 0.25rem);
   cursor: pointer;
   display: none;
 }
 
 .zNavbar-toggler:hover {
-  background-color: var(--hoverBg, #f8f9fa);
+  background-color: var(--color-light, #f8f9fa);
 }
 
 .zNavbar-toggler-icon {
@@ -8950,13 +8951,13 @@ body.zModal-open {
   padding: 0.5rem 0;
   margin: 0.25rem 0 0;
   font-size: 1rem;
-  color: var(--textPrimary, #212529);
+  color: var(--color-body, #212529);
   text-align: left;
   list-style: none;
-  background-color: var(--mainBase, #ffffff);
+  background-color: var(--color-white, #ffffff);
   background-clip: padding-box;
-  border: 1px solid var(--borderColor, #dee2e6);
-  border-radius: 0.375rem;
+  border: 1px solid var(--color-border, #dee2e6);
+  border-radius: var(--border-radius-lg, 0.375rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
@@ -8984,7 +8985,7 @@ body.zModal-open {
   padding: 0.5rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: var(--textPrimary, #212529);
+  color: var(--color-body, #212529);
   text-align: left;
   text-decoration: none;
   white-space: nowrap;
@@ -8996,64 +8997,64 @@ body.zModal-open {
 
 .zNav-dropdown-item:hover,
 .zNav-dropdown-item:focus {
-  color: var(--textPrimary, #212529);
-  background-color: var(--hoverBg, #f8f9fa);
+  color: var(--color-dark, #212529);
+  background-color: var(--color-light, #f8f9fa);
 }
 
 .zNav-dropdown-item.active {
-  color: var(--mainBase, #ffffff);
-  background-color: var(--mainAccent, #0d6efd);
+  color: var(--color-white, #ffffff);
+  background-color: var(--color-primary, #A2D46E);
 }
 
 /* Utilities */
 .zNavbar-text {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: var(--textSecondary, #6c757d);
+  color: var(--color-gray, #6c757d);
 }
 
 /* Light Theme */
 .zNavbar-light {
-  background-color: var(--lightBg, #f8f9fa);
-  border-bottom: 1px solid var(--borderColor, #dee2e6);
+  background-color: var(--color-light, #f8f9fa);
+  border-bottom: 1px solid var(--color-border, #dee2e6);
 }
 
 .zNavbar-light .zNavbar-brand {
-  color: var(--textPrimary, #212529);
+  color: var(--color-body, #212529);
 }
 
 .zNavbar-light .zNav-link {
-  color: var(--textSecondary, #6c757d);
+  color: var(--color-gray, #6c757d);
 }
 
 .zNavbar-light .zNav-link:hover {
-  color: var(--mainAccent, #0d6efd);
+  color: var(--color-primary, #A2D46E);
 }
 
 .zNavbar-light .zNav-link.active {
-  color: var(--mainAccent, #0d6efd);
+  color: var(--color-primary, #A2D46E);
 }
 
 /* Dark Theme */
 .zNavbar-dark {
-  background-color: var(--darkBg, #212529);
-  border-bottom: 1px solid var(--darkBorder, #373b3e);
+  background-color: var(--color-dark, #212529);
+  border-bottom: 1px solid var(--color-darkgray, #373b3e);
 }
 
 .zNavbar-dark .zNavbar-brand {
-  color: var(--lightText, #ffffff);
+  color: var(--color-white, #ffffff);
 }
 
 .zNavbar-dark .zNav-link {
-  color: var(--lightText, rgba(255, 255, 255, 0.7));
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .zNavbar-dark .zNav-link:hover {
-  color: var(--lightText, #ffffff);
+  color: var(--color-white, #ffffff);
 }
 
 .zNavbar-dark .zNav-link.active {
-  color: var(--lightText, #ffffff);
+  color: var(--color-white, #ffffff);
 }
 
 /* Responsive Breakpoints */

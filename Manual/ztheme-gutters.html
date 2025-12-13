@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutters - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <!-- Breadcrumb -->
     <nav class="zSmall zmb-3">
-        <a href="/ztheme" class="zPrimary">zTheme</a>
+        <a href="../ztheme.html" class="zPrimary">zTheme</a>
         <span class="zMuted zmx-2">›</span>
-        <a href="/ztheme" class="zPrimary">{{ section }}</a>
+        <a href="../ztheme.html" class="zPrimary">Components</a>
         <span class="zMuted zmx-2">›</span>
-        <span>{{ title }}</span>
+        <span>Gutters</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Gutters</h1>
     <p class="zLead text-muted zmb-5">
         Control spacing between columns
     </p>
@@ -23,10 +41,10 @@
     <!-- What Are Gutters -->
     <section class="zmy-6">
         <h2>What Are Gutters?</h2>
-        <p>Gutters are the spacing between columns in a <a href="/ztheme/grid" class="zPrimary">grid</a>. They create visual separation without requiring margin utilities.</p>
+        <p>Gutters are the spacing between columns in a <a href="ztheme-grid.html" class="zPrimary">grid</a>. They create visual separation without requiring margin utilities.</p>
         <ul class="lh-lg zmy-3">
             <li><strong>Default</strong> - 0.75rem (12px) horizontal padding</li>
-            <li><strong>Responsive</strong> - Can change at different <a href="/ztheme/breakpoints" class="zPrimary">breakpoints</a></li>
+            <li><strong>Responsive</strong> - Can change at different <a href="ztheme-breakpoints.html" class="zPrimary">breakpoints</a></li>
             <li><strong>Directional</strong> - Control horizontal, vertical, or both</li>
         </ul>
     </section>
@@ -240,7 +258,7 @@
     <!-- Responsive Gutters -->
     <section class="zmy-6">
         <h2>Responsive Gutters</h2>
-        <p>Change gutter size at different <a href="/ztheme/breakpoints" class="zPrimary">breakpoints</a>. Resize your browser to see the gaps change:</p>
+        <p>Change gutter size at different <a href="ztheme-breakpoints.html" class="zPrimary">breakpoints</a>. Resize your browser to see the gaps change:</p>
         
         <div class="zRow zG-0 zG-md-4 zmy-5">
             <div class="zCol-6 zCol-md-3 zmb-3">
@@ -348,16 +366,24 @@
     <section class="zmy-6">
         <h2>Related Topics</h2>
         <ul class="lh-lg zmy-3">
-            <li><a href="/ztheme/grid" class="zPrimary">Grid</a> - Core grid system</li>
-            <li><a href="/ztheme/columns" class="zPrimary">Columns</a> - Ordering and offsetting</li>
+            <li><a href="ztheme-grid.html" class="zPrimary">Grid</a> - Core grid system</li>
+            <li><a href="ztheme-columns.html" class="zPrimary">Columns</a> - Ordering and offsetting</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav class="zmt-6 zpt-5 zD-flex zFlex-between" style="border-top: 2px solid var(--borderColor, #dee2e6);">
-        <a href="/ztheme/columns" class="zPrimary">← Previous: Columns</a>
-        <a href="/ztheme" class="zPrimary">Back to zTheme Index</a>
+        <a href="ztheme-columns.html" class="zPrimary">← Previous: Columns</a>
+        <a href="../ztheme.html" class="zPrimary">Back to zTheme Index</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

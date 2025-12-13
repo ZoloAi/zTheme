@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reboot - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <!-- Breadcrumb -->
     <nav class="zSmall zmb-3">
-        <a href="/ztheme" class="zPrimary">zTheme</a>
+        <a href="../ztheme.html" class="zPrimary">zTheme</a>
         <span class="zMuted zmx-2">›</span>
-        <a href="/ztheme" class="zPrimary">{{ section }}</a>
+        <a href="../ztheme.html" class="zPrimary">Components</a>
         <span class="zMuted zmx-2">›</span>
-        <span>{{ title }}</span>
+        <span>Reboot</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Reboot</h1>
     <p class="zLead text-muted zmb-5">
         CSS reset for consistent cross-browser styling
     </p>
@@ -27,10 +45,10 @@
         <p class="zmt-3">Think of it as a "fresh start" for your HTML elements - everything looks the same whether someone views your site in Chrome, Firefox, Safari, or any other browser.</p>
         <p class="zmt-3">This is a <strong>quick reference</strong> page showing what Reboot does. For detailed styling options, see the following pages:</p>
         <ul class="lh-lg zmy-3">
-            <li><a href="/ztheme/typography" class="zPrimary">Typography</a> - Headings, paragraphs, lists, and text styling</li>
-            <li><a href="/ztheme/images" class="zPrimary">Images</a> - Image styling and responsive images</li>
-            <li><a href="/ztheme/tables" class="zPrimary">Tables</a> - Table components and styling</li>
-            <li><a href="/ztheme/figures" class="zPrimary">Figures</a> - Figure and caption styling</li>
+            <li><a href="ztheme-typography.html" class="zPrimary">Typography</a> - Headings, paragraphs, lists, and text styling</li>
+            <li><a href="ztheme-images.html" class="zPrimary">Images</a> - Image styling and responsive images</li>
+            <li><a href="ztheme-tables.html" class="zPrimary">Tables</a> - Table components and styling</li>
+            <li><a href="ztheme-figures.html" class="zPrimary">Figures</a> - Figure and caption styling</li>
         </ul>
     </section>
     
@@ -106,7 +124,7 @@
     <section class="zmy-6">
         <h2>Headings and Paragraphs</h2>
         <p>All headings and paragraphs have <code>margin-top</code> removed. Headings have <code>margin-bottom: .5rem</code> and paragraphs have <code>margin-bottom: 1rem</code>.</p>
-        <p class="zmt-2"><strong>→</strong> For detailed typography options, see <a href="/ztheme/typography" class="zPrimary">Typography</a></p>
+        <p class="zmt-2"><strong>→</strong> For detailed typography options, see <a href="ztheme-typography.html" class="zPrimary">Typography</a></p>
         
         <table class="table zmy-3">
             <thead>
@@ -148,7 +166,7 @@
     <section class="zmy-6">
         <h2>Lists</h2>
         <p>All lists have <code>margin-top</code> removed and <code>margin-bottom: 1rem</code>. Nested lists have no <code>margin-bottom</code>.</p>
-        <p class="zmt-2"><strong>→</strong> For more list styling options, see <a href="/ztheme/typography" class="zPrimary">Typography</a></p>
+        <p class="zmt-2"><strong>→</strong> For more list styling options, see <a href="ztheme-typography.html" class="zPrimary">Typography</a></p>
         
         <div class="zmy-5" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
             <div>
@@ -211,7 +229,7 @@
         <pre class="zp-3 zmy-5" style="background: #2d2d2d; color: #f8f8f2; border-radius: 4px; overflow-x: auto;"><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 &lt;p&gt;And another line of sample text here...&lt;/p&gt;</code></pre>
         
-        <p><strong>→</strong> For more text and code styling, see <a href="/ztheme/typography" class="zPrimary">Typography</a></p>
+        <p><strong>→</strong> For more text and code styling, see <a href="ztheme-typography.html" class="zPrimary">Typography</a></p>
     </section>
     
     <!-- Variables, Input, Output -->
@@ -242,7 +260,7 @@
     <section class="zmy-6">
         <h2>Tables</h2>
         <p>Tables are adjusted to style <code>&lt;caption&gt;</code>s, collapse borders, and ensure consistent <code>text-align</code>.</p>
-        <p class="zmt-2"><strong>→</strong> For table variants and styling, see <a href="/ztheme/tables" class="zPrimary">Tables</a></p>
+        <p class="zmt-2"><strong>→</strong> For table variants and styling, see <a href="ztheme-tables.html" class="zPrimary">Tables</a></p>
         
         <table class="table zmy-3" style="border: 1px solid #dee2e6;">
             <caption class="zMuted" style="padding: 0.5rem; text-align: left;">This is an example table, and this is its caption to describe the contents.</caption>
@@ -290,7 +308,7 @@
             <li><code>&lt;button&gt;</code>s have <code>cursor: pointer</code> when not disabled</li>
         </ul>
         
-        <p class="zmt-3"><strong>→</strong> For detailed form styling, see <a href="/ztheme/forms-overview" class="zPrimary">Forms</a></p>
+        <p class="zmt-3"><strong>→</strong> For detailed form styling, see <a href="ztheme-forms-overview.html" class="zPrimary">Forms</a></p>
         
         <h3 class="zmt-5">Pointers on Buttons</h3>
         <p>Elements with <code>role="button"</code> get <code>cursor: pointer</code> to indicate interactivity.</p>
@@ -357,18 +375,26 @@
         
         <p class="zmt-4"><strong>Next Steps:</strong> Reboot gives you a solid foundation. The following pages show you how to style and enhance your content:</p>
         <ul class="lh-lg zmy-3">
-            <li><a href="/ztheme/typography" class="zPrimary">Typography</a> - Style your text</li>
-            <li><a href="/ztheme/images" class="zPrimary">Images</a> - Make images responsive</li>
-            <li><a href="/ztheme/tables" class="zPrimary">Tables</a> - Style data tables</li>
-            <li><a href="/ztheme/figures" class="zPrimary">Figures</a> - Add captions to images</li>
+            <li><a href="ztheme-typography.html" class="zPrimary">Typography</a> - Style your text</li>
+            <li><a href="ztheme-images.html" class="zPrimary">Images</a> - Make images responsive</li>
+            <li><a href="ztheme-tables.html" class="zPrimary">Tables</a> - Style data tables</li>
+            <li><a href="ztheme-figures.html" class="zPrimary">Figures</a> - Add captions to images</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav class="zmt-6 zpt-5 zD-flex zFlex-between" style="border-top: 2px solid var(--borderColor, #dee2e6);">
-        <a href="/ztheme" class="zPrimary">← Back to zTheme Index</a>
-        <a href="/ztheme/typography" class="zPrimary">Next: Typography →</a>
+        <a href="../ztheme.html" class="zPrimary">← Back to zTheme Index</a>
+        <a href="ztheme-typography.html" class="zPrimary">Next: Typography →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

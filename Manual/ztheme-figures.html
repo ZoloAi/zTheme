@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figures - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
-        <a href="/ztheme" style="color: var(--color-primary);">zTheme</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">zTheme</a>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
         <span style="color: var(--color-darkgray);">Content</span>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ title }}</span>
+        <span style="color: var(--color-darkgray);">Figures</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Figures</h1>
     <p style="font-size: 1.25rem; color: var(--color-gray); margin-bottom: 2rem;">
         Use semantic HTML elements to display images with captions
     </p>
@@ -114,7 +132,7 @@
     <!-- Image Styling -->
     <section style="margin: 3rem 0;">
         <h2>Image Styling</h2>
-        <p>Combine figures with image utilities from the <a href="/ztheme/images" style="color: var(--color-primary);">Images page</a> for different visual effects:</p>
+        <p>Combine figures with image utilities from the <a href="ztheme-images.html" style="color: var(--color-primary);">Images page</a> for different visual effects:</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: 4px; margin: 2rem 0;">
             <div style="display: grid; gap: 2rem;">
@@ -272,9 +290,17 @@ figcaption {
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/tables" style="color: var(--color-primary);">← Previous: Tables</a>
-        <a href="/ztheme" style="color: var(--color-primary);">Back to zTheme Index →</a>
+        <a href="ztheme-tables.html" style="color: var(--color-primary);">← Previous: Tables</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">Back to zTheme Index →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

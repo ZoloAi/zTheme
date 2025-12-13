@@ -1,23 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block extra_head %}
-<!-- Validation JavaScript is now handled by zTheme.js (loaded globally in base.html) -->
-{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#forms">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#forms">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Validation</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Validation</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Guide users with instant feedback on their form input using HTML5 validation and zTheme styling
     </p>
@@ -368,7 +382,7 @@
     <!-- Validation with Input Groups -->
     <section style="margin: 3rem 0;">
         <h2>Validation with Input Groups</h2>
-        <p>When validating <a href="/ztheme/input-group" class="zPrimary">input groups</a>, wrap the input group in a <code>.zHas-validation</code> div to ensure proper styling:</p>
+        <p>When validating <a href="ztheme-input-group.html" class="zPrimary">input groups</a>, wrap the input group in a <code>.zHas-validation</code> div to ensure proper styling:</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: var(--border-radius, 4px); margin: 2rem 0;">
             <form class="zValidation" novalidate>
@@ -516,17 +530,26 @@
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/form-control" class="zPrimary">Form Controls</a> - Input, textarea, and form basics</li>
-            <li><a href="/ztheme/input-group" class="zPrimary">Input Groups</a> - Add-ons and combined inputs</li>
-            <li><a href="/ztheme/floating-labels" class="zPrimary">Floating Labels</a> - Animated label patterns</li>
-            <li><a href="/ztheme/form-layout" class="zPrimary">Form Layout</a> - Structure multi-column forms</li>
+            <li><a href="ztheme-form-control.html" class="zPrimary">Form Controls</a> - Input, textarea, and form basics</li>
+            <li><a href="ztheme-input-group.html" class="zPrimary">Input Groups</a> - Add-ons and combined inputs</li>
+            <li><a href="ztheme-floating-labels.html" class="zPrimary">Floating Labels</a> - Animated label patterns</li>
+            <li><a href="ztheme-form-layout.html" class="zPrimary">Form Layout</a> - Structure multi-column forms</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/form-layout" class="zPrimary">← Previous: Layout</a>
-        <a href="/ztheme" class="zPrimary">Back to zTheme Showcase</a>
+        <a href="ztheme-form-layout.html" class="zPrimary">← Previous: Layout</a>
+        <a href="../ztheme.html" class="zPrimary">Back to zTheme Showcase</a>
     </nav>
 </div>
-{% endblock %}
+
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

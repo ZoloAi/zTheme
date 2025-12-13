@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Containers - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <!-- Breadcrumb -->
     <nav class="zSmall zmb-3">
-        <a href="/ztheme" class="zPrimary">zTheme</a>
+        <a href="../ztheme.html" class="zPrimary">zTheme</a>
         <span class="zMuted zmx-2">›</span>
-        <a href="/ztheme" class="zPrimary">{{ section }}</a>
+        <a href="../ztheme.html" class="zPrimary">Components</a>
         <span class="zMuted zmx-2">›</span>
-        <span>{{ title }}</span>
+        <span>Containers</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Containers</h1>
     <p class="zLead text-muted zmb-5">
         Center and constrain your content at different screen sizes
     </p>
@@ -36,7 +54,7 @@
         </div>
         
         <div class="zp-4 zmt-4" style="background: #f5f5f5; border-left: 4px solid var(--color-gray);">
-            <strong>📝 Note:</strong> Rows and columns must be inside a container for <a href="/ztheme/grid" class="zPrimary">grid layouts</a> to work correctly.
+            <strong>📝 Note:</strong> Rows and columns must be inside a container for <a href="ztheme-grid.html" class="zPrimary">grid layouts</a> to work correctly.
         </div>
     </section>
 
@@ -230,9 +248,17 @@
     
     <!-- Navigation -->
     <nav class="zmt-6 zpt-5 zD-flex zFlex-between" style="border-top: 2px solid var(--borderColor, #dee2e6);">
-        <a href="/ztheme/breakpoints" class="zPrimary">← Previous: Breakpoints</a>
-        <a href="/ztheme/grid" class="zPrimary">Next: Grid →</a>
+        <a href="ztheme-breakpoints.html" class="zPrimary">← Previous: Breakpoints</a>
+        <a href="ztheme-grid.html" class="zPrimary">Next: Grid →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

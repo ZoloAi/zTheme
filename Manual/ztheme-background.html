@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Background Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <h1 class="zmb-2">🎨 Background Utilities</h1>
     <p class="zLead text-muted zmb-6">
@@ -384,10 +402,10 @@
     <section class="zmy-6">
         <h2 class="zInfo">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/colors">Colors</a> - Text color utilities (.zText-*)</li>
-            <li><a href="/ztheme/borders">Borders</a> - Border color utilities</li>
-            <li><a href="/ztheme/shadows">Shadows</a> - Box shadow utilities</li>
-            <li><a href="/ztheme/opacity">Opacity</a> - Opacity utilities</li>
+            <li><a href="ztheme-colors.html">Colors</a> - Text color utilities (.zText-*)</li>
+            <li><a href="ztheme-borders.html">Borders</a> - Border color utilities</li>
+            <li><a href="ztheme-shadows.html">Shadows</a> - Box shadow utilities</li>
+            <li><a href="ztheme-opacity.html">Opacity</a> - Opacity utilities</li>
         </ul>
     </section>
 
@@ -396,5 +414,13 @@
 <script>
 // No JavaScript needed for background utilities - they're pure CSS!
 </script>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

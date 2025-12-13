@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Labels - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#forms">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#forms">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Floating Labels</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Floating Labels</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Create modern, space-efficient forms where labels animate into placeholders.
     </p>
@@ -156,7 +174,7 @@
     <!-- In Grid Layouts -->
     <section style="margin: 3rem 0;">
         <h2>In Grid Layouts</h2>
-        <p>Floating labels work seamlessly with the <a href="/ztheme/grid" class="zPrimary">zTheme grid system</a>:</p>
+        <p>Floating labels work seamlessly with the <a href="ztheme-grid.html" class="zPrimary">zTheme grid system</a>:</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: var(--border-radius, 4px); margin: 2rem 0;">
             <div class="zRow zG-2">
@@ -251,19 +269,26 @@
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/form-control" class="zPrimary">Form Control</a> - Text inputs and textareas</li>
-            <li><a href="/ztheme/select" class="zPrimary">Select</a> - Dropdown menus</li>
-            <li><a href="/ztheme/input-group" class="zPrimary">Input Group</a> - Combining inputs with labels/buttons</li>
-            <li><a href="/ztheme/grid" class="zPrimary">Grid</a> - Layout system for responsive forms</li>
+            <li><a href="ztheme-form-control.html" class="zPrimary">Form Control</a> - Text inputs and textareas</li>
+            <li><a href="ztheme-select.html" class="zPrimary">Select</a> - Dropdown menus</li>
+            <li><a href="ztheme-input-group.html" class="zPrimary">Input Group</a> - Combining inputs with labels/buttons</li>
+            <li><a href="ztheme-grid.html" class="zPrimary">Grid</a> - Layout system for responsive forms</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/input-group" class="zPrimary">← Previous: Input Group</a>
-        <a href="/ztheme/form-layout" class="zPrimary">Next: Layout →</a>
+        <a href="ztheme-input-group.html" class="zPrimary">← Previous: Input Group</a>
+        <a href="ztheme-form-layout.html" class="zPrimary">Next: Layout →</a>
     </nav>
 </div>
-{% endblock %}
+
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
 
 
+</body>
+</html>

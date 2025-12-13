@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinners - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
-        <a href="/ztheme" style="color: var(--color-primary);">zTheme</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">zTheme</a>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ section }}</span>
+        <span style="color: var(--color-darkgray);">Components</span>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ title }}</span>
+        <span style="color: var(--color-darkgray);">Spinners</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Spinners</h1>
     <p style="font-size: 1.25rem; color: var(--color-gray); margin-bottom: 2rem;">
         Pure CSS loading indicators built with HTML and CSS—no JavaScript required.
     </p>
@@ -388,17 +406,17 @@
         <h2>Related Topics</h2>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/progress" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-progress.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Progress</strong> → For operations with known completion percentage
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/buttons" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-buttons.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Buttons</strong> → Where spinners are commonly used
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/alerts" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-alerts.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Alerts</strong> → Show completion or error messages
                 </a>
             </li>
@@ -407,9 +425,17 @@
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/scrollspy" style="color: var(--color-primary);">← Previous: Scrollspy</a>
-        <a href="/ztheme" style="color: var(--color-primary);">Back to Components</a>
+        <a href="ztheme-scrollspy.html" style="color: var(--color-primary);">← Previous: Scrollspy</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">Back to Components</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

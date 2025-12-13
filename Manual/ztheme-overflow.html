@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Overflow Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -510,11 +528,11 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/sizing">Sizing</a> - Width and height utilities (required for overflow)</li>
-            <li><a href="/ztheme/text-truncation">Text Truncation</a> - Helper for truncating text</li>
-            <li><a href="/ztheme/display">Display</a> - Display property utilities</li>
-            <li><a href="/ztheme/position">Position</a> - Position utilities</li>
-            <li><a href="/ztheme/spacing">Spacing</a> - Padding utilities for scrollable areas</li>
+            <li><a href="ztheme-sizing.html">Sizing</a> - Width and height utilities (required for overflow)</li>
+            <li><a href="ztheme-text-truncation.html">Text Truncation</a> - Helper for truncating text</li>
+            <li><a href="ztheme-display.html">Display</a> - Display property utilities</li>
+            <li><a href="ztheme-position.html">Position</a> - Position utilities</li>
+            <li><a href="ztheme-spacing.html">Spacing</a> - Padding utilities for scrollable areas</li>
         </ul>
     </section>
 
@@ -651,5 +669,13 @@ function setAxisOverflow(axis, value) {
 setAxisOverflow('x', 'auto');
 setAxisOverflow('y', 'auto');
 </script>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#forms">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#forms">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Form Layout</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Form Layout</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Structure your forms with vertical stacking, horizontal layouts, or multi-column grids.
     </p>
@@ -23,7 +41,7 @@
     <!-- Understanding Form Layout -->
     <section style="margin: 3rem 0;">
         <h2>Understanding Form Layout</h2>
-        <p>Form layout determines how form controls, labels, and buttons are arranged on the page. zTheme provides no default styling for the <code>&lt;form&gt;</code> element itself—instead, you use the <a href="/ztheme/grid" class="zPrimary">grid system</a> and spacing utilities to create the layout you need.</p>
+        <p>Form layout determines how form controls, labels, and buttons are arranged on the page. zTheme provides no default styling for the <code>&lt;form&gt;</code> element itself—instead, you use the <a href="ztheme-grid.html" class="zPrimary">grid system</a> and spacing utilities to create the layout you need.</p>
         
         <p><strong>Common layouts:</strong></p>
         <ul style="line-height: 2;">
@@ -74,7 +92,7 @@
     <!-- Multi-Column Forms -->
     <section style="margin: 3rem 0;">
         <h2>Multi-Column Forms</h2>
-        <p>Use the <a href="/ztheme/grid" class="zPrimary">grid system</a> (<code>.zRow</code>, <code>.zCol-*</code>) to create multi-column layouts. Add <code>.zG-3</code> for gutters:</p>
+        <p>Use the <a href="ztheme-grid.html" class="zPrimary">grid system</a> (<code>.zRow</code>, <code>.zCol-*</code>) to create multi-column layouts. Add <code>.zG-3</code> for gutters:</p>
         
         <div style="background: #f5f5f5; padding: 2rem; border-radius: var(--border-radius, 4px); margin: 2rem 0;">
             <form class="zRow zG-3">
@@ -258,18 +276,26 @@
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/grid" class="zPrimary">Grid</a> - Layout system used for form structure</li>
-            <li><a href="/ztheme/gutters" class="zPrimary">Gutters</a> - Spacing between columns</li>
-            <li><a href="/ztheme/form-control" class="zPrimary">Form Control</a> - Input and textarea styling</li>
-            <li><a href="/ztheme/select" class="zPrimary">Select</a> - Dropdown menus</li>
+            <li><a href="ztheme-grid.html" class="zPrimary">Grid</a> - Layout system used for form structure</li>
+            <li><a href="ztheme-gutters.html" class="zPrimary">Gutters</a> - Spacing between columns</li>
+            <li><a href="ztheme-form-control.html" class="zPrimary">Form Control</a> - Input and textarea styling</li>
+            <li><a href="ztheme-select.html" class="zPrimary">Select</a> - Dropdown menus</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/floating-labels" class="zPrimary">← Previous: Floating Labels</a>
-        <a href="/ztheme/validation" class="zPrimary">Next: Validation →</a>
+        <a href="ztheme-floating-labels.html" class="zPrimary">← Previous: Floating Labels</a>
+        <a href="ztheme-validation.html" class="zPrimary">Next: Validation →</a>
     </nav>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

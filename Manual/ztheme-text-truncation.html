@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Truncation - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav style="margin-bottom: 1rem; font-size: 0.9rem;">
-        <a href="/ztheme" style="color: var(--color-primary);">zTheme</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">zTheme</a>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ section }}</span>
+        <span style="color: var(--color-darkgray);">Components</span>
         <span style="margin: 0 0.5rem; color: var(--color-gray);">›</span>
-        <span style="color: var(--color-darkgray);">{{ title }}</span>
+        <span style="color: var(--color-darkgray);">Text Truncation</span>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Text Truncation</h1>
     <p style="font-size: 1.25rem; color: var(--color-gray); margin-bottom: 2rem;">
         Truncate long text with an ellipsis (…)—perfect for keeping layouts clean when content overflows.
     </p>
@@ -394,17 +412,17 @@
         <h2>Related Topics</h2>
         <ul style="list-style: none; padding: 0;">
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/tooltips" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-tooltips.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Tooltips</strong> → Show full text on hover
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/cards" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-cards.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Cards</strong> → Use truncation for consistent card heights
                 </a>
             </li>
             <li style="margin: 0.5rem 0;">
-                <a href="/ztheme/tables" style="color: var(--color-primary); text-decoration: none;">
+                <a href="ztheme-tables.html" style="color: var(--color-primary); text-decoration: none;">
                     <strong>Tables</strong> → Prevent column expansion with truncation
                 </a>
             </li>
@@ -413,10 +431,18 @@
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/visually-hidden" style="color: var(--color-primary);">← Previous: Visually Hidden</a>
-        <a href="/ztheme" style="color: var(--color-primary);">Back to Helpers</a>
+        <a href="ztheme-visually-hidden.html" style="color: var(--color-primary);">← Previous: Visually Hidden</a>
+        <a href="../ztheme.html" style="color: var(--color-primary);">Back to Helpers</a>
     </nav>
 </div>
 
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

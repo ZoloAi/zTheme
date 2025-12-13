@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer zp-5">
     <!-- Breadcrumb -->
     <nav class="zmb-3 zSmall">
-        <a href="/ztheme" class="zPrimary">zTheme</a>
+        <a href="../ztheme.html" class="zPrimary">zTheme</a>
         <span class="zMuted zmx-2">›</span>
-        <span class="zMuted">{{ section }}</span>
+        <span class="zMuted">Components</span>
         <span class="zMuted zmx-2">›</span>
-        <span class="zMuted">{{ title }}</span>
+        <span class="zMuted">Typography</span>
     </nav>
 
-    <h1 class="zmt-0">{{ title }}</h1>
+    <h1 class="zmt-0">Typography</h1>
     <p class="zLead zMuted zmb-6">
         Consistent text styling and inline elements.
     </p>
@@ -427,7 +445,7 @@
             <p class="zmb-0"><strong>Semantic elements:</strong> <code>&lt;figure&gt;</code>, <code>&lt;blockquote&gt;</code>, <code>&lt;figcaption&gt;</code>, and <code>&lt;cite&gt;</code> are all semantic HTML - they tell screen readers and search engines the structure and meaning. Only <code>.zBlockquote-footer</code> is a zTheme utility class for visual styling.</p>
         </div>
 
-        <p class="zmt-3"><strong>→</strong> For more about figures, see <a href="/ztheme/figures"
+        <p class="zmt-3"><strong>→</strong> For more about figures, see <a href="ztheme-figures.html"
                 class="zPrimary">Figures</a></p>
     </section>
 
@@ -547,14 +565,23 @@
 
         <p class="zmt-3">We use <code>rem</code> units for all font sizes. This means if a user increases their browser's default font size (for better readability), your text scales up accordingly - much better for accessibility!</p>
 
-        <p class="zmt-4"><strong>→</strong> Learn more about <code>rem</code> units in <a href="/ztheme/reboot"
+        <p class="zmt-4"><strong>→</strong> Learn more about <code>rem</code> units in <a href="ztheme-reboot.html"
                 class="zPrimary">Reboot</a></p>
     </section>
 
     <!-- Navigation -->
     <nav class="zmt-6 zpt-5 zD-flex zFlex-between" style="border-top: 2px solid var(--borderColor, #dee2e6);">
-        <a href="/ztheme/reboot" class="zPrimary">← Previous: Reboot</a>
-        <a href="/ztheme/images" class="zPrimary">Next: Images →</a>
+        <a href="ztheme-reboot.html" class="zPrimary">← Previous: Reboot</a>
+        <a href="ztheme-images.html" class="zPrimary">Next: Images →</a>
     </nav>
 </div>
-{% endblock %}
+
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

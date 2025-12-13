@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Float Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -22,8 +40,8 @@
         </p>
         <blockquote style="background: #fff3cd; padding: 1rem; border-left: 4px solid #ffc107; margin: 2rem 0;">
             <p style="margin: 0;"><strong>⚠️ Modern Note:</strong> While float utilities still work perfectly for 
-            wrapping content around elements (like images in text), consider using <a href="/ztheme/flex">Flexbox</a> 
-            or <a href="/ztheme/grid">Grid</a> for complex layouts. Float utilities have no effect on flex items!</p>
+            wrapping content around elements (like images in text), consider using <a href="ztheme-flex.html">Flexbox</a> 
+            or <a href="ztheme-grid.html">Grid</a> for complex layouts. Float utilities have no effect on flex items!</p>
         </blockquote>
     </section>
 
@@ -249,8 +267,8 @@
 
         <blockquote style="background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin: 2rem 0;">
             <p style="margin: 0;"><strong>💡 Tip:</strong> Float utilities are perfect for traditional document-style 
-            layouts (images in text, pull quotes) but <a href="/ztheme/flex">Flexbox</a> and 
-            <a href="/ztheme/grid">Grid</a> are better for modern app-style layouts with complex alignment needs.</p>
+            layouts (images in text, pull quotes) but <a href="ztheme-flex.html">Flexbox</a> and 
+            <a href="ztheme-grid.html">Grid</a> are better for modern app-style layouts with complex alignment needs.</p>
         </blockquote>
     </section>
 
@@ -296,7 +314,7 @@
                 </tr>
                 <tr>
                     <td><strong>Clearfix</strong></td>
-                    <td><code>.zClearfix</code> (see <a href="/ztheme/clearfix">Clearfix helper</a>)</td>
+                    <td><code>.zClearfix</code> (see <a href="ztheme-clearfix.html">Clearfix helper</a>)</td>
                     <td><code>clear: both</code></td>
                 </tr>
             </tbody>
@@ -311,15 +329,23 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/clearfix">Clearfix</a> - Clear floated elements (.zClearfix)</li>
-            <li><a href="/ztheme/flex">Flex</a> - Modern flexbox layout utilities</li>
-            <li><a href="/ztheme/grid">Grid</a> - CSS Grid utilities for complex layouts</li>
-            <li><a href="/ztheme/display">Display</a> - Display property utilities</li>
-            <li><a href="/ztheme/position">Position</a> - Position utilities (absolute, relative, etc.)</li>
-            <li><a href="/ztheme/breakpoints">Breakpoints</a> - Responsive breakpoint reference</li>
+            <li><a href="ztheme-clearfix.html">Clearfix</a> - Clear floated elements (.zClearfix)</li>
+            <li><a href="ztheme-flex.html">Flex</a> - Modern flexbox layout utilities</li>
+            <li><a href="ztheme-grid.html">Grid</a> - CSS Grid utilities for complex layouts</li>
+            <li><a href="ztheme-display.html">Display</a> - Display property utilities</li>
+            <li><a href="ztheme-position.html">Position</a> - Position utilities (absolute, relative, etc.)</li>
+            <li><a href="ztheme-breakpoints.html">Breakpoints</a> - Responsive breakpoint reference</li>
         </ul>
     </section>
 
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

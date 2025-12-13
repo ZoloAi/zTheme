@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#components">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#components">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Accordion</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Accordion</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Organize content into collapsible panels that expand and collapse with smooth animations
     </p>
@@ -426,20 +444,28 @@ window.zTheme.initAccordion();</code></pre>
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/collapse" class="zPrimary">Collapse</a> - Generic collapsible content (coming soon)</li>
-            <li><a href="/ztheme/modal" class="zPrimary">Modal</a> - Popup dialogs for focused content</li>
-            <li><a href="/ztheme/tabs" class="zPrimary">Tabs</a> - Alternative navigation pattern (coming soon)</li>
-            <li><a href="/ztheme/cards" class="zPrimary">Cards</a> - Content containers (coming soon)</li>
+            <li><a href="ztheme-collapse.html" class="zPrimary">Collapse</a> - Generic collapsible content (coming soon)</li>
+            <li><a href="ztheme-modal.html" class="zPrimary">Modal</a> - Popup dialogs for focused content</li>
+            <li><a href="ztheme-tabs.html" class="zPrimary">Tabs</a> - Alternative navigation pattern (coming soon)</li>
+            <li><a href="ztheme-cards.html" class="zPrimary">Cards</a> - Content containers (coming soon)</li>
         </ul>
     </section>
     
     <!-- Navigation -->
     <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--color-border); display: flex; justify-content: space-between;">
-        <a href="/ztheme/validation" class="zPrimary">← Previous: Validation</a>
-        <a href="/ztheme" class="zPrimary">Back to zTheme Showcase</a>
+        <a href="ztheme-validation.html" class="zPrimary">← Previous: Validation</a>
+        <a href="../ztheme.html" class="zPrimary">Back to zTheme Showcase</a>
     </nav>
 </div>
 
 <!-- Accordion JavaScript is handled by zTheme.js (loaded globally in base.html) -->
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

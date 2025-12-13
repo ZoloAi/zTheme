@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#components">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#components">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Cards</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Cards</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Flexible and extensible content containers with multiple variants and options for headers, footers, images, and contextual styling
     </p>
@@ -624,12 +642,20 @@
     <section style="margin: 3rem 0;">
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
-            <li><a href="/ztheme/grid" class="zInfo">Grid</a> - Layout system for card arrangements</li>
-            <li><a href="/ztheme/buttons" class="zInfo">Buttons</a> - Add action buttons to cards</li>
-            <li><a href="/ztheme/images" class="zInfo">Images</a> - Image styling and responsiveness</li>
-            <li><a href="/ztheme/typography" class="zInfo">Typography</a> - Text styling for card content</li>
+            <li><a href="ztheme-grid.html" class="zInfo">Grid</a> - Layout system for card arrangements</li>
+            <li><a href="ztheme-buttons.html" class="zInfo">Buttons</a> - Add action buttons to cards</li>
+            <li><a href="ztheme-images.html" class="zInfo">Images</a> - Image styling and responsiveness</li>
+            <li><a href="ztheme-typography.html" class="zInfo">Typography</a> - Text styling for card content</li>
         </ul>
     </section>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

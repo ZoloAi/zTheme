@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Icons - zTheme{% endblock %}
-
-{% block content %}
 <!-- Include SVG sprite system -->
 {% include "shared/svg-icons.html" %}
 
@@ -559,19 +577,27 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/buttons">Buttons</a> - Using icons in buttons</li>
-            <li><a href="/ztheme/colors">Colors</a> - Icon color utilities</li>
-            <li><a href="/ztheme/vertical-align">Vertical Align</a> - Aligning icons with text</li>
-            <li><a href="/ztheme/approach">Approach</a> - Design philosophy</li>
+            <li><a href="ztheme-buttons.html">Buttons</a> - Using icons in buttons</li>
+            <li><a href="ztheme-colors.html">Colors</a> - Icon color utilities</li>
+            <li><a href="ztheme-vertical-align.html">Vertical Align</a> - Aligning icons with text</li>
+            <li><a href="ztheme-approach.html">Approach</a> - Design philosophy</li>
         </ul>
     </section>
 
     <!-- Navigation -->
     <div style="display: flex; justify-content: space-between; margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #dee2e6;">
-        <a href="/ztheme/approach" class="zBtn zBtn-outline-primary">&larr; Approach</a>
-        <a href="/ztheme" class="zBtn zBtn-primary">Back to zTheme</a>
+        <a href="ztheme-approach.html" class="zBtn zBtn-outline-primary">&larr; Approach</a>
+        <a href="../ztheme.html" class="zBtn zBtn-primary">Back to zTheme</a>
         <span style="color: #999;"><!-- End of utilities --></span>
     </div>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

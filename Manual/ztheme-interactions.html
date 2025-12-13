@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactions - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Interaction Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -579,11 +597,11 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/buttons">Buttons</a> - Button styles including disabled states</li>
-            <li><a href="/ztheme/forms">Forms</a> - Form controls with disabled attribute</li>
-            <li><a href="/ztheme/modal">Modal</a> - Overlays that block background interaction</li>
-            <li><a href="/ztheme/overflow">Overflow</a> - Control content overflow behavior</li>
-            <li><a href="/ztheme/visibility">Visibility</a> - Show/hide utilities</li>
+            <li><a href="ztheme-buttons.html">Buttons</a> - Button styles including disabled states</li>
+            <li><a href="ztheme-forms.html">Forms</a> - Form controls with disabled attribute</li>
+            <li><a href="ztheme-modal.html">Modal</a> - Overlays that block background interaction</li>
+            <li><a href="ztheme-overflow.html">Overflow</a> - Control content overflow behavior</li>
+            <li><a href="ztheme-visibility.html">Visibility</a> - Show/hide utilities</li>
         </ul>
     </section>
 
@@ -598,5 +616,13 @@ document.querySelectorAll('.zPe-none').forEach(el => {
     });
 });
 </script>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

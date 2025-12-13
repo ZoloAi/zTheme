@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Position Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -579,11 +597,11 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/display">Display</a> - Display property utilities</li>
-            <li><a href="/ztheme/overflow">Overflow</a> - Overflow control for positioned elements</li>
-            <li><a href="/ztheme/sizing">Sizing</a> - Width and height utilities</li>
-            <li><a href="/ztheme/spacing">Spacing</a> - Margin and padding utilities</li>
-            <li><a href="/ztheme/z-index">Z-index</a> - Detailed z-index layering guide</li>
+            <li><a href="ztheme-display.html">Display</a> - Display property utilities</li>
+            <li><a href="ztheme-overflow.html">Overflow</a> - Overflow control for positioned elements</li>
+            <li><a href="ztheme-sizing.html">Sizing</a> - Width and height utilities</li>
+            <li><a href="ztheme-spacing.html">Spacing</a> - Margin and padding utilities</li>
+            <li><a href="ztheme-z-index.html">Z-index</a> - Detailed z-index layering guide</li>
         </ul>
     </section>
 
@@ -631,4 +649,13 @@ function resetPosition() {
     document.getElementById('valueSelect').value = '0';
 }
 </script>
-{% endblock %}
+
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

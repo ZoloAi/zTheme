@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Sizing Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -467,14 +485,22 @@
     <section class="zmy-6">
         <h2 class="zText-info">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/spacing">Spacing</a> - Padding and margin utilities</li>
-            <li><a href="/ztheme/display">Display</a> - Display utilities (block, inline, flex, grid)</li>
-            <li><a href="/ztheme/flex">Flex</a> - Flexbox utilities for layout</li>
-            <li><a href="/ztheme/grid">Grid</a> - Grid system for responsive layouts</li>
-            <li><a href="/ztheme/overflow">Overflow</a> - Control content overflow</li>
+            <li><a href="ztheme-spacing.html">Spacing</a> - Padding and margin utilities</li>
+            <li><a href="ztheme-display.html">Display</a> - Display utilities (block, inline, flex, grid)</li>
+            <li><a href="ztheme-flex.html">Flex</a> - Flexbox utilities for layout</li>
+            <li><a href="ztheme-grid.html">Grid</a> - Grid system for responsive layouts</li>
+            <li><a href="ztheme-overflow.html">Overflow</a> - Control content overflow</li>
         </ul>
     </section>
 
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

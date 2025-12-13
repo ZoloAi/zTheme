@@ -1,19 +1,37 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}{{ section }}: {{ title }} - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
         <ol class="zBreadcrumb">
-            <li class="zBreadcrumb-item"><a href="/ztheme">zTheme</a></li>
-            <li class="zBreadcrumb-item"><a href="/ztheme#components">{{ section }}</a></li>
-            <li class="zBreadcrumb-item zActive" aria-current="page">{{ title }}</li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html">zTheme</a></li>
+            <li class="zBreadcrumb-item"><a href="../ztheme.html#components">Components</a></li>
+            <li class="zBreadcrumb-item zActive" aria-current="page">Buttons</li>
         </ol>
     </nav>
     
-    <h1>{{ title }}</h1>
+    <h1>Buttons</h1>
     <p class="zLead" style="margin-bottom: 2rem;">
         Use zTheme's button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and color variants
     </p>
@@ -222,12 +240,12 @@
         <p>You can style <code>&lt;a&gt;</code> elements as buttons for navigation. Remember to add <code>role="button"</code> for accessibility:</p>
         
         <div class="zDemo" style="padding: 2rem; background: #f8f9fa; border-radius: 0.5rem; margin: 1.5rem 0;">
-            <a href="/ztheme" class="zBtn zBtn-primary" role="button">Link to zTheme</a>
-            <a href="/ztheme/forms-overview" class="zBtn zBtn-outline-info" role="button">Forms Overview</a>
+            <a href="../ztheme.html" class="zBtn zBtn-primary" role="button">Link to zTheme</a>
+            <a href="ztheme-forms-overview.html" class="zBtn zBtn-outline-info" role="button">Forms Overview</a>
         </div>
 
-        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 0.25rem; overflow-x: auto; margin: 1.5rem 0;"><code>&lt;a href="/ztheme" class="zBtn zBtn-primary" role="button"&gt;Link to zTheme&lt;/a&gt;
-&lt;a href="/ztheme/forms-overview" class="zBtn zBtn-outline-info" role="button"&gt;Forms Overview&lt;/a&gt;</code></pre>
+        <pre style="background: #f5f5f5; padding: 1rem; border-radius: 0.25rem; overflow-x: auto; margin: 1.5rem 0;"><code>&lt;a href="../ztheme.html" class="zBtn zBtn-primary" role="button"&gt;Link to zTheme&lt;/a&gt;
+&lt;a href="ztheme-forms-overview.html" class="zBtn zBtn-outline-info" role="button"&gt;Forms Overview&lt;/a&gt;</code></pre>
 
         <blockquote style="margin: 2rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--color-warning); background: #fff8e1;">
             <strong>Semantic Rule:</strong> Use <code>&lt;button&gt;</code> for actions (submit, toggle) and <code>&lt;a&gt;</code> for navigation. This helps screen readers and search engines understand your page structure.
@@ -422,11 +440,19 @@
         <h2>Related Topics</h2>
         <ul style="line-height: 2;">
             <li><strong>Button Group</strong> - Layout component for grouping buttons (separate guide)</li>
-            <li><a href="/ztheme/form-control" class="zInfo">Form Control</a> - Form inputs and labels</li>
-            <li><a href="/ztheme/form-layout" class="zInfo">Form Layout</a> - Arranging forms with the grid</li>
-            <li><a href="/ztheme/utilities" class="zInfo">Utilities</a> - Spacing and display utilities</li>
+            <li><a href="ztheme-form-control.html" class="zInfo">Form Control</a> - Form inputs and labels</li>
+            <li><a href="ztheme-form-layout.html" class="zInfo">Form Layout</a> - Arranging forms with the grid</li>
+            <li><a href="ztheme-utilities.html" class="zInfo">Utilities</a> - Spacing and display utilities</li>
         </ul>
     </section>
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>

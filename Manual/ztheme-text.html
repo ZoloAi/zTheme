@@ -1,8 +1,26 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text - zTheme</title>
+    
+    <!-- zTheme CSS from CDN (Production)
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.css"> -->
+    
+    <!-- zTheme CSS Local (Development - Uncomment to use local files) -->
+    <link rel="stylesheet" href="../dist/ztheme.css">
+    
+    
+    <style>
+        body {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
 
-{% block title %}Text Utilities - zTheme{% endblock %}
-
-{% block content %}
 <div class="zContainer" style="padding: 2rem 0;">
     <!-- Header -->
     <div style="margin-bottom: 3rem;">
@@ -22,7 +40,7 @@
         <blockquote style="background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin: 2rem 0;">
             <p style="margin: 0;"><strong>🌍 International Support:</strong> zTheme text utilities are RTL-aware! 
             For Hebrew (עברית), Arabic (العربية), and other RTL languages, see the 
-            <a href="/ztheme/rtl">RTL Support Guide</a> for complete internationalization setup.</p>
+            <a href="ztheme-rtl.html">RTL Support Guide</a> for complete internationalization setup.</p>
         </blockquote>
     </section>
 
@@ -52,7 +70,7 @@
         <blockquote style="background: #e8f5e9; padding: 1rem; border-left: 4px solid #4caf50; margin: 2rem 0;">
             <p style="margin: 0;"><strong>🌍 RTL Support:</strong> These alignment classes automatically adapt when 
             <code>dir="rtl"</code> is set on the <code>&lt;html&gt;</code> tag. Perfect for Hebrew (עברית), Arabic (العربية), 
-            and other RTL languages! See <a href="/ztheme/rtl">RTL Support Guide</a> for full internationalization setup.</p>
+            and other RTL languages! See <a href="ztheme-rtl.html">RTL Support Guide</a> for full internationalization setup.</p>
         </blockquote>
     </section>
 
@@ -449,15 +467,23 @@
     <section class="zmy-6">
         <h2 class="zText-primary">Related Topics</h2>
         <ul class="lh-lg">
-            <li><a href="/ztheme/typography">Typography</a> - Headings, paragraphs, lists</li>
-            <li><a href="/ztheme/colors">Colors</a> - Text color utilities</li>
-            <li><a href="/ztheme/spacing">Spacing</a> - Margin and padding</li>
-            <li><a href="/ztheme/display">Display</a> - Display utilities</li>
-            <li><a href="/ztheme/overflow">Overflow</a> - Overflow control</li>
-            <li><strong><a href="/ztheme/rtl">RTL Support</a></strong> - Right-to-Left language support (Hebrew, Arabic, Persian, Urdu)</li>
+            <li><a href="ztheme-typography.html">Typography</a> - Headings, paragraphs, lists</li>
+            <li><a href="ztheme-colors.html">Colors</a> - Text color utilities</li>
+            <li><a href="ztheme-spacing.html">Spacing</a> - Margin and padding</li>
+            <li><a href="ztheme-display.html">Display</a> - Display utilities</li>
+            <li><a href="ztheme-overflow.html">Overflow</a> - Overflow control</li>
+            <li><strong><a href="ztheme-rtl.html">RTL Support</a></strong> - Right-to-Left language support (Hebrew, Arabic, Persian, Urdu)</li>
         </ul>
     </section>
 
 </div>
-{% endblock %}
 
+<!-- Load zTheme JavaScript for interactive components (Production) 
+<script src="https://cdn.jsdelivr.net/gh/ZoloAi/zTheme@main/dist/ztheme.js"></script>-->
+
+<!-- zTheme JavaScript Local (Development - Uncomment to use local files) -->
+<script src="../dist/ztheme.js"></script>
+
+
+</body>
+</html>
