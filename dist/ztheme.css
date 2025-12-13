@@ -7282,6 +7282,16 @@ body.zOffcanvas-open[data-offcanvas-scroll="true"] {
   font-weight: 600;
 }
 
+.zNavbar-dark .zNavbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.zNavbar-dark .zNavbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 1);
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
   .zNavbar-toggler {
