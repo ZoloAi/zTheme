@@ -7277,8 +7277,8 @@ body.zOffcanvas-open[data-offcanvas-scroll="true"] {
 }
 
 .zNavbar-dark .zNav-link.active {
-  color: var(--color-dark, #212529);
-  background-color: var(--color-white, rgba(255, 255, 255, 0.95));
+  color: var(--color-dark, #212529) !important;
+  background-color: var(--color-white, rgba(255, 255, 255, 0.95)) !important;
   font-weight: 600;
 }
 
