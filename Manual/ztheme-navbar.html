@@ -21,6 +21,9 @@
 </head>
 <body>
 
+<!-- Include SVG sprite system -->
+{% include "shared/svg-icons.html" %}
+
 <article style="max-width: 900px; margin: 0 auto; padding: 2rem;">
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
@@ -138,13 +141,17 @@
     <!-- Mobile Toggle -->
     <section style="margin: 3rem 0;">
         <h2>Mobile Toggle</h2>
-        <p>Add a <code>.zNavbar-toggler</code> button to show/hide navigation on mobile screens (≤768px):</p>
+        <p>Add a <code>.zNavbar-toggler</code> button to show/hide navigation on mobile screens (≤640px):</p>
 
         <div class="zDemo" style="padding: 2rem; background: #f8f9fa; border-radius: 0.5rem; margin: 1.5rem 0;">
             <nav class="zNavbar">
                 <a href="#" class="zNavbar-brand">MyApp</a>
-                <button class="zNavbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                    <span class="zNavbar-toggler-icon"></span>
+                <button class="zNavbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="zNavbar-toggler-icon" aria-hidden="true">
+                        <svg class="zIcon zIcon-lg" focusable="false">
+                            <use xlink:href="#icon-hamburger-fill"></use>
+                        </svg>
+                    </span>
                 </button>
                 <div class="zNavbar-collapse" id="navbarResponsive">
                     <ul class="zNavbar-nav">
@@ -168,8 +175,8 @@
         <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #4caf50; margin: 1.5rem 0;">
             <p style="margin: 0 0 0.5rem 0;"><strong>📱 Try it:</strong></p>
             <ul style="margin: 0;">
-                <li><strong>Desktop (>768px):</strong> Nav links displayed inline, toggle button hidden</li>
-                <li><strong>Mobile (≤768px):</strong> Toggle button appears, click it to expand/collapse menu vertically</li>
+                <li><strong>Desktop (>640px):</strong> Nav links displayed inline, toggle button hidden</li>
+                <li><strong>Mobile (≤640px):</strong> Toggle button appears, click it to expand/collapse menu vertically</li>
                 <li><strong>Mobile expanded:</strong> Links stack vertically below brand for easy touch interaction</li>
             </ul>
         </div>
@@ -180,8 +187,15 @@
   &lt;!-- Mobile toggle button --&gt;
   &lt;button class="zNavbar-toggler" type="button" 
           data-bs-toggle="collapse" 
-          data-bs-target="#navbarResponsive"&gt;
-    &lt;span class="zNavbar-toggler-icon"&gt;&lt;/span&gt;
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"&gt;
+    &lt;span class="zNavbar-toggler-icon" aria-hidden="true"&gt;
+      &lt;svg class="zIcon zIcon-lg" focusable="false"&gt;
+        &lt;use xlink:href="#icon-hamburger-fill"&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   
   &lt;!-- Collapsible content --&gt;
@@ -304,8 +318,8 @@
         <blockquote style="margin: 2rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--color-info); background: rgba(54, 162, 235, 0.1);">
             <strong>Desktop vs Mobile:</strong>
             <ul style="margin: 0.5rem 0 0 0;">
-                <li><strong>Desktop (>768px):</strong> Dropdowns appear on hover. Click the parent link to navigate.</li>
-                <li><strong>Mobile (≤768px):</strong> Dropdowns toggle on click (no navigation). Displayed inline below parent with full width and subtle background for better touch interaction.</li>
+                <li><strong>Desktop (>640px):</strong> Dropdowns appear on hover. Click the parent link to navigate.</li>
+                <li><strong>Mobile (≤640px):</strong> Dropdowns toggle on click (no navigation). Displayed inline below parent with full width and subtle background for better touch interaction.</li>
             </ul>
         </blockquote>
     </section>
@@ -368,10 +382,16 @@
   
   &lt;button class="zNavbar-toggler" 
           type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
           aria-expanded="false"
           aria-controls="navbarNav"
           aria-label="Toggle navigation"&gt;
-    &lt;span class="zNavbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;span class="zNavbar-toggler-icon" aria-hidden="true"&gt;
+      &lt;svg class="zIcon zIcon-lg" focusable="false"&gt;
+        &lt;use xlink:href="#icon-hamburger-fill"&gt;&lt;/use&gt;
+      &lt;/svg&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   
   &lt;div class="zNavbar-collapse" id="navbarNav"&gt;
@@ -430,7 +450,7 @@
                 </tr>
                 <tr>
                     <td><code>.zNavbar-toggler</code></td>
-                    <td>Mobile menu toggle button (shows ≤768px)</td>
+                    <td>Mobile menu toggle button (shows ≤640px)</td>
                 </tr>
                 <tr>
                     <td><code>.zNavbar-toggler-icon</code></td>
