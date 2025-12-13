@@ -271,13 +271,13 @@
 &lt;/nav&gt;</code></pre>
 
         <h3 style="margin-top: 2rem;">Dark Theme</h3>
-        <p>Use on dark backgrounds for better contrast:</p>
+        <p>Use on dark backgrounds for better contrast. Add <code>.zNavbar-toggler-dark</code> to the toggle button so the icon and border stay visible on smaller screens:</p>
 
         <div class="zDemo" style="padding: 2rem; background: #212529; border-radius: 0.5rem; margin: 1.5rem 0;">
             <nav class="zNavbar zNavbar-dark">
                 <a href="#" class="zNavbar-brand">Dark Brand</a>
-                <button class="zNavbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navDark">
-                    <svg class="zIcon zIcon-lg" style="color: rgba(255,255,255,0.8);">
+                <button class="zNavbar-toggler zNavbar-toggler-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navDark">
+                    <svg class="zIcon zIcon-lg">
                         <use xlink:href="#icon-hamburger-fill"></use>
                     </svg>
                 </button>
@@ -485,6 +485,10 @@
                 <tr>
                     <td><code>.zNavbar-toggler</code></td>
                     <td>Mobile menu toggle button (shows ≤640px)</td>
+                </tr>
+                <tr>
+                    <td><code>.zNavbar-toggler-dark</code></td>
+                    <td>Dark-background variant for toggle button/icon</td>
                 </tr>
                 <tr>
                     <td><code>.zNavbar-toggler-icon</code></td>
