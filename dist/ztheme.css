@@ -7273,10 +7273,13 @@ body.zOffcanvas-open[data-offcanvas-scroll="true"] {
 
 .zNavbar-dark .zNav-link:hover {
   color: var(--color-white, #ffffff);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .zNavbar-dark .zNav-link.active {
   color: var(--color-white, #ffffff);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
 }
 
 /* Responsive Breakpoints */
