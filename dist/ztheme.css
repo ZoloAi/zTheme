@@ -8847,7 +8847,7 @@ body.zModal-open {
 
 .zNavbar-brand:hover,
 .zNavbar-brand:focus {
-  color: var(--color-primary, #A2D46E);
+  color: var(--color-primary, #0d6efd);
   text-decoration: none;
 }
 
@@ -8876,22 +8876,22 @@ body.zModal-open {
   color: var(--color-gray, #6c757d);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
-  border-radius: var(--border-radius, 0.25rem);
+  border-radius: 0.25rem;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .zNav-link:hover,
 .zNav-link:focus {
-  color: var(--color-primary, #A2D46E);
+  color: var(--color-primary, #0d6efd);
   background-color: var(--color-light, #f8f9fa);
 }
 
 /* Active State */
 .zNav-link.active {
-  color: var(--color-primary, #A2D46E);
+  color: var(--color-primary, #0d6efd);
   font-weight: 600;
-  background-color: rgba(162, 212, 110, 0.15);
+  background-color: var(--color-light, #e7f1ff);
 }
 
 /* Disabled State */
@@ -8899,12 +8899,11 @@ body.zModal-open {
   color: var(--color-gray, #adb5bd);
   pointer-events: none;
   cursor: default;
-  opacity: 0.6;
 }
 
 /* Navbar Toggle (Mobile) */
 .zNavbar-toggler {
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -8912,21 +8911,24 @@ body.zModal-open {
   border-radius: var(--border-radius, 0.25rem);
   cursor: pointer;
   display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .zNavbar-toggler:hover {
   background-color: var(--color-light, #f8f9fa);
 }
 
-.zNavbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+/* SVG icon directly in toggler button */
+.zNavbar-toggler .zIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.zNavbar-toggler-icon .zIcon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* Navbar Collapse */
@@ -8957,7 +8959,7 @@ body.zModal-open {
   background-color: var(--color-white, #ffffff);
   background-clip: padding-box;
   border: 1px solid var(--color-border, #dee2e6);
-  border-radius: var(--border-radius-lg, 0.375rem);
+  border-radius: 0.375rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
@@ -8968,7 +8970,7 @@ body.zModal-open {
 }
 
 /* Desktop: Hover to open dropdown */
-@media (min-width: 769px) {
+@media (min-width: 641px) {
   .zNav-dropdown:hover .zNav-dropdown-menu {
     display: block;
   }
@@ -8997,13 +8999,13 @@ body.zModal-open {
 
 .zNav-dropdown-item:hover,
 .zNav-dropdown-item:focus {
-  color: var(--color-dark, #212529);
+  color: var(--color-body, #212529);
   background-color: var(--color-light, #f8f9fa);
 }
 
 .zNav-dropdown-item.active {
   color: var(--color-white, #ffffff);
-  background-color: var(--color-primary, #A2D46E);
+  background-color: var(--color-primary, #0d6efd);
 }
 
 /* Utilities */
@@ -9028,11 +9030,11 @@ body.zModal-open {
 }
 
 .zNavbar-light .zNav-link:hover {
-  color: var(--color-primary, #A2D46E);
+  color: var(--color-primary, #0d6efd);
 }
 
 .zNavbar-light .zNav-link.active {
-  color: var(--color-primary, #A2D46E);
+  color: var(--color-primary, #0d6efd);
 }
 
 /* Dark Theme */
@@ -9046,7 +9048,7 @@ body.zModal-open {
 }
 
 .zNavbar-dark .zNav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-white, rgba(255, 255, 255, 0.7));
 }
 
 .zNavbar-dark .zNav-link:hover {
@@ -9060,15 +9062,18 @@ body.zModal-open {
 /* Responsive Breakpoints */
 @media (max-width: 768px) {
   .zNavbar-toggler {
-    display: block;
+    display: flex;
   }
   
   .zNavbar-collapse {
     display: none;
+    width: 100%;
+    flex-basis: 100%;
   }
   
   .zNavbar-collapse.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   
   .zNavbar-nav {
@@ -9102,6 +9107,12 @@ body.zModal-open {
 @media (min-width: 769px) {
   .zNavbar-collapse {
     display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+  
+  .zNavbar-toggler {
+    display: none !important;
   }
 }
 
