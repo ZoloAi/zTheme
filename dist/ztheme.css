@@ -7900,8 +7900,7 @@ footer {
   justify-content: center !important;
   align-items: center !important;
   text-align: center;
-  padding: 3rem 1.5rem;
-  min-height: 50vh;
+  min-height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
