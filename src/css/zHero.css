@@ -46,7 +46,19 @@
    ============================================ */
 
 .zHero-full {
-  min-height: 100vh !important;
+  min-height: calc(100vh - var(--zHero-offset, 0px)) !important;
+}
+
+@supports (height: 100svh) {
+  .zHero-full {
+    min-height: calc(100svh - var(--zHero-offset, 0px)) !important;
+  }
+}
+
+@supports (height: 100dvh) {
+  .zHero-full {
+    min-height: calc(100dvh - var(--zHero-offset, 0px)) !important;
+  }
 }
 
 .zHero-half {
@@ -236,4 +248,3 @@
     padding: 0.5rem;
   }
 }
-

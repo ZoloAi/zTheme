@@ -22,6 +22,9 @@
   /* Highlight Colors */
   --color-highlight: #ffeb3b; /* Marker yellow for text highlighting */
 
+  /* Layout Measurements */
+  --zNavbar-height: 3.75rem;   /* Default zNavbar height for offset helpers */
+
   /* Border Radii */
   --border-radius: 0.25rem;       /* Default border radius (4px) */
   --border-radius-sm: 0.2rem;     /* Small border radius (3.2px) */
@@ -7909,7 +7912,19 @@ footer {
    ============================================ */
 
 .zHero-full {
-  min-height: 100vh !important;
+  min-height: calc(100vh - var(--zHero-offset, 0px)) !important;
+}
+
+@supports (height: 100svh) {
+  .zHero-full {
+    min-height: calc(100svh - var(--zHero-offset, 0px)) !important;
+  }
+}
+
+@supports (height: 100dvh) {
+  .zHero-full {
+    min-height: calc(100dvh - var(--zHero-offset, 0px)) !important;
+  }
 }
 
 .zHero-half {
