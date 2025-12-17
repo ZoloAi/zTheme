@@ -40,6 +40,22 @@
   margin: 0 0 0.4em 0.4em;
 }
 
+/* Dashboard link active state */
+.zSidebar ul li a.active {
+  background-color: var(--primaryColor);
+  color: var(--mainBase);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  transition: all 0.3s ease;
+}
+
+.zSidebar ul li a:hover {
+  background-color: var(--primaryLight, rgba(0, 123, 255, 0.1));
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  transition: all 0.3s ease;
+}
+
 .zPanel {
     order: 0;
     flex: 1 1 auto;
