@@ -18,20 +18,28 @@
   position: relative;
 }
 
+/* Dashboard navigation links - remove default link styling */
 .zSidebar ul li a {
   font-weight: 700;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: var(--bodyPsize);
+  text-decoration: none;
+  color: var(--secondaryBase);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .zSidebar ul li a span {
   font-weight: 700;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: var(--bodyPsize);
+  color: inherit;
 }
 
 .zSidebar ul li svg {
@@ -43,14 +51,16 @@
 /* Dashboard link active state */
 .zSidebar ul li a.active {
   background-color: var(--primaryColor);
-  color: var(--mainBase);
+  color: var(--mainBase) !important;
   border-radius: 5px;
   padding: 0.5em 1em;
   transition: all 0.3s ease;
 }
 
-.zSidebar ul li a:hover {
+/* Hover state for non-active links */
+.zSidebar ul li a:not(.active):hover {
   background-color: var(--primaryLight, rgba(0, 123, 255, 0.1));
+  color: var(--primaryColor);
   border-radius: 5px;
   padding: 0.5em 1em;
   transition: all 0.3s ease;
@@ -63,8 +73,9 @@
     width: 100%;
     background-color: var(--mainBase);
     border-radius: 10px;
-    padding: 1em;
-    min-height: 100%;
+    padding: 2em;
+    margin-left: 1.5em;
+    min-height: 500px;
 }
 
 .zSidebar ul {
@@ -72,10 +83,13 @@
   padding: 0;
   list-style: none;
   width: max-content;
+  min-width: 200px;
 }
+
 .zSidebar li {
-  padding: 1em 0;
-  width: max-content;
+  padding: 0.25em 0;
+  width: 100%;
+  list-style-type: none;
 }
 
 .zPanel-content {
