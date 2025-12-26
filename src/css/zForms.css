@@ -415,24 +415,6 @@ input[type="file"]:not(:disabled):not([readonly]) {
   border-color: var(--color-error, #dc3545);
 }
 
-.zBtn-secondary {
-  color: var(--color-base);
-  background-color: var(--color-secondary); /* zTheme purple */
-  border-color: var(--color-secondary);
-}
-
-.zBtn-secondary:hover {
-  color: var(--color-darkgray);
-  background-color: var(--color-primary); /* Shift to green */
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.zBtn-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(147, 112, 219, 0.5), 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Button Info - zolo style */
 .zBtn-info {
   color: var(--color-base);
@@ -1347,4 +1329,3 @@ textarea.zInput.zValid {
 .zCheck-input:disabled ~ .zCheck-label {
   opacity: 0.5;
 }
-
