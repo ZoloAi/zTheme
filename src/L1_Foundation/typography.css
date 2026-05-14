@@ -1,0 +1,327 @@
+/**************************
+L1_Foundation/typography.css
+**************************/
+
+:root {
+	/* Opacity Variants */
+	--text-black-50:      rgba(0, 0, 0, 0.5);
+	--text-white-50:      rgba(255, 255, 255, 0.5);
+}
+/* Font Family
+============================================== */
+.zFont-monospace {
+	font-family: var(--font-family-monospace) !important;
+}
+
+.zFont-kalam {
+	font-family: var(--font-family-kalam) !important;
+}
+
+.zFont-boogaloo {
+	font-family: var(--font-family-boogaloo) !important;
+}
+
+.zFont-poppins {
+	font-family: var(--font-family-poppins) !important;
+}
+
+.zFont-rubik {
+	font-family: var(--font-family-rubik) !important;
+}
+
+/* Headings
+============================================== */
+h0,
+.zH0 {
+	font-size: var(--h0size);
+}
+
+h1,
+.zH1 {
+	font-size: var(--h1size);
+}
+
+h2,
+.zH2 {
+	font-size: var(--h2size);
+}
+
+h3,
+.zH3 {
+	font-size: var(--h3size);
+}
+
+h4,
+.zH4 {
+	font-size: var(--h4size);
+}
+
+h5,
+.zH5 {
+	font-size: var(--h5size);
+}
+
+h6,
+.zH6 {
+	font-size: var(--h6size);
+}
+
+h0,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.zH0,
+.zH1,
+.zH2,
+.zH3,
+.zH4,
+.zH5,
+.zH6 {
+	font-family: inherit;
+	font-weight: var(--font-weight-medium);
+	line-height: var(--line-height-tight);
+	color: inherit;
+}
+
+/* Lead Text
+============================================== */
+.zLead {
+	font-size: var(--font-size-lead);
+	line-height: var(--line-height-relaxed);
+	font-weight: var(--font-weight-light);
+}
+
+/* Display Headings
+============================================== */
+.zDisplay-1,
+.zDisplay-2,
+.zDisplay-3,
+.zDisplay-4,
+.zDisplay-5,
+.zDisplay-6 {
+	font-weight: 300;
+	line-height: var(--line-height-tight);
+}
+
+.zDisplay-1 {
+	font-size: var(--display-1-size);
+}
+
+.zDisplay-2 {
+	font-size: var(--display-2-size);
+}
+
+.zDisplay-3 {
+	font-size: var(--display-3-size);
+}
+
+.zDisplay-4 {
+	font-size: var(--display-4-size);
+}
+
+.zDisplay-5 {
+	font-size: var(--display-5-size);
+}
+
+.zDisplay-6 {
+	font-size: var(--display-6-size);
+}
+
+
+/* Title Headings
+============================================== */
+.zTitle-1,
+.zTitle-2,
+.zTitle-3,
+.zTitle-4,
+.zTitle-5,
+.zTitle-6 {
+	font-weight: 300;
+	line-height: var(--line-height-tight);
+}
+
+.zTitle-1 {
+	font-size: var(--title-1-size);
+}
+
+.zTitle-2 {
+	font-size: var(--title-2-size);
+}
+
+.zTitle-3 {
+	font-size: var(--title-3-size);
+}
+
+.zTitle-4 {
+	font-size: var(--title-4-size);
+}
+
+.zTitle-5 {
+	font-size: var(--title-5-size);
+}
+
+.zTitle-6 {
+	font-size: var(--title-6-size);
+}
+
+/*  Text Size
+============================================== */
+.zText-xs {
+	font-size: var(--font-size-xs) !important;
+}
+
+.zText-sm {
+	font-size: var(--font-size-sm) !important;
+}
+
+.zText {
+	font-size: var(--font-size-base) !important
+}
+
+.zText-lg {
+	font-size: var(--font-size-lg) !important;
+}
+
+
+/* ==============================================
+✅ Font Weight
+============================================== */
+.zFw-100 {
+	font-weight: 100 !important;
+}
+
+.zFw-200 {
+	font-weight: 200 !important;
+}
+
+.zFw-300 {
+	font-weight: 300 !important;
+}
+
+.zFw-400 {
+	font-weight: 400 !important;
+}
+
+.zFw-500 {
+	font-weight: 500 !important;
+}
+
+.zFw-600 {
+	font-weight: 600 !important;
+}
+
+.zFw-700 {
+	font-weight: 700 !important;
+}
+
+.zFw-800 {
+	font-weight: 800 !important;
+}
+
+.zFw-900 {
+	font-weight: 900 !important;
+}
+
+
+/* ==============================================
+✅ Line Height
+============================================== */
+.zLh-tight {
+	line-height: var(--line-height-tight) !important;
+}
+
+.zLh-normal {
+	line-height: var(--line-height-normal) !important;
+}
+
+.zLh-relaxed {
+	line-height: var(--line-height-relaxed) !important;
+}
+
+.zLh-loose {
+	line-height: var(--line-height-loose) !important;
+}
+
+/* ==============================================
+✅ Text Alignment
+============================================== */
+.zText-start {
+	text-align: left !important;
+}
+
+.zText-center {
+	text-align: center !important;
+}
+
+.zText-end {
+	text-align: right !important;
+}
+
+/* ==============================================
+✅ Text Wrapping & Overflow
+============================================== */
+.zText-wrap {
+	white-space: normal !important;
+}
+
+.zText-nowrap {
+	white-space: nowrap !important;
+}
+
+.zText-break {
+	/* Break Long Words */
+	word-wrap: break-word !important;
+	word-break: break-word !important;
+}
+
+.zText-truncate {
+	/* Truncate with Ellipsis */
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	white-space: nowrap !important;
+}
+
+/* ==============================================
+✅ Text Transform
+============================================== */
+.zText-lowercase {
+	text-transform: lowercase !important;
+}
+
+.zText-uppercase {
+	text-transform: uppercase !important;
+}
+
+.zText-capitalize {
+	text-transform: capitalize !important;
+}
+
+/* ==============================================
+✅ Text Reset
+============================================== */
+.zText-reset {
+	color: inherit !important;
+}
+
+.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+.blockquote {
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.blockquote-footer {
+	display: block;
+	font-size: 80%;
+	color: #6c757d;
+}
+
+.blockquote-footer::before {
+	content: "\2014 \00A0";
+}

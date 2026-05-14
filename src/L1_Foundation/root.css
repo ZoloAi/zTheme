@@ -1,0 +1,180 @@
+:root {
+/* Font Families */
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-poppins: 'Poppins', var(--font-family-base);
+  --font-family-boogaloo: 'Boogaloo', var(--font-family-base);
+  --font-family-kalam: 'Kalam', var(--font-family-base);
+  --font-family-rubik: 'Rubik', var(--font-family-base);
+  --font-family-monospace: 'Courier New', Courier, monospace;
+
+/* Neutral Colors */
+  --color-base:      #FFFCDC; /* Foundation - warm & natural */
+  --color-gray:      #6F6F62; /* Earth - grounded & stable */
+  --color-darkgray:  #3A3A32; /* Depth - contrast & clarity */
+  --color-dark:      #212529; /* Dark text/elements */
+  --color-light:     #f8f9fa; /* Light backgrounds/text */
+  --color-white:     #ffffff; /* Pure white */
+  --color-black:     #000000; /* Body text color */
+
+/* Highlight Colors */
+  --color-highlight: #ffeb3b; /* Marker yellow for text highlighting */
+
+/* Link Colors */
+  --color-hyperlink: #007bff;
+  --color-hyperlink-hover: #0056b3;
+
+/* Named Colors */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+
+/* Zolo Colors */
+  --color-primary:   #A2D46E; /* Intention - the heart of zCLI */
+  --color-secondary: #9370DB; /* Validation - structure & elegance */
+
+/* Contextual Colors */
+  --color-info:      #5CA9FF; /* Perception - clarity & understanding */
+  --color-success:   #52B788; /* Manifestation - organic & vibrant */
+  --color-warning:   #FFB347; /* Caution - warm & approachable */
+  --color-error:     #E63946; /* Decisive - clear & strong */
+
+/* Light Variants (for backgrounds, alerts, callouts) */
+  --color-primary-light:   #f1f9e8; /* Light green background */
+  --color-secondary-light: #f3eeff; /* Light purple background */
+  --color-success-light:   #e8f5e9; /* Light green background */
+  --color-info-light:      #e3f2fd; /* Light blue background */
+  --color-warning-light:   #fff8e1; /* Light orange background */
+  --color-error-light:     #ffebee; /* Light red background */
+
+/* Focus Variants (darker for interactions) */
+  --color-primary-focus:   #8bc24a; /* Primary focus (darker lime green) */
+  --color-secondary-focus: #7e57a1; /* Secondary focus (darker purple) */
+  --color-success-focus:   #3d8b64; /* Success focus (darker forest green) */
+  --color-info-focus:      #4a9bd6; /* Info focus (darker blue) */
+  --color-warning-focus:   #ff9f3d; /* Warning focus (darker orange) */
+  --color-error-focus:     #d32f2f; /* Error/Danger focus (darker red) */
+  --color-light-focus:     #e0e0e0; /* Light focus (darker gray) */
+  --color-dark-focus:      #1a1a1a; /* Dark focus (lighter black) */
+
+/* Gradients - Rainbow progression */
+  --gradient-success: linear-gradient(135deg, #2d6a4f 0%, #52B788 50%, #74c69d 100%);
+  --gradient-primary: linear-gradient(135deg, #52B788 0%, #A2D46E 50%, #F4E76E 100%);
+  --gradient-warning: linear-gradient(135deg, #F4E76E 0%, #FFB347 50%, #ff6b6b 100%);
+  --gradient-error: linear-gradient(135deg, #ff6b6b 0%, #e85d6c 50%, #c77dbd 100%);
+  --gradient-secondary: linear-gradient(135deg, #c77dbd 0%, #7B68EE 50%, #6A5ACD 100%);
+  --gradient-info: linear-gradient(135deg, #6A5ACD 0%, #5CA9FF 50%, #4FC3F7 100%);
+
+/* Semantic aliases (map to common UI uses) */
+  --opacity-disabled: 0.65;
+  --opacity-hover:    0.9;
+  --opacity-muted:    0.7;
+  --opacity-subtle:   0.8;
+  --opacity-strong:   0.9;
+  --opacity-faint:    0.15;
+
+/* Breakpoints */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+/* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+/* Font Sizes — base scale (Fluid Responsive) */
+  --font-size-base: clamp(14px, 1.5vw, 16px);
+  --font-size-xs: clamp(11px, 1.2vw, 12px);
+  --font-size-sm: clamp(13px, 1.4vw, 14px);
+  --font-size-lg: clamp(16px, 1.8vw, 18px);
+  --font-size-lead: clamp(18px, 2vw, 20px);
+
+/* Heading Sizes (Fluid Responsive) */
+  --h0size: clamp(36px, 6vw, 56px);
+  --h1size: clamp(32px, 5vw, 48px);
+  --h2size: clamp(28px, 4vw, 40px);
+  --h3size: clamp(24px, 3.5vw, 36px);
+  --h4size: clamp(20px, 3vw, 30px);
+  --h5size: clamp(18px, 2.5vw, 24px);
+  --h6size: clamp(16px, 2vw, 20px);
+
+/* Title Sizes (Fluid Responsive) */
+  --title-1-size: clamp(48px, 8vw, 80px);
+  --title-2-size: clamp(44px, 7vw, 72px);
+  --title-3-size: clamp(40px, 6vw, 64px);
+  --title-4-size: clamp(36px, 5.5vw, 56px);
+  --title-5-size: clamp(32px, 5vw, 48px);
+  --title-6-size: clamp(28px, 4vw, 40px);
+
+/* Display Sizes (Fluid Responsive) */
+  --display-1-size: clamp(56px, 10vw, 120px);
+  --display-2-size: clamp(52px, 9vw, 104px);
+  --display-3-size: clamp(48px, 8vw, 88px);
+  --display-4-size: clamp(44px, 7vw, 72px);
+  --display-5-size: clamp(40px, 6vw, 64px);
+  --display-6-size: clamp(36px, 5vw, 56px);
+
+/* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+/* Letter Spacing */
+  --letter-spacing-tight: -0.05em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+
+/* Spacing Scale */
+  --spacing-xs: 0.25rem;            /* 4px */
+  --spacing-sm: 0.5rem;             /* 8px */
+  --spacing-md: 1rem;               /* 16px */
+  --spacing-lg: 1.5rem;             /* 24px */
+  --spacing-xl: 3rem;               /* 48px */
+
+/* Container Max Widths */
+  --container-sm: 540px;            /* Small container breakpoint */
+  --container-md: 720px;            /* Medium container breakpoint */
+  --container-lg: 960px;            /* Large container breakpoint */
+  --container-xl: 1140px;           /* Extra large container breakpoint */
+  --container-xxl: 1320px;          /* Extra extra large container breakpoint */
+
+/* Z-Index Layers */
+  --z-index-dropdown: 1000;       /* Dropdown menus */
+  --z-index-sticky: 1020;         /* Sticky positioned elements */
+  --z-index-fixed: 1030;          /* Fixed positioned elements (navbars) */
+  --z-index-modal-backdrop: 1040; /* Modal backdrop */
+  --z-index-modal: 1050;          /* Modal dialogs */
+  --z-index-popover: 1060;        /* Popovers */
+  --z-index-tooltip: 1070;        /* Tooltips */
+
+/* Border Radii */
+  --border-radius: 0.5rem;        /* Default border radius (8px) */
+  --border-radius-sm: 0.25rem;    /* Small border radius (4px) */
+  --border-radius-lg: 1rem;       /* Large border radius (16px) */
+  --border-radius-pill: 50rem;    /* Pill-shaped (fully rounded ends) */
+  --border-radius-circle: 50%;    /* Perfect circle */
+  
+/* Border Widths */
+  --border-width: 1px;            /* Default border width */
+
+}

@@ -1,0 +1,63 @@
+/* ============================================
+   sizing.css - Sizing Utilities
+   ============================================
+
+   Width, height, max/min, and viewport utilities.
+
+   Classes:
+   - Width:    .zW-25/33/50/66/75/100/auto, .zMw-100
+   - Height:   .zH-25/50/75/100/auto, .zMh-100
+   - Viewport: .zVw-*/zVh-*, .zMin-vw-100, .zMin-vh-*
+   ============================================ */
+
+/* Width
+   ============================================ */
+
+.zW-25   { width: 25% !important; }
+.zW-33   { width: 33.333333% !important; }
+.zW-50   { width: 50% !important; }
+.zW-66   { width: 66.666667% !important; }
+.zW-75   { width: 75% !important; }
+.zW-100  { width: 100% !important; }
+.zW-auto { width: auto !important; }
+.zMw-100 { max-width: 100% !important; }
+
+/* Height
+   ============================================ */
+
+.zH-25   { height: 25% !important; }
+.zH-50   { height: 50% !important; }
+.zH-75   { height: 75% !important; }
+.zH-100  { height: 100% !important; }
+.zH-auto { height: auto !important; }
+.zMh-100 { max-height: 100% !important; }
+
+/* Viewport Width
+   ============================================ */
+
+.zVw-10  { width: 10vw !important; }
+.zVw-25  { width: 25vw !important; }
+.zVw-50  { width: 50vw !important; }
+.zVw-75  { width: 75vw !important; }
+.zVw-90  { width: 90vw !important; }
+.zVw-100 { width: 100vw !important; }
+.zMin-vw-100 { min-width: 100vw !important; }
+
+/* Viewport Height
+   ============================================ */
+
+.zVh-10  { height: 10vh !important; }
+.zVh-20  { height: 20vh !important; }
+.zVh-25  { height: 25vh !important; }
+.zVh-30  { height: 30vh !important; }
+.zVh-40  { height: 40vh !important; }
+.zVh-50  { height: 50vh !important; }
+.zVh-60  { height: 60vh !important; }
+.zVh-70  { height: 70vh !important; }
+.zVh-75  { height: 75vh !important; }
+.zVh-80  { height: 80vh !important; }
+.zVh-90  { height: 90vh !important; }
+.zVh-100 { height: 100vh !important; }
+.zMin-vh-50  { min-height: 50vh !important; }
+.zMin-vh-75  { min-height: 75vh !important; }
+.zMin-vh-100 { min-height: 100vh !important; }

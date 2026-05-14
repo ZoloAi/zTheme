@@ -1,0 +1,76 @@
+/**
+ * L1_Foundation/variables/colors.css
+ * Color system variables for zTheme
+ */
+:root {
+  --color-body:   var(--color-dark);    /* default body text color */
+  --color-border: var(--color-gray);    /* default border color */
+}
+
+/* ========================================================================== */
+/* Text Color Utilities (.zText-*) */
+/* ========================================================================== */
+.zText-primary { color: var(--color-primary) !important; }
+.zText-secondary { color: var(--color-secondary) !important; }
+.zText-success { color: var(--color-success) !important; }
+.zText-info { color: var(--color-info) !important; }
+.zText-warning { color: var(--color-warning) !important; }
+.zText-danger { color: var(--color-error) !important; }
+.zText-light { color: var(--color-light) !important; }
+.zText-dark { color: var(--color-dark) !important; }
+.zText-gray { color: var(--color-gray) !important; }
+.zText-darkgray { color: var(--color-darkgray) !important; }
+.zText-white { color: var(--color-white) !important; }
+.zText-black { color: var(--color-black) !important; }
+.zText-body { color: var(--color-body) !important; }
+.zText-muted { color: var(--color-gray) !important; }
+
+/* ========================================================================== */
+/* Background Color Utilities (.zBg-*) */
+/* ========================================================================== */
+.zBg-primary { background-color: var(--color-primary) !important; }
+.zBg-secondary { background-color: var(--color-secondary) !important; }
+.zBg-success { background-color: var(--color-success) !important; }
+.zBg-info { background-color: var(--color-info) !important; }
+.zBg-warning { background-color: var(--color-warning) !important; }
+.zBg-danger { background-color: var(--color-error) !important; }
+.zBg-light { background-color: var(--color-light) !important; }
+.zBg-dark { background-color: var(--color-dark) !important; }
+.zBg-gray { background-color: var(--color-gray) !important; }
+.zBg-darkgray { background-color: var(--color-darkgray) !important; }
+.zBg-white { background-color: var(--color-white) !important; }
+.zBg-black { background-color: var(--color-black) !important; }
+.zBg-base { background-color: var(--color-base) !important; }
+
+/* Light Backgrounds */
+.zBg-primary-light { background-color: var(--color-primary-light) !important; }
+.zBg-secondary-light { background-color: var(--color-secondary-light) !important; }
+.zBg-success-light { background-color: var(--color-success-light) !important; }
+.zBg-info-light { background-color: var(--color-info-light) !important; }
+.zBg-warning-light { background-color: var(--color-warning-light) !important; }
+.zBg-danger-light { background-color: var(--color-error-light) !important; }
+
+/* Focus Backgrounds */
+.zBg-primary-focus { background-color: var(--color-primary-focus) !important; }
+.zBg-secondary-focus { background-color: var(--color-secondary-focus) !important; }
+.zBg-success-focus { background-color: var(--color-success-focus) !important; }
+.zBg-info-focus { background-color: var(--color-info-focus) !important; }
+.zBg-warning-focus { background-color: var(--color-warning-focus) !important; }
+.zBg-danger-focus { background-color: var(--color-error-focus) !important; }
+
+/* ========================================================================== */
+/* Border Color Utilities (.zBorder-*) */
+/* ========================================================================== */
+.zBorder-primary { border-color: var(--color-primary) !important; }
+.zBorder-secondary { border-color: var(--color-secondary) !important; }
+.zBorder-success { border-color: var(--color-success) !important; }
+.zBorder-info { border-color: var(--color-info) !important; }
+.zBorder-warning { border-color: var(--color-warning) !important; }
+.zBorder-danger { border-color: var(--color-error) !important; }
+.zBorder-light { border-color: var(--color-light) !important; }
+.zBorder-dark { border-color: var(--color-dark) !important; }
+.zBorder-gray { border-color: var(--color-gray) !important; }
+.zBorder-darkgray { border-color: var(--color-darkgray) !important; }
+.zBorder-white { border-color: var(--color-white) !important; }
+.zBorder-black { border-color: var(--color-black) !important; }
+  

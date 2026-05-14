@@ -1,0 +1,71 @@
+/* ============================================
+   main.css - Core Global Utilities
+   Direction utilities and the zVaF UI canvas base.
+   Note: Body styling is in reboot.css
+   ============================================ */
+/* Images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Figures */
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
+}
+
+/* Lists */
+.zList-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.zList-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.zList-inline-item {
+  display: inline-block;
+}
+
+.zList-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* Text Direction Utilities */
+.zDirection-rtl {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.zDirection-ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Resets */
+.zReset {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}

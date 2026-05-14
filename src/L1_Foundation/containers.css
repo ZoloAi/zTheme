@@ -1,0 +1,74 @@
+/* ============================================
+   zContainers.css - Responsive Containers
+   ============================================ */
+/* Base Container Styles
+     ===================== */
+  .zContainer,
+  .zContainer-sm,
+  .zContainer-md,
+  .zContainer-lg,
+  .zContainer-xl,
+  .zContainer-xxl,
+  .zContainer-fluid {
+    width: 100%;
+    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Responsive Container (.zContainer)
+     Adapts max-width at each breakpoint
+     ==================================== */
+  @media (min-width: 576px) {
+    .zContainer, .zContainer-sm {
+      max-width: var(--container-sm);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .zContainer, .zContainer-sm, .zContainer-md {
+      max-width: var(--container-md);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg {
+      max-width: var(--container-lg);
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg, .zContainer-xl {
+      max-width: var(--container-xl);
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .zContainer, .zContainer-sm, .zContainer-md, .zContainer-lg, .zContainer-xl, .zContainer-xxl {
+      max-width: var(--container-xxl);
+    }
+  }
+  
+  /* Fluid Container (.zContainer-fluid)
+     Always 100% width, never constrained
+     ===================================== */
+  .zContainer-fluid {
+    max-width: 100%;
+  }
+  
+  /* Responsive Padding
+     ================== */
+  @media (max-width: 575.98px) {
+    .zContainer,
+    .zContainer-sm,
+    .zContainer-md,
+    .zContainer-lg,
+    .zContainer-xl,
+    .zContainer-xxl {
+      padding-right: var(--spacing-xs);
+      padding-left: var(--spacing-xs);
+    }
+  }
+  
+  

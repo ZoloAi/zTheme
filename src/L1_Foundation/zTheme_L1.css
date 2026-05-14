@@ -1,0 +1,18 @@
+/**
+ * ═══════════════════════════════════════════════════════════════
+ * L1_Foundation - Core Variables and Base Styles
+ * ═══════════════════════════════════════════════════════════════
+ * Foundation layer provides CSS custom properties and base styles
+ * that all other layers depend on. Never imports from higher layers.
+ * 
+ * Imports L0_Reset for normalization and fonts.
+ */
+@import '../L0_Reset/zTheme_L0.css';
+@import './root.css';
+@import './html.css';
+@import './main.css';
+@import './zVaF/zVaF.css';
+@import './zVaF/zBadges.css';
+@import './colors.css';
+@import './typography.css';
+

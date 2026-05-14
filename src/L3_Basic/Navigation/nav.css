@@ -1,0 +1,568 @@
+/* ============================================================================
+   zNav.css - Navigation & Tabs Component
+   ============================================================================
+   
+   Bootstrap-inspired navigation components for building menus, tabs, and pills.
+   All values reference L1_Foundation variables for LFS/SSOT compliance.
+   
+   Base Classes: .zNav, .zNav-tabs, .zNav-pills
+   
+   NOTE: Tab switching requires JavaScript (zTheme.js) for:
+   - Tab switching on click
+   - Content pane show/hide
+   - Fade animations
+   - Accessibility (aria attributes)
+   ============================================================================ */
+
+/* Base Navigation
+   ===============
+   Flexbox-based navigation component that works with lists or standalone links. */
+.zNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.zNav-link {
+  display: block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-darkgray);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  border: var(--border-width) solid transparent;
+  transition: color var(--transition-speed) ease-in-out, 
+              background-color var(--transition-speed) ease-in-out, 
+              border-color var(--transition-speed) ease-in-out;
+}
+
+.zNav-link:hover,
+.zNav-link:focus {
+  color: var(--color-darkgray);
+  background-color: var(--color-light);
+  border-color: var(--color-border);
+}
+
+.zNav-link.zActive,
+.zNav-link.active {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.zNav-link.zActive:hover,
+.zNav-link.active:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.zNav-link.zDisabled,
+.zNav-link.disabled {
+  color: var(--color-gray);
+  background-color: transparent;
+  border-color: transparent;
+  pointer-events: none;
+  cursor: default;
+  opacity: var(--opacity-disabled);
+}
+
+/* Tabs Style
+   ==========
+   Classic tabbed interface with bottom border. 
+   Inherits base active state (green bg + white text) and adds tab borders. */
+.zNav-tabs {
+  border-bottom: var(--border-width) solid var(--color-border);
+  gap: 0;
+}
+
+.zNav-tabs .zNav-link {
+  margin-bottom: calc(var(--border-width) * -1);
+  border-top-left-radius: var(--border-radius-sm);
+  border-top-right-radius: var(--border-radius-sm);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.zNav-tabs .zNav-link:hover,
+.zNav-tabs .zNav-link:focus {
+  background-color: var(--color-light);
+  border-color: var(--color-border) var(--color-border) var(--color-border);
+  isolation: isolate;
+}
+
+.zNav-tabs .zNav-link.zActive,
+.zNav-tabs .zNav-item.zShow .zNav-link {
+  /* Inherits: green bg + white text from base .zNav-link.zActive */
+  border-color: var(--color-primary) var(--color-primary) transparent;
+}
+
+.zNav-tabs .zNav-link.zActive:hover {
+  border-color: var(--color-primary-hover) var(--color-primary-hover) transparent;
+}
+
+.zNav-tabs .zDropdown-menu {
+  margin-top: calc(var(--border-width) * -1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Pills Style
+   ===========
+   Rounded button-like navigation items. 
+   Inherits base active state, just adjusts border-radius. */
+.zNav-pills .zNav-link {
+  background: none;
+  border: 0;
+  border-radius: var(--border-radius);
+}
+
+.zNav-pills .zNav-link:hover,
+.zNav-pills .zNav-link:focus {
+  background-color: var(--color-light);
+  border-color: transparent;
+}
+
+.zNav-pills .zNav-link.zActive,
+.zNav-pills .zShow > .zNav-link {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.zNav-pills .zNav-link.zActive:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* Fill and Justify
+   ================
+   Control how nav items distribute width across container.
+   
+   Structure:
+   .zNav (display: flex) > .zNav-item (flex item) > .zNav-link
+   
+   .zNav-fill - Items grow proportionally to fill space
+                (longer items stay wider)
+   
+   .zNav-justified - All items have exactly equal width
+                     (perfectly symmetrical) 
+   
+   Key: Must target direct children (>) as flex items,
+        then make links fill their parent items. */
+
+/* Fill: Items grow proportionally */
+.zNav-fill > .zNav-item {
+  display: block !important;  /* Override navbar's display: flex */
+  flex: 1 1 auto;             /* Grow/shrink proportionally with auto basis */
+}
+
+/* For nav without <li> wrappers */
+.zNav-fill > .zNav-link {
+  flex: 1 1 auto;
+}
+
+.zNav-fill .zNav-link {
+  display: block;    /* Fill the flex item */
+  width: 100%;
+  text-align: center;
+}
+
+/* Justified: All items equal width */
+.zNav-justified > .zNav-item {
+  display: block !important;  /* Override navbar's display: flex */
+  flex: 1 1 0%;               /* Shorthand: grow, shrink, basis */
+  min-width: 0;               /* Allow shrinking below content size */
+}
+
+/* For nav without <li> wrappers */
+.zNav-justified > .zNav-link {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.zNav-justified .zNav-link {
+  display: block;    /* Fill the flex item */
+  width: 100%;
+  text-align: center;
+}
+
+/* Mobile: Prevent overlap in fill/justified layouts
+   ==================================================
+   When container is too narrow, enable horizontal scroll
+   instead of allowing items to overlap. */
+@media (max-width: var(--breakpoint-md)) {
+  .zNav-fill,
+  .zNav-justified {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  
+  /* Prevent items from shrinking too much */
+  .zNav-fill > .zNav-item,
+  .zNav-justified > .zNav-item {
+    min-width: calc(var(--spacing-xl) * 5);
+    flex-shrink: 0;
+  }
+  
+  .zNav-fill > .zNav-link,
+  .zNav-justified > .zNav-link {
+    min-width: calc(var(--spacing-xl) * 5);
+    flex-shrink: 0;
+  }
+}
+
+/* Vertical Navigation
+   ===================
+   Stack navigation items vertically. */
+.zNav.zFlex-column {
+  flex-direction: column;
+}
+
+.zNav.zFlex-column .zNav-link {
+  border-radius: var(--border-radius-sm);
+}
+
+/* Responsive Vertical Layout Container
+   ====================================
+   Sidebar + content layouts:
+   - Desktop: Side-by-side (sidebar on left)
+   - Mobile: Tabs scroll horizontally (no sidebar)
+*/
+.zVertical-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .zVertical-layout {
+    display: grid;
+    grid-template-columns: calc(var(--spacing-xl) * 12.5) 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* Right sidebar variant */
+.zVertical-layout-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .zVertical-layout-right {
+    display: grid;
+    grid-template-columns: 1fr calc(var(--spacing-xl) * 12.5);
+    gap: var(--spacing-xl);
+  }
+  
+  /* Reorder: content first, nav second */
+  .zVertical-layout-right > :first-child {
+    order: 2;
+  }
+  
+  .zVertical-layout-right > :last-child {
+    order: 1;
+  }
+}
+
+/* Wider sidebar variants */
+.zVertical-layout-wide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .zVertical-layout-wide {
+    display: grid;
+    grid-template-columns: calc(var(--spacing-xl) * 15.625) 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+.zVertical-layout-wide-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .zVertical-layout-wide-right {
+    display: grid;
+    grid-template-columns: 1fr calc(var(--spacing-xl) * 15.625);
+    gap: var(--spacing-xl);
+  }
+  
+  .zVertical-layout-wide-right > :first-child {
+    order: 2;
+  }
+  
+  .zVertical-layout-wide-right > :last-child {
+    order: 1;
+  }
+}
+
+/* Vertical Tabs */
+.zNav.zFlex-column.zNav-tabs {
+  border-bottom: 0;
+  border-right: var(--border-width) solid var(--color-border);
+  max-width: 100%;
+}
+
+.zNav.zFlex-column.zNav-tabs .zNav-link {
+  margin-bottom: 0;
+  margin-right: calc(var(--border-width) * -1);
+  border-top-left-radius: var(--border-radius-sm);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--border-radius-sm);
+  border-bottom-right-radius: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.zNav.zFlex-column.zNav-tabs .zNav-link:hover,
+.zNav.zFlex-column.zNav-tabs .zNav-link:focus {
+  border-color: var(--color-light) var(--color-border) var(--color-light) var(--color-light);
+}
+
+.zNav.zFlex-column.zNav-tabs .zNav-link.zActive,
+.zNav.zFlex-column.zNav-tabs .zNav-item.zShow .zNav-link {
+  border-color: var(--color-border) var(--color-white) var(--color-border) var(--color-border);
+}
+
+/* Vertical Pills - prevent overflow */
+.zNav.zFlex-column.zNav-pills {
+  max-width: 100%;
+}
+
+.zNav.zFlex-column.zNav-pills .zNav-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Vertical Navigation: Horizontal Scroll on Mobile
+   =================================================
+   On mobile, vertical navigation becomes horizontal scrolling tabs.
+   This is more intuitive than stacking vertically. */
+@media (max-width: var(--breakpoint-md)) {
+  .zNav.zFlex-column {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide scrollbar */
+  .zNav.zFlex-column::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Pills style on mobile */
+  .zNav.zFlex-column.zNav-pills .zNav-link {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  
+  /* Tabs style on mobile */
+  .zNav.zFlex-column.zNav-tabs {
+    border-right: 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+  
+  .zNav.zFlex-column.zNav-tabs .zNav-link {
+    margin-right: 0;
+    margin-bottom: calc(var(--border-width) * -1);
+    border-top-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  
+  .zNav.zFlex-column.zNav-tabs .zNav-link:hover,
+  .zNav.zFlex-column.zNav-tabs .zNav-link:focus {
+    border-color: var(--color-light) var(--color-light) var(--color-border);
+  }
+  
+  .zNav.zFlex-column.zNav-tabs .zNav-link.zActive {
+    border-color: var(--color-border) var(--color-border) var(--color-white);
+  }
+}
+
+/* Tab Content
+   ===========
+   Container for tab panes. */
+.zTab-content {
+  padding: var(--spacing-md);
+  border: var(--border-width) solid var(--color-border);
+  border-top: 0;
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+}
+
+.zTab-content > .zTab-pane {
+  display: none;
+}
+
+.zTab-content > .zActive {
+  display: block;
+}
+
+/* Tab Fade Animation
+   ==================
+   Smooth fade transition for tab content. */
+.zTab-pane.zFade {
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease-in-out;
+}
+
+.zTab-pane.zFade.zShow {
+  opacity: 1;
+}
+
+/* Underline Style (Modern)
+   ========================
+   Modern underline style for navigation. */
+.zNav-underline {
+  gap: var(--spacing-md);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.zNav-underline .zNav-link {
+  padding: var(--spacing-sm) 0;
+  border: 0;
+  border-bottom: calc(var(--border-width) * 2) solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-gray);
+}
+
+.zNav-underline .zNav-link:hover,
+.zNav-underline .zNav-link:focus {
+  border-bottom-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+}
+
+.zNav-underline .zNav-link.zActive {
+  border-bottom-color: var(--color-primary);
+  background: transparent;
+  color: var(--color-primary-hover);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive Design: Horizontal Scrolling Tabs on Mobile
+   ========================================================
+   Modern, professional approach - tabs scroll horizontally on small screens.
+   Used by Gmail, Twitter, Chrome, and most modern mobile apps. */
+@media (max-width: var(--breakpoint-md)) {
+  .zNav-tabs,
+  .zNav-pills,
+  .zNav-underline {
+    /* Enable horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+    
+    /* Add scroll snap for better UX */
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide scrollbar on Chrome/Safari */
+  .zNav-tabs::-webkit-scrollbar,
+  .zNav-pills::-webkit-scrollbar,
+  .zNav-underline::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ensure tabs don't shrink */
+  .zNav-tabs .zNav-link,
+  .zNav-pills .zNav-link,
+  .zNav-underline .zNav-link {
+    flex-shrink: 0;
+    white-space: nowrap;
+    scroll-snap-align: start;
+  }
+  
+  /* Add padding to container for scroll area */
+  .zNav-tabs,
+  .zNav-pills {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+  }
+  
+  /* Optional: Add subtle fade gradient to indicate scrollability */
+  .zNav-tabs::after,
+  .zNav-pills::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--spacing-xl);
+    background: linear-gradient(to left, rgba(248, 249, 250, var(--opacity-hover)), transparent);
+    pointer-events: none;
+  }
+}
+
+/* Mobile: Force Vertical Stacking (Optional)
+   ============================================
+   Use .zNav-mobile-vertical to force vertical stacking on mobile
+   (useful for settings pages or when horizontal scroll isn't desired). */
+@media (max-width: var(--breakpoint-md)) {
+  .zNav-mobile-vertical {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+  }
+  
+  .zNav-mobile-vertical .zNav-link {
+    width: 100%;
+    text-align: left;
+    border-radius: var(--border-radius-sm);
+  }
+  
+  .zNav-mobile-vertical.zNav-tabs {
+    border-bottom: 0;
+    border-right: var(--border-width) solid var(--color-border);
+  }
+  
+  .zNav-mobile-vertical.zNav-tabs .zNav-link {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .zNav-mobile-vertical.zNav-tabs .zNav-link.zActive {
+    border-left: calc(var(--border-width) * 3) solid var(--color-primary);
+  }
+}
+
+/* Accessibility
+   =============
+   Ensure proper focus states and reduced motion support. */
+.zNav-link:focus {
+  outline: calc(var(--border-width) * 2) solid var(--color-primary);
+  outline-offset: calc(var(--border-width) * 2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zNav-link,
+  .zTab-pane.zFade {
+    transition: none;
+  }
+}

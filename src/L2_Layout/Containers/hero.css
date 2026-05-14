@@ -1,0 +1,214 @@
+/* ============================================
+   hero.css — Hero Section Component
+   L2_Layout/Containers
+
+   Full-viewport hero sections for landing pages,
+   welcome screens, and call-to-action areas.
+
+   Height variants:  .zHero-full | .zHero-three-quarter | .zHero-half | .zHero-quarter
+   Color variants:   .zHero-primary | -secondary | -info | -success | -warning | -error | -dark | -light
+   Gradient:         .zHero-gradient | -gradient-vertical | -gradient-dark
+   Background image: .zHero-cover | .zHero-contain | .zHero-overlay
+   Content width:    .zHero-content | .zHero-content-wide | .zHero-content-narrow
+   Alignment:        .zHero-left | .zHero-right | .zHero-top | .zHero-bottom
+   ============================================ */
+
+/* ── Hero component variables ── */
+:root {
+    --hero-padding-x:        var(--spacing-lg);       /* 1.5rem */
+    --hero-padding-y:        var(--spacing-xl);       /* 3rem   */
+    --hero-padding-x-sm:     var(--spacing-md);       /* 1rem   */
+    --hero-padding-y-sm:     clamp(1rem, 4vw, 2rem);
+    --hero-min-height:       50vh;
+    --hero-content-max:      800px;
+    --hero-content-wide-max: var(--container-xl);     /* 1140px */
+    --hero-content-narrow-max: var(--container-sm);   /* 540px  */
+    --hero-overlay-bg:       rgba(0, 0, 0, 0.5);
+    --hero-offset:           0px;                     /* override to account for fixed navbar */
+}
+
+/* ── Base ── */
+.zHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--hero-padding-y) var(--hero-padding-x);
+    min-height: var(--hero-min-height);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Height variants ── */
+.zHero-full {
+    min-height: calc(100vh - var(--hero-offset));
+}
+
+.zHero-three-quarter {
+    min-height: calc(75vh - var(--hero-offset));
+}
+
+.zHero-half {
+    min-height: calc(50vh - var(--hero-offset));
+}
+
+.zHero-quarter {
+    min-height: calc(25vh - var(--hero-offset));
+}
+
+/* Use small viewport units where supported (prevents mobile address-bar jump) */
+@supports (height: 100svh) {
+    .zHero-full         { min-height: calc(100svh - var(--hero-offset)); }
+    .zHero-three-quarter{ min-height: calc(75svh  - var(--hero-offset)); }
+    .zHero-half         { min-height: calc(50svh  - var(--hero-offset)); }
+}
+
+/* ── Content width containers ── */
+.zHero-content {
+    max-width: var(--hero-content-max);
+    width: 100%;
+    padding: var(--spacing-lg);
+    position: relative;
+    z-index: 1;
+}
+
+.zHero-content-wide {
+    max-width: var(--hero-content-wide-max);
+}
+
+.zHero-content-narrow {
+    max-width: var(--hero-content-narrow-max);
+}
+
+/* ── Background image support ── */
+.zHero-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.zHero-contain {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability over background images */
+.zHero-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay-bg);
+    z-index: 0;
+}
+
+.zHero-overlay > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Color variants ── */
+.zHero-primary {
+    background-color: var(--color-primary);
+    color: var(--color-darkgray);
+}
+
+.zHero-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-base);
+}
+
+.zHero-info {
+    background-color: var(--color-info);
+    color: var(--color-base);
+}
+
+.zHero-success {
+    background-color: var(--color-success);
+    color: var(--color-base);
+}
+
+.zHero-warning {
+    background-color: var(--color-warning);
+    color: var(--color-darkgray);
+}
+
+.zHero-error {
+    background-color: var(--color-error);
+    color: var(--color-base);
+}
+
+.zHero-dark {
+    background-color: var(--color-darkgray);
+    color: var(--color-base);
+}
+
+.zHero-light {
+    background-color: var(--color-base);
+    color: var(--color-darkgray);
+    border-bottom: var(--border-width) solid var(--color-gray);
+}
+
+/* ── Gradient variants ── */
+.zHero-gradient {
+    background: var(--gradient-primary);
+    color: var(--color-base);
+}
+
+.zHero-gradient-vertical {
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-base);
+}
+
+.zHero-gradient-dark {
+    background: linear-gradient(135deg, var(--color-darkgray) 0%, var(--color-gray) 100%);
+    color: var(--color-base);
+}
+
+/* ── Alignment utilities ── */
+.zHero-left {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.zHero-right {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.zHero-top {
+    justify-content: flex-start;
+    padding-top: var(--spacing-xl);
+}
+
+.zHero-bottom {
+    justify-content: flex-end;
+    padding-bottom: var(--spacing-xl);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .zHero {
+        padding: var(--hero-padding-y-sm) var(--hero-padding-x-sm);
+    }
+
+    .zHero-content {
+        padding: var(--spacing-md);
+    }
+
+    .zHero-half {
+        min-height: 60vh; /* slightly taller on mobile for readability */
+    }
+}
+
+@media (max-width: 576px) {
+    .zHero {
+        padding: var(--spacing-lg) calc(var(--spacing-sm) + 0.25rem);
+    }
+
+    .zHero-content {
+        padding: var(--spacing-sm);
+    }
+}

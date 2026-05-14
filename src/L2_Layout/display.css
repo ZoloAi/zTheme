@@ -1,0 +1,147 @@
+/* ============================================
+   display.css - Display Property Utilities
+   ============================================
+
+   Responsive display utilities with zD- prefix.
+   Controls element display values across breakpoints and print.
+
+   Classes:
+   - .zD-none, .zD-inline, .zD-inline-block, .zD-block
+   - .zD-grid, .zD-inline-grid, .zD-flex, .zD-inline-flex
+   - .zD-table, .zD-table-row, .zD-table-cell
+   - Responsive: .zD-{sm|md|lg|xl|xxl}-{value}
+   - Print: .zD-print-{value}
+
+   Note: Gap utilities (.zGap-*) live in spacing.css.
+   Note: Breakpoints are hardcoded px — CSS vars don't work in @media queries.
+   ============================================ */
+
+/* Base Display Values
+   ============================================ */
+
+.zD-none         { display: none !important; }
+.zD-inline       { display: inline !important; }
+.zD-inline-block { display: inline-block !important; }
+.zD-block        { display: block !important; }
+.zD-grid         { display: grid !important; }
+.zD-inline-grid  { display: inline-grid !important; }
+.zD-flex         { display: flex !important; }
+.zD-inline-flex  { display: inline-flex !important; }
+.zD-table        { display: table !important; }
+.zD-table-row    { display: table-row !important; }
+.zD-table-cell   { display: table-cell !important; }
+
+/* Grid Template Column Shortcuts
+   ============================================
+   Use with .zD-grid or .zD-inline-grid.
+   ============================================ */
+
+.zGrid-cols-1  { grid-template-columns: repeat(1,  1fr) !important; }
+.zGrid-cols-2  { grid-template-columns: repeat(2,  1fr) !important; }
+.zGrid-cols-3  { grid-template-columns: repeat(3,  1fr) !important; }
+.zGrid-cols-4  { grid-template-columns: repeat(4,  1fr) !important; }
+.zGrid-cols-5  { grid-template-columns: repeat(5,  1fr) !important; }
+.zGrid-cols-6  { grid-template-columns: repeat(6,  1fr) !important; }
+.zGrid-cols-12 { grid-template-columns: repeat(12, 1fr) !important; }
+
+/* Responsive — Small (sm) ≥576px
+   ============================================ */
+
+@media (min-width: 576px) {
+  .zD-sm-none         { display: none !important; }
+  .zD-sm-inline       { display: inline !important; }
+  .zD-sm-inline-block { display: inline-block !important; }
+  .zD-sm-block        { display: block !important; }
+  .zD-sm-grid         { display: grid !important; }
+  .zD-sm-inline-grid  { display: inline-grid !important; }
+  .zD-sm-flex         { display: flex !important; }
+  .zD-sm-inline-flex  { display: inline-flex !important; }
+  .zD-sm-table        { display: table !important; }
+  .zD-sm-table-row    { display: table-row !important; }
+  .zD-sm-table-cell   { display: table-cell !important; }
+}
+
+/* Responsive — Medium (md) ≥768px
+   ============================================ */
+
+@media (min-width: 768px) {
+  .zD-md-none         { display: none !important; }
+  .zD-md-inline       { display: inline !important; }
+  .zD-md-inline-block { display: inline-block !important; }
+  .zD-md-block        { display: block !important; }
+  .zD-md-grid         { display: grid !important; }
+  .zD-md-inline-grid  { display: inline-grid !important; }
+  .zD-md-flex         { display: flex !important; }
+  .zD-md-inline-flex  { display: inline-flex !important; }
+  .zD-md-table        { display: table !important; }
+  .zD-md-table-row    { display: table-row !important; }
+  .zD-md-table-cell   { display: table-cell !important; }
+}
+
+/* Responsive — Large (lg) ≥992px
+   ============================================ */
+
+@media (min-width: 992px) {
+  .zD-lg-none         { display: none !important; }
+  .zD-lg-inline       { display: inline !important; }
+  .zD-lg-inline-block { display: inline-block !important; }
+  .zD-lg-block        { display: block !important; }
+  .zD-lg-grid         { display: grid !important; }
+  .zD-lg-inline-grid  { display: inline-grid !important; }
+  .zD-lg-flex         { display: flex !important; }
+  .zD-lg-inline-flex  { display: inline-flex !important; }
+  .zD-lg-table        { display: table !important; }
+  .zD-lg-table-row    { display: table-row !important; }
+  .zD-lg-table-cell   { display: table-cell !important; }
+}
+
+/* Responsive — Extra Large (xl) ≥1200px
+   ============================================ */
+
+@media (min-width: 1200px) {
+  .zD-xl-none         { display: none !important; }
+  .zD-xl-inline       { display: inline !important; }
+  .zD-xl-inline-block { display: inline-block !important; }
+  .zD-xl-block        { display: block !important; }
+  .zD-xl-grid         { display: grid !important; }
+  .zD-xl-inline-grid  { display: inline-grid !important; }
+  .zD-xl-flex         { display: flex !important; }
+  .zD-xl-inline-flex  { display: inline-flex !important; }
+  .zD-xl-table        { display: table !important; }
+  .zD-xl-table-row    { display: table-row !important; }
+  .zD-xl-table-cell   { display: table-cell !important; }
+}
+
+/* Responsive — Extra Extra Large (xxl) ≥1400px
+   ============================================ */
+
+@media (min-width: 1400px) {
+  .zD-xxl-none         { display: none !important; }
+  .zD-xxl-inline       { display: inline !important; }
+  .zD-xxl-inline-block { display: inline-block !important; }
+  .zD-xxl-block        { display: block !important; }
+  .zD-xxl-grid         { display: grid !important; }
+  .zD-xxl-inline-grid  { display: inline-grid !important; }
+  .zD-xxl-flex         { display: flex !important; }
+  .zD-xxl-inline-flex  { display: inline-flex !important; }
+  .zD-xxl-table        { display: table !important; }
+  .zD-xxl-table-row    { display: table-row !important; }
+  .zD-xxl-table-cell   { display: table-cell !important; }
+}
+
+/* Print Utilities
+   ============================================ */
+
+@media print {
+  .zD-print-none         { display: none !important; }
+  .zD-print-inline       { display: inline !important; }
+  .zD-print-inline-block { display: inline-block !important; }
+  .zD-print-block        { display: block !important; }
+  .zD-print-grid         { display: grid !important; }
+  .zD-print-inline-grid  { display: inline-grid !important; }
+  .zD-print-flex         { display: flex !important; }
+  .zD-print-inline-flex  { display: inline-flex !important; }
+  .zD-print-table        { display: table !important; }
+  .zD-print-table-row    { display: table-row !important; }
+  .zD-print-table-cell   { display: table-cell !important; }
+}

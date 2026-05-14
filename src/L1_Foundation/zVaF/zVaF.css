@@ -1,0 +1,18 @@
+/* ============================================
+zVaF.css - zOS specific main styling
+============================================ */
+
+/* zVaF Element - Full Declarative UI Canvas
+  ========================================== */
+zVaF {
+  display: block;
+  min-height: 100vh;
+  padding-bottom: var(--spacing-xl); /* Space for fixed connection bar */
+  background-color: var(--color-base);
+}
+  
+#zVaF-content {
+  display: block;
+  width: 100%;
+}
+  

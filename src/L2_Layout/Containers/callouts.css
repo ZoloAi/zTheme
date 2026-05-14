@@ -1,0 +1,95 @@
+/* ============================================================================
+   zCallouts.css - Callout/Note Component System
+   ============================================================================
+   
+   Highlight important information with left-accent bordered boxes.
+   Perfect for tips, notes, warnings, and informational asides.
+   All values reference L1_Foundation variables for LFS/SSOT compliance.
+   
+   Base Class: .zCallout
+   Variants: .zCallout-primary, .zCallout-secondary, .zCallout-success, 
+             .zCallout-info, .zCallout-warning, .zCallout-danger,
+             .zCallout-light, .zCallout-dark
+   
+   Example:
+   <div class="zCallout zCallout-success">
+     <strong>✨ Pro Tip</strong><br>
+     This is important information you should know!
+   </div>
+   ============================================================================ */
+
+/* Base Callout
+   ============ */
+.zCallout {
+  position: relative;
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  border-left: calc(var(--border-width) * 4) solid;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-darkgray);
+}
+
+.zCallout p:last-child {
+  margin-bottom: 0;
+}
+
+/* Callout Variants
+   ================ */
+.zCallout-primary {
+  background-color: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+.zCallout-secondary {
+  background-color: var(--color-light);
+  border-color: var(--color-secondary);
+}
+
+.zCallout-success {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+}
+
+.zCallout-info {
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
+}
+
+.zCallout-warning {
+  background-color: var(--color-warning-light);
+  border-color: var(--color-warning);
+}
+
+.zCallout-danger {
+  background-color: var(--color-error-light);
+  border-color: var(--color-error);
+}
+
+.zCallout-light {
+  background-color: var(--color-light);
+  border-color: var(--color-border);
+}
+
+.zCallout-dark {
+  background-color: var(--color-dark);
+  border-color: var(--color-darkgray);
+  color: var(--color-white);
+}
+
+/* Callout Heading
+   =============== */
+.zCallout-heading {
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  display: block;
+}
+
+/* Responsive Adjustments */
+/* Note: Using hardcoded 768px (matches var(--breakpoint-md)) because CSS variables don't work in @media queries */
+@media (max-width: 768px) {
+  .zCallout {
+    padding: calc(var(--spacing-sm) + var(--spacing-xs)) var(--spacing-md);
+    font-size: var(--small-font-size);
+    border-left-width: calc(var(--border-width) * 3);
+  }
+}

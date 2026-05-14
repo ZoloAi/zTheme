@@ -1,0 +1,399 @@
+/* ============================================================================
+   zBreadcrumb.css - Breadcrumb Navigation Component
+   ============================================================================
+   
+   Bootstrap-inspired navigation breadcrumb with automatic CSS separators.
+   Shows the current page's location within a navigational hierarchy.
+   All values reference L1_Foundation variables for LFS/SSOT compliance.
+   
+   Base Class: .zBreadcrumb
+   
+   Divider Variants:
+   - .zBreadcrumb-arrow (>)
+   - .zBreadcrumb-bullet (•)
+   - .zBreadcrumb-dash (-)
+   - .zBreadcrumb-none (no divider)
+   
+   Size Variants:
+   - .zBreadcrumb-sm (small)
+   - .zBreadcrumb-lg (large)
+   
+   Style Variants:
+   - .zBreadcrumb-pills (background on items)
+   - .zBreadcrumb-light (light background)
+   - .zBreadcrumb-dark (dark background)
+   
+   Uses semantic <nav> and <ol> elements for accessibility.
+   ============================================================================ */
+
+/* Base Breadcrumb
+   =============== */
+.zBreadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: var(--spacing-md);
+  list-style: none;
+}
+
+/* Breadcrumb Item
+   =============== */
+.zBreadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.zBreadcrumb-item + .zBreadcrumb-item {
+  padding-left: var(--spacing-sm);
+}
+
+/* Add divider before all items except the first */
+.zBreadcrumb-item + .zBreadcrumb-item::before {
+  display: inline-block;
+  padding-right: var(--spacing-sm);
+  color: var(--color-gray);
+  content: var(--breadcrumb-divider, "/");
+}
+
+/* Active Item (Current Page)
+   =========================== */
+.zBreadcrumb-item.zActive {
+  color: var(--color-gray);
+}
+
+/* Breadcrumb Links
+   ================ */
+.zBreadcrumb-item a {
+  color: var(--color-info);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-item a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.zBreadcrumb-item a:focus {
+  outline: calc(var(--border-width) * 2) dotted var(--color-info);
+  outline-offset: var(--border-width);
+}
+
+/* Custom Dividers
+   =============== */
+/* Override divider by setting CSS variable on nav:
+   <nav style="--breadcrumb-divider: '>';">
+   
+   Or remove divider entirely:
+   <nav style="--breadcrumb-divider: '';"> */
+
+/* Common Divider Variations */
+.zBreadcrumb-arrow {
+  --breadcrumb-divider: ">";
+}
+
+.zBreadcrumb-bullet {
+  --breadcrumb-divider: "•";
+}
+
+.zBreadcrumb-dash {
+  --breadcrumb-divider: "-";
+}
+
+.zBreadcrumb-none {
+  --breadcrumb-divider: "";
+}
+
+/* Size Variants
+   ============= */
+.zBreadcrumb-sm {
+  font-size: var(--small-font-size);
+}
+
+.zBreadcrumb-sm .zBreadcrumb-item + .zBreadcrumb-item {
+  padding-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-sm .zBreadcrumb-item + .zBreadcrumb-item::before {
+  padding-right: var(--spacing-xs);
+}
+
+.zBreadcrumb-lg {
+  font-size: var(--lead-font-size);
+}
+
+.zBreadcrumb-lg .zBreadcrumb-item + .zBreadcrumb-item {
+  padding-left: var(--spacing-md);
+}
+
+.zBreadcrumb-lg .zBreadcrumb-item + .zBreadcrumb-item::before {
+  padding-right: var(--spacing-md);
+}
+
+/* Pill/Background Style
+   ===================== */
+.zBreadcrumb-pills .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills .zBreadcrumb-item.zActive {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Pill Color Variants
+   =================== 
+   All pill variants inherit base pill styling (padding, border-radius, spacing)
+   and only override colors for active state */
+
+/* Primary Pills */
+.zBreadcrumb-pills-primary .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-primary .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-primary .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-primary .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-primary .zBreadcrumb-item.zActive {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Secondary Pills */
+.zBreadcrumb-pills-secondary .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-secondary .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-secondary .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-secondary .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-secondary .zBreadcrumb-item.zActive {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Success Pills */
+.zBreadcrumb-pills-success .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-success .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-success .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-success .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-success .zBreadcrumb-item.zActive {
+  background-color: var(--color-success);
+  color: var(--color-white);
+}
+
+/* Info Pills */
+.zBreadcrumb-pills-info .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-info .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-info .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-info .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-info .zBreadcrumb-item.zActive {
+  background-color: var(--color-info);
+  color: var(--color-white);
+}
+
+/* Warning Pills */
+.zBreadcrumb-pills-warning .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-warning .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-warning .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-warning .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-warning .zBreadcrumb-item.zActive {
+  background-color: var(--color-warning);
+  color: var(--color-white);
+}
+
+/* Danger Pills */
+.zBreadcrumb-pills-danger .zBreadcrumb-item {
+  background-color: var(--color-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-pill);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+
+.zBreadcrumb-pills-danger .zBreadcrumb-item + .zBreadcrumb-item {
+  margin-left: var(--spacing-xs);
+}
+
+.zBreadcrumb-pills-danger .zBreadcrumb-item a {
+  color: var(--color-darkgray);
+}
+
+.zBreadcrumb-pills-danger .zBreadcrumb-item:hover {
+  background-color: var(--color-border);
+}
+
+.zBreadcrumb-pills-danger .zBreadcrumb-item.zActive {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+/* Light Background Theme
+   ====================== */
+.zBreadcrumb-light {
+  background-color: var(--color-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+/* Dark Background Theme
+   ===================== */
+.zBreadcrumb-dark {
+  background-color: var(--color-dark);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+}
+
+.zBreadcrumb-dark .zBreadcrumb-item {
+  color: var(--color-white);
+  opacity: var(--opacity-hover);
+}
+
+.zBreadcrumb-dark .zBreadcrumb-item + .zBreadcrumb-item::before {
+  color: var(--color-white);
+  opacity: var(--opacity-muted);
+}
+
+.zBreadcrumb-dark .zBreadcrumb-item a {
+  color: var(--color-white);
+}
+
+.zBreadcrumb-dark .zBreadcrumb-item a:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.zBreadcrumb-dark .zBreadcrumb-item.zActive {
+  color: var(--color-white);
+  opacity: var(--opacity-muted);
+}
+
+/* Icon Support
+   ============ */
+.zBreadcrumb-item .zIcon {
+  width: calc(var(--spacing-md) + var(--spacing-xs));
+  height: calc(var(--spacing-md) + var(--spacing-xs));
+  margin-right: var(--spacing-xs);
+  vertical-align: middle;
+}
+
+/* Truncation for Long Paths
+   ========================== */
+.zBreadcrumb-truncate .zBreadcrumb-item {
+  max-width: calc(var(--spacing-xl) * 5); /* 150px equivalent */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zBreadcrumb-truncate .zBreadcrumb-item.zActive {
+  max-width: none; /* Don't truncate active item */
+}
+
+/* Responsive Adjustments */
+/* Note: Using hardcoded 768px (matches var(--breakpoint-md)) because CSS variables don't work in @media queries */
+@media (max-width: 768px) {
+  /* Only apply mobile sizing to breadcrumbs without explicit size modifiers */
+  .zBreadcrumb:not(.zBreadcrumb-sm):not(.zBreadcrumb-lg) {
+    font-size: var(--small-font-size);
+  }
+  
+  .zBreadcrumb:not(.zBreadcrumb-sm):not(.zBreadcrumb-lg) .zBreadcrumb-item + .zBreadcrumb-item {
+    padding-left: var(--spacing-xs);
+  }
+  
+  .zBreadcrumb:not(.zBreadcrumb-sm):not(.zBreadcrumb-lg) .zBreadcrumb-item + .zBreadcrumb-item::before {
+    padding-right: var(--spacing-xs);
+  }
+  
+  /* Auto-truncate on mobile except active item */
+  .zBreadcrumb-item:not(.zActive) {
+    max-width: calc(var(--spacing-xl) * 3.33); /* ~100px equivalent */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

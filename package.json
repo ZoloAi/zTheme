@@ -1,0 +1,41 @@
+{
+  "name": "ztheme",
+  "version": "1.0.0",
+  "description": "Modern CSS framework with handwritten typography and SVG icons for zCLI applications",
+  "main": "dist/ztheme.css",
+  "scripts": {
+    "build": "python3 build.py",
+    "build:postcss": "postcss src/**/*.css --base src --dir src-compiled",
+    "build:full": "npm run build:postcss && python3 build.py"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/zTheme.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "theme",
+    "zcli",
+    "typography",
+    "icons",
+    "ui"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/zTheme/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/zTheme#readme",
+  "cdn": "https://cdn.jsdelivr.net/gh/YOUR_USERNAME/zTheme@main/dist/ztheme.css",
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "postcss-mixins": "^10.0.1",
+    "postcss-nested": "^6.0.1"
+  }
+}
